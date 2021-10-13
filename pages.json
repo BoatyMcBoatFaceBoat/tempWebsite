@@ -1,0 +1,30 @@
+{
+    "en": {
+        "home": "home.html",
+        "consultancy": "consultancy.html",
+        "contact": "contact.php",
+        "excel": "excel.html",
+        "impressum": "impressum.html",
+        "language": "language.html",
+        "model": "model.html",
+        "partners": "partners.html",
+        "raku": "raku.html",
+        "software": "software.html",
+        "team": "team.html",
+        "values": "values.html"
+    },
+    "nl": {
+        "home": "home.html",
+        "consultancy": "consultancy.html",
+        "contact": "contact.php",
+        "excel": "excel.html",
+        "impressum": "impressum.html",
+        "language": "language.html",
+        "model": "model.html",
+        "partners": "partners.html",
+        "raku": "raku.html",
+        "software": "software.html",
+        "team": "team.html",
+        "values": "values.html"
+    }
+}
