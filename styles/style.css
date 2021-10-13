@@ -64,6 +64,23 @@ header {
   /* align-items: stretch; */
 }
 
+/* breadcrumb */
+.breadCrumb {
+  /* background: rgb(174, 245, 245); */
+  width: 100%;
+  height: 1em;
+  font-size: 0.8rem;
+  margin: 1em;
+  
+}
+
+.breadCrumb a {
+  padding: 0.5rem;
+}
+
+
+/* navigation */
+
 .nav-wrapper ul {
   display: flex;
   list-style: none;
@@ -90,13 +107,28 @@ header {
   align-self: center;
 }
 
-.nav a {
+/* .nav a {
   font-size: 0.8rem;
   padding: 1em; 
   color: grey;
 }
 
 .nav a:hover, .nav a:focus {
+  color: rgb(92, 92, 184);
+}
+
+a.current-page, a.current-page:hover {
+  color: rgb(55, 55, 112);
+} */
+
+
+a {
+  font-size: 0.8rem;
+  padding: 1em; 
+  color: grey;
+}
+
+ a:hover,  a:focus {
   color: rgb(92, 92, 184);
 }
 
