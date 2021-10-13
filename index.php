@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
@@ -27,8 +27,7 @@
   </header>
 
   <div class="content-wrapper"><?php
-var_dump($_GET);
-  $lang = 'en';
+  $lang = 'nl';
   $page = 'home';
   if(!empty($_GET['lang'])) {
     $lang = $_GET['lang'];
