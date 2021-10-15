@@ -16,6 +16,7 @@
       }
     ?>/script/untangle.js"></script>
 </head>
+sudo mysqld_safe --skip-grant-tables
 
 <body>
   <header>
