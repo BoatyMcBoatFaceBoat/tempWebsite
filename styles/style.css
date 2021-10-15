@@ -49,8 +49,10 @@ header {
 }
 
 .content-wrapper > div {
-  width: 85%;
+  width: 85vw;
+  max-width: 980px;
   margin: 0 auto;
+  text-align: justify;
 }
 
 .nav-wrapper {
