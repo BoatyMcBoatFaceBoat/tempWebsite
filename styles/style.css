@@ -48,6 +48,11 @@ header {
 
 }
 
+.content-wrapper > div {
+  width: 85%;
+  margin: 0 auto;
+}
+
 .nav-wrapper {
   position: relative;
   bottom: 0px;
