@@ -14,11 +14,11 @@ $captcha =  array(
   ),
   array(
     'q' => 'What year is next year (yyyy)?',
-    'a' => array('2022') // calculate this!
+    'a' => array(date("Y") + 1)  // we need to set the timezone. php.ini?
   ),
   array(
     'q' => 'What year is last year (yyyy)?',
-    'a' => array('2020') // calculate this!
+    'a' => array(date("Y") - 1) 
   ),
   array(
     'q' => 'In the Peanuts cartoon, what is the name of the dog?',
