@@ -9,8 +9,16 @@ $captcha =  array(
     'a' => array('2', 'twee')
   ),
   array(
-    'q' => 'Wil je koffie?',
-    'a' => array('ja')
+    'q' => 'Welke kleur buiten blauw en wit vindt je in de Nederlandse vlag?',
+    'a' => array('rood')
+  ),
+  array(
+    'q' => 'Welk jaar is het volgend jaar (yyyy)?',
+    'a' => array('2022')
+  ),
+  array(
+    'q' => 'Welk jaar was het afgelopen jaar (yyyy)?',
+    'a' => array('2020')
   ),
   array(
     'q' => 'Welk dier verstopt met pasen eieren?',
@@ -21,12 +29,16 @@ $captcha =  array(
     'a' => array('lepel', 'spork')
   ),
   array(
-    'q' => 'Epel epel epel, vlees snij je met een ...?',
-    'a' => array('mes')
+    'q' => 'In de Peanuts-strip, hoe heet de hond?',
+    'a' => array('Snoopy')
   ),
   array(
-    'q' => 'Welke kleuren heeft een ei?',
-    'a' => array('wit en geel', 'geel en wit', 'wit & geel', 'geel & wit', 'wit geel', 'wit, geel')
+    'q' => 'De officiële taal van Frankrijk is ...?',
+    'a' => array('Frans')
+  ),
+  array(
+    'q' => 'Het kasteel van koning Arthur heet ...?',
+    'a' => array('Camelot')
   )
 );
 $captchaIndex = rand(0, count($captcha) - 1);
@@ -38,13 +50,13 @@ $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
     <form action="xyzzy.php" method="post">
       <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
       <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
-      <p>Enter your name <input type="text" name="name" required="required" /></p>
-      <p>E-mail address <input type="email" name="email" required="required" /></p>
-      <p>Subject <input type="text" name="subject" required="required" /></p>
-      <p>Enter your message <textarea name="message" rows="8" cols="35" required="required"></textarea></p>
+      <p>Uw naam <input type="text" name="name" required="required" /></p>
+      <p>E-mailaddres <input type="email" name="email" required="required" /></p>
+      <p>Onderwerp <input type="text" name="subject" required="required" /></p>
+      <p>Uw bericht <textarea name="message" rows="8" cols="35" required="required"></textarea></p>
         <p><?php echo $captcha[$captchaIndex]['q']; ?> <input type="text" name="captcha" required="required" /></p>
       <p>
-        <input type="submit" value="Send"/>
+        <input type="submit" value="Verzend"/>
       </p>
     </form>
   </div>
