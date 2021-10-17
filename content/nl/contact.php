@@ -14,11 +14,11 @@ $captcha =  array(
   ),
   array(
     'q' => 'Welk jaar is het volgend jaar (yyyy)?',
-    'a' => array('2022')
+    'a' => array(date("Y") + 1) // we need to set the timezone. php.ini?
   ),
   array(
     'q' => 'Welk jaar was het afgelopen jaar (yyyy)?',
-    'a' => array('2020')
+    'a' => array(date("Y") - 1)
   ),
   array(
     'q' => 'Welk dier verstopt met pasen eieren?',
@@ -42,7 +42,7 @@ $captcha =  array(
   )
 );
 $captchaIndex = rand(0, count($captcha) - 1);
-$_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
+$_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a']; // strtolower on both sides
 ?>
 <div>
   <h1> Contact</h1>
