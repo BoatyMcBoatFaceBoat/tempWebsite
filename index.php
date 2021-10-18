@@ -19,7 +19,7 @@
 
 <body onload="loadWebsite()">
   <header>
-    <a href="#home"><img src="<?php
+    <a href="home"><img src="<?php
       if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
         echo '/tempWebsite';
       }
