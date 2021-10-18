@@ -25,6 +25,8 @@
       }
     ?>/media/logo.png" alt="logo" class="logo"></a>
   </header>
+  
+  <div class="breadCrumb"></div>
 
   <div class="content-wrapper"><?php
   $lang = 'nl';
@@ -40,9 +42,9 @@
   ?>
   </div>
 
-  <div class="nav-wrapper">
-    <div class="breadCrumb">
-  </div>
+  <!-- <div class="nav-wrapper"> -->
+  
+
   <div class="nav-wrapper">
     <nav class="nav">
       <ul>

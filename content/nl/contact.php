@@ -44,20 +44,50 @@ $captcha =  array(
 $captchaIndex = rand(0, count($captcha) - 1);
 $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
 ?>
-<div>
-  <h1> Contact</h1>
-  <div class="contact flowText">
+<div class="contact">
+  <div class="form">
+    <h1> Contact</h1>
+    <!-- <div class="contact flowText"> -->
     <form action="xyzzy.php" method="post">
       <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
       <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
-      <p>Uw naam <input type="text" name="name" required="required" /></p>
-      <p>E-mailaddres <input type="email" name="email" required="required" /></p>
-      <p>Onderwerp <input type="text" name="subject" required="required" /></p>
-      <p>Uw bericht <textarea name="message" rows="8" cols="35" required="required"></textarea></p>
-        <p><?php echo $captcha[$captchaIndex]['q']; ?> <input type="text" name="captcha" required="required" /></p>
-      <p>
-        <input type="submit" value="Verzend"/>
-      </p>
+      <p>Uw naam </p> 
+      <input type="text" name="name" required="required" />
+      <p>E-mailaddres</p> 
+      <input type="email" name="email" required="required" /></p>
+      <p>Onderwerp</p> 
+      <input type="text" name="subject" required="required" /></p>
+      <p>Uw bericht</p> 
+      <textarea name="message" rows="8" cols="35" required="required"></textarea></p>
+      <p><?php echo $captcha[$captchaIndex]['q']; ?></p>
+      <input type="text" name="captcha" required="required" />
+    
+      <input class="btn" type="submit" value="Verzend"/>
     </form>
   </div>
+  <div class="extra">
+    <p>Van den Heuvel HLT Consultancy handelt onder de naam Untangle.</p>
+    <p>Ons kantoor bevindt zich in Malden vlakbij Nijmegen, in het oude Gemeentehuis.</p>
+    <p> Ons KvK-nummer is 09205757. Theo van den Heuvel is de eigenaar.</p>
+    <p class="icon-p">
+      <img class="icon" src="<?php
+        if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
+          echo '/tempWebsite';
+        }
+        ?>/media/home_icon.png" alt="address">  
+        Rijksweg 112
+    </p>
+    <p class="icon-p"> 
+      <img class="icon" src="<?php
+        if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
+          echo '/tempWebsite';
+        }
+      ?>/media/telephone_icon.png" alt="address">
+      
+     +31625492788
+    </p>
+     
+  </div>
 </div>
+
+

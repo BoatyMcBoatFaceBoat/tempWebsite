@@ -1,16 +1,22 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html, body {
   height: 100%;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input, textarea {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 div {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+h2, h1 {
+  font-size: 2rem;
+  margin: 1em 0;
+  color: #373770;
 }
 
 body {
@@ -25,7 +31,7 @@ header {
   top: 0px;
   left: 0px;
   right: 0px;
-  height: 6em;
+  height: 90px;
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,17 +48,26 @@ header {
 .content-wrapper {
   /* grid-area: 'content'; */
   /* height: calc(100vh - 2em -1rem); */
-  height: calc(100vh - 10rem);
-  background: orange;
+  background: #7474ac;
+  min-height: calc(100vh - 90px - 20px - 60px);
   display: block;
 }
 
-.content-wrapper > div {
+.content-wrapper div {
   width: 85vw;
   max-width: 980px;
   margin: 0 auto;
   text-align: justify;
-  background: orange;
+  line-height: 1.5;
+  background: grey;
+  padding: 1em;
+  min-height: calc(100vh - 90px - 20px - 60px);
+}
+
+.content-wrapper div a {
+  color: #383737;
+  padding: 0;
+  font-size: 1rem;
 }
 
 .nav-wrapper {
@@ -63,7 +78,7 @@ header {
   /* grid-area: foooter; */
   background: lightgray;
   /* height: 100px; */
-  height: 4em;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,9 +94,9 @@ header {
 .breadCrumb {
   /* background: rgb(174, 245, 245); */
   width: 100%;
-  height: 1em;
+  height: 20px;
   font-size: 0.8rem;
-  margin: 1em;
+  background: white;
 }
 
 .breadCrumb a {
@@ -150,5 +165,61 @@ a:hover, a:focus {
 
 a.current-page, a.current-page:hover {
   color: #373770;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact p {
+  margin: 0;
+  text-align: left;
+}
+
+.contact input, .contact textarea {
+  margin-bottom: 30px;
+  padding: 0.6em;
+  border-radius: 0.6em;
+  border: none;
+  background: #383737;
+  width: 300px;
+  color: white;
+}
+
+.contact .flowText {
+  padding: 0;
+}
+
+.contact .form {
+  width: 50%;
+}
+
+.contact .extra {
+  padding-top: 8rem;
+  width: 50%;
+  background: #7a7979;
+  line-height: 1.5;
+}
+
+.contact input.btn {
+  width: auto;
+  background: #5c5cb8;
+  display: block;
+  padding: 1em;
+  font-weight: bold;
+  border-radius: 2em;
+}
+
+.icon {
+  height: 1.5em;
+  display: inline;
+  vertical-align: bottom;
+}
+
+p.icon-p {
+  margin: 1.5em 0;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
