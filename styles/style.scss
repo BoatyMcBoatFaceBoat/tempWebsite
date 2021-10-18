@@ -44,7 +44,9 @@ header {
   /* height: calc(100vh - 2em -1rem); */
   height: calc(100vh - 10rem);
 
-  background: lightslategrey;
+  // background: lightslategrey;
+  background: orange;
+
   display: block;
 
 }
@@ -54,6 +56,9 @@ header {
   max-width: 980px;
   margin: 0 auto;
   text-align: justify;
+
+  background: orange;
+
 }
 
 .nav-wrapper {
