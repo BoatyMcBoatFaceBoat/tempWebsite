@@ -15,9 +15,10 @@ div {
 
 
 // typography
-h2 {
+h2, h1 {
   font-size: 2rem;
   margin: 1em 0;
+  color: $dark-accent-color;
 }
 
 
@@ -168,3 +169,66 @@ a {
 a.current-page, a.current-page:hover {
   color: $current-page-link-color;
 }
+
+// contact form
+.contact {
+  display: flex;
+  text-align: left;
+
+  p {
+    margin: 0;
+    // font-weight: bold;
+  }
+
+  input, textarea {
+    margin-bottom: 30px;
+    padding: 0.4em;
+    border-radius: 0.6em;
+
+    border: none;
+    background: $contact-color;
+    width: 300px;
+    color: white;
+  }
+
+  .flowText{
+    padding: 0;
+  }
+
+  .form{
+    width: 50%;
+  }
+  .extra{
+    padding-top: 8rem;
+    width: 50%;
+    background: $contact-color;
+    line-height: 1.5;
+  }
+
+  input.btn{
+    width: auto;
+    background: $accent-color;
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    border-radius: 2em;
+  }
+}
+
+.icon {
+  // height: 20px;
+  height: 1.5em;
+  // width: 20px;
+  display: inline;
+  vertical-align: bottom;
+}
+p.icon-p {
+  margin: 1.5em 0;
+
+}
+
+// i {
+//   display: inline;
+//   height: 20px;
+//   width: 20px;
+// }

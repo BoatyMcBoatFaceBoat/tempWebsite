@@ -42,11 +42,17 @@ $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
     <form action="xyzzy.php" method="post">
       <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
       <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
-      <p>Your name <input type="text" name="name" required="required" /></p>
-      <p>E-mail address <input type="email" name="email" required="required" /></p>
-      <p>Subject <input type="text" name="subject" required="required" /></p>
-      <p>Your message <textarea name="message" rows="8" cols="35" required="required"></textarea></p>
-        <p><?php echo $captcha[$captchaIndex]['q']; ?> <input type="text" name="captcha" required="required" /></p>
+      <p>Your name </p> 
+      <input type="text" name="name" required="required" />
+      <p>E-mail address</p> 
+      <input type="email" name="email" required="required" />
+      <p>Subject</p> 
+      <input type="text" name="subject" required="required" />
+      <p>Your message</p>
+      <textarea name="message" rows="8" cols="35" required="required"></textarea>
+      <p><?php echo $captcha[$captchaIndex]['q']; ?> </p>
+      <input type="text" name="captcha" required="required" />
+
       <p>
         <input type="submit" value="Send"/>
       </p>

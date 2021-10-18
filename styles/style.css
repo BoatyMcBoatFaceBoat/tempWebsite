@@ -9,9 +9,10 @@ div {
           box-sizing: border-box;
 }
 
-h2 {
+h2, h1 {
   font-size: 2rem;
   margin: 1em 0;
+  color: #373770;
 }
 
 body {
@@ -89,7 +90,7 @@ header {
   width: 100%;
   height: 20px;
   font-size: 0.8rem;
-  background: pink;
+  background: white;
 }
 
 .breadCrumb a {
@@ -158,5 +159,60 @@ a:hover, a:focus {
 
 a.current-page, a.current-page:hover {
   color: #373770;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.contact input, .contact textarea {
+  margin-bottom: 30px;
+  padding: 0.4em;
+  border-radius: 0.6em;
+  border: none;
+  background: #4d4b4b;
+  width: 300px;
+  color: white;
+}
+
+.contact .flowText {
+  padding: 0;
+}
+
+.contact .form {
+  width: 50%;
+}
+
+.contact .extra {
+  padding-top: 8rem;
+  width: 50%;
+  background: #4d4b4b;
+  line-height: 1.5;
+}
+
+.contact input.btn {
+  width: auto;
+  background: #5c5cb8;
+  display: block;
+  padding: 1em;
+  font-weight: bold;
+  border-radius: 2em;
+}
+
+.icon {
+  height: 1.5em;
+  display: inline;
+  vertical-align: bottom;
+}
+
+p.icon-p {
+  margin: 1.5em 0;
 }
 /*# sourceMappingURL=style.css.map */

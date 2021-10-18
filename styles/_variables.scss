@@ -5,10 +5,15 @@ $nav-height: 60px;
 $header-color: white;
 $content-color: grey;
 $navigation-color: lightgray;
-$breadcrumb-color: pink;
+$breadcrumb-color: white;
 
+$accent-color: rgb(92, 92, 184);
+$dark-accent-color: rgb(55, 55, 112);
 
 $link-color: grey;
-$active-link-color: rgb(92, 92, 184);
-$current-page-link-color: rgb(55, 55, 112);
+$active-link-color: $accent-color;
+$current-page-link-color: $dark-accent-color;
 $content-link-color: rgb(56, 55, 55);
+$contact-color: rgb(77, 75, 75);
+
+
