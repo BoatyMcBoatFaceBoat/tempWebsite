@@ -91,7 +91,7 @@ function getCurHref() {
   // let loc = paramList.substr(1, paramList.length);
   // console.log(loc)
   // return loc;
-  return;
+  return pagename;
 }
 
 function redrawBreadCrumbs(curLoc){
