@@ -41,6 +41,27 @@ const hierarchy = {
           ]
         }
       ]
+    },
+
+    {
+      name: 'values',
+      children: []
+    },
+    {
+      name: 'team',
+      children: []
+    },
+    {
+      name: 'contact',
+      children: []
+    },
+    {
+      name: 'impressum',
+      children: []
+    },
+    {
+      name: 'partners',
+      children: []
     }
   ]
 };
@@ -52,63 +73,30 @@ function findRouteTo(locationName){
   function findPath(pageName, obj = hierarchy, path = []) {
     path.push(obj.name);
     if (obj.name === pageName) {
-      console.log(path)
       return path;
     } else {
-      // if(!children.length) { return; }
       obj.children.forEach(chObj => {
         let subPath = path.slice();
         res = findPath(pageName, chObj, subPath);
       });
     }
-    // console.log(res)
     return res;
   }
 
-  console.log(findPath(locationName));
   return findPath(locationName);
 }
 
-console.log(findRouteTo('excel'));
-let ex = findRouteTo('excel')
-console.log(ex)
 
-
-// console.log(findPath('raku', hierarchy, []))
-// console.log(findPath('electron', hierarchy, []));
-// console.log(findPath('excel', hierarchy, []));
-// console.log(findPath('lang', hierarchy, []));
-
-function getCurHref() {
-  // const fullLink = window.location.href;
-  // const paramList = new URL(fullLink).hash;
-
-  let pagename = window.location.pathname;
-  console.log(pagename);
-  // pagename.replace('')
-  // const paramList = new URLSearchParams(searchParams);
-
-  // let loc = paramList.substr(1, paramList.length);
-  // console.log(loc)
-  // return loc;
-  return pagename;
-}
-
-function redrawBreadCrumbs(curLoc){
-  console.log(curLoc)
+function redrawBreadCrumbs(curLoc ){
   const crumbSpace = document.querySelector('.breadCrumb');
+  
   crumbSpace.innerHTML = "";
-  // let levels = findRouteTo(curLoc);
-  // let levels = [];
-  // levels.push(findPath(curLoc));
-  // console.log(findPath(curLoc))
   let levels = findRouteTo(curLoc);
   if(!levels.length){ return; }
 
   levels.forEach(level => {
     let link = document.createElement('a');
-    link.setAttribute('href', '#'+level);
-    // let link = document.createElement('span');
+    link.setAttribute('href', level);
     link.innerHTML = level;
     let span = document.createElement('span');
     span.innerHTML = '/';
@@ -118,29 +106,24 @@ function redrawBreadCrumbs(curLoc){
 }
 
 
-
-
 function loadWebsite(){
-  // redr
-  let loc = getCurHref();
-  //     let loc = 'model';
-  // redrawBreadCrumbs('raku');
-  redrawBreadCrumbs(loc);
-  // console.log(navLinks);
-  // for (let breadLink of breadLinks){
-  //   breadLink.addEventListener('click', () => {
-  //     // direct page here
 
-  //     // window.location.reload(); //doesn work
+  let loc = window.location.pathname;
+  let addressArr = loc.replace(/\s*\/tempWebsite\//, "");
+  let subj;
+  let addArr = addressArr.split('/');
+  console.log(addArr)  
+  if(addArr.length > 1 ){
+    // lang = addressArr[0];
+    subj = addArr[1];
+  } else {
+    subj = addArr[0];
+  }
 
+  c('addressArr', addressArr);
+  c('subj', subj);
+  redrawBreadCrumbs(subj);
 
-
-  //     // let loc = getCurHref();
-  //     let loc = 'model';
-  //     redrawBreadCrumbs(loc);
-  //   })
-  // }
-  // return;
 
 
 }

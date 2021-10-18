@@ -17,7 +17,7 @@
     ?>/script/untangle.js"></script>
 </head>
 
-<body>
+<body onload="loadWebsite()">
   <header>
     <a href="#home"><img src="<?php
       if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
