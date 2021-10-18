@@ -9,6 +9,10 @@ html, body {
 
 }
 
+input, textarea {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 div {
   box-sizing: border-box;
 }
@@ -52,23 +56,23 @@ header {
   // height: calc(100vh - 10rem);
 
   // background: lightslategrey;
-  background: $content-color;
+  background: $background-color;
   min-height: calc(100vh - #{$header-height} - #{$breadcrumb-height} - #{$nav-height});
   display: block;
 
 }
 
 .content-wrapper {
-
   div {
     width: 85vw;
     max-width: 980px;
     margin: 0 auto;
     text-align: justify;
     line-height: 1.5;
-
+    background: $content-color;
     // background: green;
     padding: 1em;
+    min-height: calc(100vh - #{$header-height} - #{$breadcrumb-height} - #{$nav-height});
 
 
     a {
@@ -182,11 +186,11 @@ a.current-page, a.current-page:hover {
 
   input, textarea {
     margin-bottom: 30px;
-    padding: 0.4em;
+    padding: 0.6em;
     border-radius: 0.6em;
 
     border: none;
-    background: $contact-color;
+    background: $content-link-color;
     width: 300px;
     color: white;
   }
@@ -224,7 +228,7 @@ a.current-page, a.current-page:hover {
 }
 p.icon-p {
   margin: 1.5em 0;
-
+  font-weight: bold;
 }
 
 // i {
