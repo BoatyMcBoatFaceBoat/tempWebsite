@@ -177,10 +177,11 @@ a.current-page, a.current-page:hover {
 // contact form
 .contact {
   display: flex;
-  text-align: left;
+  
 
   p {
     margin: 0;
+    text-align: left;
     // font-weight: bold;
   }
 
