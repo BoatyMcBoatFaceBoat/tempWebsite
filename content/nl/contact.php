@@ -50,10 +50,10 @@ $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
     <form action="xyzzy.php" method="post">
       <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
       <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
-      <p>Uw naam <input type="text" name="name" required="required" /></p>
-      <p>E-mailaddres <input type="email" name="email" required="required" /></p>
-      <p>Onderwerp <input type="text" name="subject" required="required" /></p>
-      <p>Uw bericht <textarea name="message" rows="8" cols="35" required="required"></textarea></p>
+      <p>Uw naam </p> <input type="text" name="name" required="required" />
+      <p>E-mailaddres</p> <input type="email" name="email" required="required" /></p>
+      <p>Onderwerp</p> <input type="text" name="subject" required="required" /></p>
+      <p>Uw bericht</p> <textarea name="message" rows="8" cols="35" required="required"></textarea></p>
         <p><?php echo $captcha[$captchaIndex]['q']; ?> <input type="text" name="captcha" required="required" /></p>
       <p>
         <input type="submit" value="Verzend"/>
@@ -61,3 +61,4 @@ $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
     </form>
   </div>
 </div>
+
