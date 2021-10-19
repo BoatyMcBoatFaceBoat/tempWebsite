@@ -70,6 +70,35 @@ a.current-page, a.current-page:hover {
   color: #373770;
 }
 
+div.readmore-elm {
+  width: 100%;
+  background: #dbd9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 1em;
+  font-weight: bold;
+}
+
+div.readmore-elm p {
+  margin: 0;
+}
+
+div.readmore-elm div {
+  height: 100%;
+}
+
+.more-content {
+  display: none;
+  background: #dbd9d9;
+  padding: 1em 0;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -125,7 +154,7 @@ header {
   display: block;
 }
 
-.content-wrapper div {
+.content-wrapper div.content {
   width: 85vw;
   max-width: 980px;
   margin: 0 auto;
@@ -136,7 +165,7 @@ header {
   min-height: calc(100vh - 90px - 20px - 60px);
 }
 
-.content-wrapper div a {
+.content-wrapper div.content a {
   color: #464545;
   padding: 0;
   font-size: 1rem;

@@ -124,9 +124,20 @@ function loadWebsite(){
   c('subj', subj);
   redrawBreadCrumbs(subj);
 
+  const moreElms = $$('.more');
+  for(let moreElm of moreElms){
+    moreElm.addEventListener('click', function(event){
+      console.log(event);
+      let plus = moreElm.querySelector('.readmore-elm');
+      let text = moreElm.querySelector('.more-content');
+      plus.style.display = 'none';
+      text.style.display = 'block';
 
+    })
+  }
 
 }
+
 
 
 
