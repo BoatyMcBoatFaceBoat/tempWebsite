@@ -1,5 +1,6 @@
 @import "variables";
 @import "temp";
+@import "theme";
 
 
 html, body {
@@ -160,19 +161,7 @@ a.current-page, a.current-page:hover {
 } */
 
 
-a {
-  font-size: 0.8rem;
-  padding: 1em; 
-  color: $link-color;
-}
 
- a:hover,  a:focus {
-  color: $active-link-color;
-}
-
-a.current-page, a.current-page:hover {
-  color: $current-page-link-color;
-}
 
 // contact form
 .contact {
@@ -185,21 +174,6 @@ a.current-page, a.current-page:hover {
     // font-weight: bold;
   }
 
-  input, textarea {
-    margin-bottom: 30px;
-    padding: 0.6em;
-    border-radius: 0.6em;
-
-    border: none;
-    background: $content-link-color;
-    width: 300px;
-    color: white;
-  }
-
-  .flowText{
-    padding: 0;
-  }
-
   .form{
     width: 50%;
   }
@@ -210,14 +184,14 @@ a.current-page, a.current-page:hover {
     line-height: 1.5;
   }
 
-  input.btn{
-    width: auto;
-    background: $accent-color;
-    display: block;
-    padding: 1em;
-    font-weight: bold;
-    border-radius: 2em;
-  }
+  // input.btn{
+  //   width: auto;
+  //   background: $accent-color;
+  //   display: block;
+  //   padding: 1em;
+  //   font-weight: bold;
+  //   border-radius: 2em;
+  // }
 }
 
 .icon {
