@@ -1,0 +1,60 @@
+@import "variables";
+
+input, textarea {
+  margin-bottom: 30px;
+  padding: 0.6em;
+  border-radius: 0.6em;
+
+  border: none;
+  background: $content-link-color;
+  width: 300px;
+  color: white;
+  outline: none;
+  border: none;
+  transition: all 200ms ease-in-out;
+}
+
+input:focus, textarea:focus {
+  // outline: 2px solid $dark-accent-color;
+  border: 2px solid $dark-accent-color;
+}
+
+
+
+.btn {
+  width: auto;
+  background: $accent-color;
+  display: block;
+  padding: 1em;
+  font-weight: bold;
+  border-radius: 2em; 
+  // transition: all 200ms ease-in-out;
+  border: none;
+  outline: none;
+}
+
+.btn:hover, .btn:focus {
+  background: $dark-accent-color;
+  border: none;
+  outline: none;
+}
+
+.btn:active {
+  background: $darker-accent-color;
+  border: none;
+  outline: none;
+}
+
+a {
+  font-size: 0.8rem;
+  padding: 1em; 
+  color: $link-color;
+}
+
+a:hover,  a:focus {
+  color: $accent-color;
+}
+
+a.current-page, a.current-page:hover {
+  color: $dark-accent-color;
+}
