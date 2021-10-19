@@ -1,0 +1,56 @@
+@media screen and (max-width: 600px) {
+    body header {
+        background: hotpink;
+    }
+}
+
+header {
+    .lang {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        height: 90px;
+        width: 90px;
+        overflow: hidden;
+        &:hover {
+            height: auto;
+            overflow:visible;
+        }
+        .lang-item {
+            &.lang-active {
+                border-top: 0;
+                border-left: 1px solid #7f7fa3;
+                padding-left: 14px;
+            }
+            margin: 0;
+            display: block;
+            box-sizing: border-box;
+            border-top: 1px solid #7f7fa3;
+            height: 90px;
+            width: 90px;
+            padding: 15px;
+            background: $header-color;
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+.nav-wrapper {
+    .nav {
+        a{
+            border-radius: 5px;
+            &.active {
+                background: rgba(255,255,255,0.1);
+            }
+            &:hover,
+            &:focus {
+                background: rgba(255,255,255,0.2);
+                color: #eae9e9;
+            }
+        }
+    }
+}

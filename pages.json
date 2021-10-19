@@ -1,30 +1,107 @@
 {
-    "en": {
-        "home": "home.html",
-        "consultancy": "consultancy.html",
-        "contact": "contact.php",
-        "excel": "excel.html",
-        "impressum": "impressum.html",
-        "language": "language.html",
-        "model": "model.html",
-        "partners": "partners.html",
-        "raku": "raku.html",
-        "software": "software.html",
-        "team": "team.html",
-        "values": "values.html"
+    "home": {
+        "lang": {
+            "en": "Home",
+            "nl": "Home",
+            "de": "Home"
+        },
+        "filename": "home.html",
+        "parent": false
     },
-    "nl": {
-        "home": "home.html",
-        "consultancy": "consultancy.html",
-        "contact": "contact.php",
-        "excel": "excel.html",
-        "impressum": "impressum.html",
-        "language": "language.html",
-        "model": "model.html",
-        "partners": "partners.html",
-        "raku": "raku.html",
-        "software": "software.html",
-        "team": "team.html",
-        "values": "values.html"
+    "excel": {
+        "lang": {
+            "en": "Excel",
+            "nl": "Excel"
+        },
+        "filename": "excel.html",
+        "parent": "home" 
+    },
+    "consultancy": {
+        "lang": {
+            "en": "Consultancy",
+            "nl": "Consultancy"
+        },
+        "filename": "consultancy.html",
+        "parent": "home"
+    },
+    "software": {
+        "lang": {
+            "en": "Software",
+            "nl": "Software"
+        },
+        "filename": "software.html",
+        "parent": "consultancy"
+    },
+    "model": {
+        "lang": {
+            "en": "Model",
+            "nl": "Model"
+        },
+        "filename": "model.html",
+        "parent": "consultancy"
+    },
+    "language": {
+        "lang": {
+            "en": "Language",
+            "nl": "Taal"
+        },
+        "filename": "language.html",
+        "parent": "model"
+    },
+    "electron": {
+        "lang": {
+            "en": "Electron",
+            "nl": "Electron"
+        },
+        "filename": "electron.html",
+        "parent": "software"
+    },
+    "raku": {
+        "lang": {
+            "en": "Raku",
+            "nl": "Raku"
+        },
+        "filename": "raku.html",
+        "parent": "software"
+    },
+    "values": {
+        "lang": {
+            "en": "Values",
+            "nl": "Waarden"
+        },
+        "filename": "values.html",
+        "parent": "home"
+    },
+    "team": {
+        "lang": {
+            "en": "Team",
+            "nl": "Team"
+        },
+        "filename": "team.html",
+        "parent": "home"
+    },
+    "contact": {
+        "lang": {
+            "en": "Contact",
+            "nl": "Contact"
+        },
+        "filename": "contact.php",
+        "parent": "home"
+    },
+    "impressum": {
+        "lang": {
+            "en": "Impressum",
+            "nl": "Impressum"
+        },
+        "filename": "impressum.html",
+        "parent": "home"
+    },
+    "partners": {
+        "lang": {
+            "en": "Partners",
+            "nl": "Partners"
+        },
+        "filename": "partners.html",
+        "parent": "home"
     }
 }
