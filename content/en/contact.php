@@ -37,7 +37,7 @@ $captchaIndex = rand(0, count($captcha) - 1);
 $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
 ?>
 <div>
-  <h1> Contact</h1>
+  <h1>Contact</h1>
   <div class="contact flowText">
     <form action="xyzzy.php" method="post">
       <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
