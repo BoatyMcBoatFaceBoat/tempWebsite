@@ -3,8 +3,8 @@ input, textarea {
   padding: 0.6em;
   border-radius: 0.6em;
   border: none;
-  background: #383737;
-  width: 300px;
+  background: #dbd9d9;
+  width: 100%;
   color: white;
   outline: none;
   border: none;
@@ -46,6 +46,7 @@ input:focus, textarea:focus {
   border: none;
   padding: 1em;
   color: white;
+  margin-bottom: 0;
 }
 
 .btn[type="submit"]:hover, .btn[type="submit"]:focus {
@@ -58,7 +59,7 @@ input:focus, textarea:focus {
 a {
   font-size: 0.8rem;
   padding: 1em;
-  color: grey;
+  color: #eae9e9;
 }
 
 a:hover, a:focus {
@@ -103,7 +104,7 @@ header {
   left: 0px;
   right: 0px;
   height: 90px;
-  background: white;
+  background: #373770;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,7 +120,7 @@ header {
 .content-wrapper {
   /* grid-area: 'content'; */
   /* height: calc(100vh - 2em -1rem); */
-  background: #7474ac;
+  background: #7474ac69;
   min-height: calc(100vh - 90px - 20px - 60px);
   display: block;
 }
@@ -130,15 +131,19 @@ header {
   margin: 0 auto;
   text-align: justify;
   line-height: 1.5;
-  background: grey;
+  background: #eae9e9;
   padding: 1em;
   min-height: calc(100vh - 90px - 20px - 60px);
 }
 
 .content-wrapper div a {
-  color: #383737;
+  color: #464545;
   padding: 0;
   font-size: 1rem;
+}
+
+.content-wrapper .contact {
+  padding: 0;
 }
 
 .nav-wrapper {
@@ -147,7 +152,7 @@ header {
   left: 0px;
   right: 0px;
   /* grid-area: foooter; */
-  background: lightgray;
+  background: #464545;
   /* height: 100px; */
   height: 60px;
   display: -webkit-box;
@@ -167,7 +172,7 @@ header {
   width: 100%;
   height: 20px;
   font-size: 0.8rem;
-  background: white;
+  background: #373770a3;
 }
 
 .breadCrumb a {
@@ -242,7 +247,7 @@ a.current-page, a.current-page:hover {
 .contact .extra {
   padding-top: 8rem;
   width: 50%;
-  background: #7a7979;
+  background: #dbd9d9;
   line-height: 1.5;
 }
 

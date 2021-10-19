@@ -6,8 +6,10 @@ input, textarea {
   border-radius: 0.6em;
 
   border: none;
-  background: $content-link-color;
-  width: 300px;
+  background: $contact-color;
+  // padding-right: 1em;
+  // width: 300px;
+  width: 100%;
   color: white;
   outline: none;
   border: none;
@@ -56,6 +58,7 @@ input:focus, textarea:focus {
   border: none;
   padding: 1em;
   color: white;
+  margin-bottom: 0;
 }
 
 .btn[type="submit"]:hover, .btn[type="submit"]:focus{ 
