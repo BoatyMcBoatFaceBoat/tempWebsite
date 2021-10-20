@@ -72,101 +72,59 @@ const hierarchy = {
 };
 
 
-function findRouteTo(locationName){
-  let res = [];
-
-  function findPath(pageName, obj = hierarchy, path = []) {
-    path.push(obj.name);
-    if (obj.name === pageName) {
-      return path;
-    } else {
-      obj.children.forEach(chObj => {
-        let subPath = path.slice();
-        res = findPath(pageName, chObj, subPath);
-      });
-    }
-    return res;
-  }
-
-  return findPath(locationName);
-}
-
-
-
-
 function loadWebsite(){
-
-  let loc = window.location.pathname;
-  let addressArr = loc.replace(/\s*\/tempWebsite\//, "");
-  let subj;
-  let addArr = addressArr.split('/');
-  console.log(addArr)  
-  if(addArr.length > 1 ){
-    // lang = addressArr[0];
-    subj = addArr[1];
-  } else {
-    subj = addArr[0];
-  }
-
-  c('addressArr', addressArr);
-  c('subj', subj);
-  // redrawBreadCrumbs(subj);
-
-  const moreElms = $$('.expand');
-  // const moreBtns = $$('.expand');
-
-  let more = false;
-
-  // for(let moreElm of moreElms){
   let plus = $('.readmore-elm');
   let minus = $('.readless-elm');
   let text = $('.more-content');
   plus.classList.add('show');
 
-  // plus.style.display = 'flex';
-  // text.style.height = '0px';
-  // text.style.display = 'none';
-  // minus.style.display = 'none';
-
-    // moreElm.addEventListener('click', function(event){
-    //   // console.log(event);
-
-    //   if(!more){
-    //     plus.style.display = 'none';
-    //     // text.style.display = 'block';
-    //     text.style.height = 'auto';
-    //     minus.style.display = 'flex';
-    //   } else {
-    //     plus.style.display = 'flex';
-    //     text.style.height = '0px';
-    //     // text.style.display = 'none';
-    //     minus.style.display = 'none';
-    //   }
-
-    //   more = !more;
-  
-    // })
-
-
   plus.addEventListener('click', ()=>{
     console.log('hellp')
     text.classList.toggle('show', true);
     plus.classList.toggle('show', false);
-
     minus.classList.toggle('show', true);
-
   })
 
   minus.addEventListener('click', ()=>{
     text.classList.toggle('show', false);
     plus.classList.toggle('show', true);
-
     minus.classList.toggle('show', false);
-
   })
-  // }
-
 }
+
+
+
+// let loc = window.location.pathname;
+// let addressArr = loc.replace(/\s*\/tempWebsite\//, "");
+// let subj;
+// let addArr = addressArr.split('/');
+// console.log(addArr)  
+// if(addArr.length > 1 ){
+//   // lang = addressArr[0];
+//   subj = addArr[1];
+// } else {
+//   subj = addArr[0];
+// }
+
+// function findRouteTo(locationName){
+//   let res = [];
+
+//   function findPath(pageName, obj = hierarchy, path = []) {
+//     path.push(obj.name);
+//     if (obj.name === pageName) {
+//       return path;
+//     } else {
+//       obj.children.forEach(chObj => {
+//         let subPath = path.slice();
+//         res = findPath(pageName, chObj, subPath);
+//       });
+//     }
+//     return res;
+//   }
+
+//   return findPath(locationName);
+// }
+
 
 
 // function redrawBreadCrumbs(curLoc ){
