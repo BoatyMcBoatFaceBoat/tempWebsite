@@ -4,7 +4,6 @@
 
 
 html, body {
-  height: 100%;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   
@@ -28,15 +27,11 @@ h2, h1 {
 }
 
 
-body {
-  /* display: grid; */
-  /* grid-template-areas: 'header' 'content' 'foooter'; */
-}
 
 header {
   /* grid-area: 'header'; */
   /* height: 40px; */
-  position: relative;
+  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -112,7 +107,6 @@ header {
   width: 100%;
   height: $breadcrumb-height;
   font-size: 0.8rem;
-  background: $breadcrumb-color;
   display: flex;
   justify-content: flex-start;
   align-items: center;

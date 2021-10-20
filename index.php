@@ -175,7 +175,7 @@ $menuPages = array(
   <!-- <div class="nav-wrapper"> -->
   
 
-  <div class="nav-wrapper">
+  <div class="nav-wrapper footer">
     <nav class="nav">
       <ul>
         <?php

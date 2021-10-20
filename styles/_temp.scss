@@ -34,11 +34,24 @@ header {
         }
     }
 }
+.breadCrumb {
+  position: fixed;
+  top: $header-height;
+  left: 0px;
+  right: 0px;
+  background: $header-secondairy-color;
+}
+
+.content-wrapper {
+    margin-top: ($header-height + $breadcrumb-height);
+    min-height: ($header-height + $breadcrumb-height + $nav-height);
+}
 
 .header-menu {
     display: flex;
     height: 100%;
     margin-left: 20px;
+    z-index: 1;
     .header-menu-nav {
         height: 100%;
         ul {
@@ -127,6 +140,11 @@ header {
     }
 }
 .nav-wrapper {
+    &.footer {
+        max-width: 100vw;
+        overflow: hidden;
+        z-index: 2;
+    }
     .nav {
         a{
             border-radius: 5px;
