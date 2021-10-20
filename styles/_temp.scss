@@ -22,6 +22,7 @@ header {
             margin: 0;
             display: block;
             box-sizing: border-box;
+            z-index: 1;
             border-top: 1px solid $header-secondairy-color;
             height: $header-height;
             width: $header-height;
@@ -35,15 +36,11 @@ header {
     }
 }
 .breadCrumb {
-  position: fixed;
-  top: $header-height;
-  left: 0px;
-  right: 0px;
-  background: $header-secondairy-color;
+    margin-top: $header-height;
+    background: $header-secondairy-color;
 }
 
 .content-wrapper {
-    margin-top: ($header-height + $breadcrumb-height);
     min-height: ($header-height + $breadcrumb-height + $nav-height);
 }
 
@@ -110,6 +107,7 @@ header {
                     overflow: visible;
                     ul {
                         display: block;
+                        z-index: 1;
                     }
                 }
                 &.close {
