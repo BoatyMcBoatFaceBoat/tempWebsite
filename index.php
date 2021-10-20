@@ -124,18 +124,32 @@ $menu = array(
 
   <div class="content-wrapper">
     <div class="content"><?php
-  if(!empty($pages->$page)) {
-    if(!empty($pages->$page->lang->$lang)) {
-      // echo "Deze pagina is wel beschikbaar in uw taalversie.";
-      include('content/' . $lang . '/' . $pages->$page->filename);
+    if(!empty($pages->$page)) {
+      if(!empty($pages->$page->lang->$lang)) {
+        // echo "Deze pagina is wel beschikbaar in uw taalversie.";
+        include('content/' . $lang . '/' . $pages->$page->filename);
+      } else {
+        echo "Deze pagina is niet beschikbaar in uw taalversie.";
+      }
     } else {
-      echo "Deze pagina is niet beschikbaar in uw taalversie.";
+      echo "Deze pagina bestaat niet.";
     }
-  } else {
-    echo "Deze pagina bestaat niet.";
-  }
   ?></div>
+
+  <div class="contact-element">
+    <div class='phone'> 
+      <img class="icon" src="<?php
+          if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
+            echo '/tempWebsite';
+          }
+        ?>/media/telephone_icon.png" alt="address">
+    </div>
+
+    <p>contact us</p>
+      
   </div>
+ 
+</div>
 
   <!-- <div class="nav-wrapper"> -->
   

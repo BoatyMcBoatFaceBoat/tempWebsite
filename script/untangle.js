@@ -76,20 +76,38 @@ function loadWebsite(){
   let plus = $('.readmore-elm');
   let minus = $('.readless-elm');
   let text = $('.more-content');
-  plus.classList.add('show');
+  let phone = $('.contact-element');
 
-  plus.addEventListener('click', ()=>{
-    console.log('hellp')
-    text.classList.toggle('show', true);
-    plus.classList.toggle('show', false);
-    minus.classList.toggle('show', true);
+  if(plus){
+    plus.classList.add('show');
+
+    plus.addEventListener('click', ()=>{
+      console.log('hellp')
+      text.classList.toggle('show', true);
+      plus.classList.toggle('show', false);
+      minus.classList.toggle('show', true);
+    })
+  
+    minus.addEventListener('click', ()=>{
+      text.classList.toggle('show', false);
+      plus.classList.toggle('show', true);
+      minus.classList.toggle('show', false);
+    })
+  }
+
+
+  phone.addEventListener('mouseover', () => {
+    console.log('mouseover')
+    phone.classList.add('open');
   })
 
-  minus.addEventListener('click', ()=>{
-    text.classList.toggle('show', false);
-    plus.classList.toggle('show', true);
-    minus.classList.toggle('show', false);
+  phone.addEventListener('mouseout', () => {
+    phone.classList.remove('open');
   })
+
+
+
+
 }
 
 
