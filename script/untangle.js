@@ -125,14 +125,33 @@ function loadWebsite(){
   redrawBreadCrumbs(subj);
 
   const moreElms = $$('.more');
+  let more = false;
   for(let moreElm of moreElms){
+    let plus = moreElm.querySelector('.readmore-elm');
+    let minus = moreElm.querySelector('.readless-elm');
+    let text = moreElm.querySelector('.more-content');
+    plus.style.display = 'flex';
+    text.style.height = '0px';
+    // text.style.display = 'none';
+    minus.style.display = 'none';
+
     moreElm.addEventListener('click', function(event){
       console.log(event);
-      let plus = moreElm.querySelector('.readmore-elm');
-      let text = moreElm.querySelector('.more-content');
-      plus.style.display = 'none';
-      text.style.display = 'block';
 
+      if(!more){
+        plus.style.display = 'none';
+        // text.style.display = 'block';
+        text.style.height = 'auto';
+        minus.style.display = 'flex';
+      } else {
+        plus.style.display = 'flex';
+        text.style.height = '0px';
+        // text.style.display = 'none';
+        minus.style.display = 'none';
+      }
+
+      more = !more;
+  
     })
   }
 

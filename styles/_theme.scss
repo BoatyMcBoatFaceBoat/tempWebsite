@@ -85,12 +85,13 @@ a.current-page, a.current-page:hover {
   color: $dark-accent-color;
 }
 
-div.readmore-elm {
+div.readmore-elm, div.readless-elm {
   width: 100%;
   background: $contact-color; 
   // 
   // border: 2px solid red;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-content: center;
   padding: 1em;
@@ -100,13 +101,19 @@ div.readmore-elm {
     margin: 0;
   }
 
-  div {
-    height: 100%;
-  }
+  // div {
+  //   height: 100%;
+  // }
 }
 
 .more-content {
-  display: none;
-  background: $contact-color;
+  // display: none;
+  // background: none;
+  // background: pink;
+  overflow: none;
+  contain: paint;
   padding: 1em 0;
+   p{
+      width: 100%;
+   }
 }
