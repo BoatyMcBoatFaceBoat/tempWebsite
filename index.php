@@ -64,7 +64,7 @@ $menuPages = array(
       if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
         echo '/tempWebsite';
       }
-    ?>/media/logo.png" alt="logo" class="logo" /></a>
+    ?>/media/untangle_logo.png" alt="logo" class="logo" /></a>
     <div class="header-menu-icon">
       <span class="hamburger">
         <span class="top"></span>
