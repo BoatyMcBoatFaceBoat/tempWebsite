@@ -48,9 +48,9 @@ input:focus, textarea:focus {
 }
 
 .btn:active {
-  background: $darker-accent-color;
-  border: none;
-  outline: none;
+  // background: $darker-accent-color;
+  // border: none;
+  // outline: none;
 }
 
 .btn[type="submit"]{ 
@@ -116,11 +116,20 @@ a.current-page, a.current-page:hover {
 // }
 
 .more-content {
+  // display: flex;
+  // justify-content: flex-start;
   overflow: none;
   contain: paint;
-  padding: 1em 0;
+  padding:  0;
   height: 0px;
   transition: height 3s ease-in-out;
+
+}
+
+.content > div > div {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
 }
 
 // .readmore-elm:focus ~ .more-content     {
@@ -136,11 +145,10 @@ a.current-page, a.current-page:hover {
 
 .more-content.show {
   height: auto;
+  padding: 1em 0;
 }
 
-.readmore-elm {
 
-}
 
 .readmore-elm.show, .readless-elm.show {
   display: block;
@@ -148,4 +156,6 @@ a.current-page, a.current-page:hover {
 
 .readmore-elm, .readless-elm {
   display: none;
+  align-self: center;
+
 }
