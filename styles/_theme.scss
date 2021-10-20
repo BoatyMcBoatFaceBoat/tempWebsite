@@ -51,7 +51,7 @@ input:focus, textarea:focus {
   background: $darker-accent-color;
   border: none;
   outline: none;
-}
+} 
 
 .btn[type="submit"]{ 
   background: $accent-color;
@@ -83,4 +83,5 @@ a:hover,  a:focus {
 a.current-page, a.current-page:hover {
   color: $dark-accent-color;
 }
+
 

@@ -1,3 +1,60 @@
+@media screen and (max-width: 600px) {
+  body header {
+    background: hotpink;
+  }
+}
+
+header .lang {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  height: 90px;
+  width: 90px;
+  overflow: hidden;
+}
+
+header .lang:hover {
+  height: auto;
+  overflow: visible;
+}
+
+header .lang .lang-item {
+  margin: 0;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 1px solid #7f7fa3;
+  height: 90px;
+  width: 90px;
+  padding: 15px;
+  background: #373770;
+}
+
+header .lang .lang-item.lang-active {
+  border-top: 0;
+  border-left: 1px solid #7f7fa3;
+  padding-left: 14px;
+}
+
+header .lang .lang-item img {
+  width: 60px;
+  height: 60px;
+}
+
+.nav-wrapper .nav a {
+  border-radius: 5px;
+}
+
+.nav-wrapper .nav a.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-wrapper .nav a:hover, .nav-wrapper .nav a:focus {
+  background: rgba(255, 255, 255, 0.2);
+  color: #eae9e9;
+}
+
 input, textarea {
   margin-bottom: 30px;
   padding: 0.6em;
