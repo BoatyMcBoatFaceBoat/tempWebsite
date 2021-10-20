@@ -87,23 +87,6 @@ function findRouteTo(locationName){
 }
 
 
-function redrawBreadCrumbs(curLoc ){
-  const crumbSpace = document.querySelector('.breadCrumb');
-  
-  crumbSpace.innerHTML = "";
-  let levels = findRouteTo(curLoc);
-  if(!levels.length){ return; }
-
-  levels.forEach(level => {
-    let link = document.createElement('a');
-    link.setAttribute('href', level);
-    link.innerHTML = level;
-    let span = document.createElement('span');
-    span.innerHTML = '/';
-    crumbSpace.append(link);
-    crumbSpace.append(span);
-  })
-}
 
 
 function loadWebsite(){
@@ -124,40 +107,57 @@ function loadWebsite(){
   c('subj', subj);
   redrawBreadCrumbs(subj);
 
-  const moreElms = $$('.more');
-  let more = false;
-  for(let moreElm of moreElms){
-    let plus = moreElm.querySelector('.readmore-elm');
-    let minus = moreElm.querySelector('.readless-elm');
-    let text = moreElm.querySelector('.more-content');
-    plus.style.display = 'flex';
-    text.style.height = '0px';
-    // text.style.display = 'none';
-    minus.style.display = 'none';
+  // const moreElms = $$('.more');
+  // let more = false;
+  // for(let moreElm of moreElms){
+  //   let plus = moreElm.querySelector('.readmore-elm');
+  //   let minus = moreElm.querySelector('.readless-elm');
+  //   let text = moreElm.querySelector('.more-content');
+  //   plus.style.display = 'flex';
+  //   text.style.height = '0px';
+  //   // text.style.display = 'none';
+  //   minus.style.display = 'none';
 
-    moreElm.addEventListener('click', function(event){
-      console.log(event);
+  //   moreElm.addEventListener('click', function(event){
+  //     console.log(event);
 
-      if(!more){
-        plus.style.display = 'none';
-        // text.style.display = 'block';
-        text.style.height = 'auto';
-        minus.style.display = 'flex';
-      } else {
-        plus.style.display = 'flex';
-        text.style.height = '0px';
-        // text.style.display = 'none';
-        minus.style.display = 'none';
-      }
+  //     if(!more){
+  //       plus.style.display = 'none';
+  //       // text.style.display = 'block';
+  //       text.style.height = 'auto';
+  //       minus.style.display = 'flex';
+  //     } else {
+  //       plus.style.display = 'flex';
+  //       text.style.height = '0px';
+  //       // text.style.display = 'none';
+  //       minus.style.display = 'none';
+  //     }
 
-      more = !more;
+  //     more = !more;
   
-    })
-  }
+  //   })
+  // }
 
 }
 
 
+// function redrawBreadCrumbs(curLoc ){
+//   const crumbSpace = document.querySelector('.breadCrumb');
+  
+//   crumbSpace.innerHTML = "";
+//   let levels = findRouteTo(curLoc);
+//   if(!levels.length){ return; }
+
+//   levels.forEach(level => {
+//     let link = document.createElement('a');
+//     link.setAttribute('href', level);
+//     link.innerHTML = level;
+//     let span = document.createElement('span');
+//     span.innerHTML = '/';
+//     crumbSpace.append(link);
+//     crumbSpace.append(span);
+//   })
+// }
 
 
 

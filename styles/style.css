@@ -74,16 +74,6 @@ a.current-page, a.current-page:hover {
 div.readmore-elm, div.readless-elm {
   width: 100%;
   background: #dbd9d9;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
   padding: 1em;
@@ -94,14 +84,44 @@ div.readmore-elm p, div.readless-elm p {
   margin: 0;
 }
 
+.readmore-elm, .readless-elm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.readless-elm {
+  display: none;
+}
+
+.readmore-elm:focus ~ .readless-elm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.readmore-elm:focus, .readless-elm:focus {
+  display: none;
+}
+
 .more-content {
   overflow: none;
   contain: paint;
   padding: 1em 0;
+  height: 0px;
+  -webkit-transition: height 3s ease-in-out;
+  transition: height 3s ease-in-out;
 }
 
-.more-content p {
-  width: 100%;
+.readmore-elm:focus ~ .more-content {
+  height: auto;
 }
 
 html, body {
