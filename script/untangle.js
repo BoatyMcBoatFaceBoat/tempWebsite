@@ -8,6 +8,11 @@ const j = function (object) {
   return console.log(JSON.stringify(object));
 }
 
+const $ = function(queryName) {
+  return document.querySelector(queryName);
+}
+
+
 const $$ = function(queryName) {
   return document.querySelectorAll(queryName);
 }
@@ -105,37 +110,60 @@ function loadWebsite(){
 
   c('addressArr', addressArr);
   c('subj', subj);
-  redrawBreadCrumbs(subj);
+  // redrawBreadCrumbs(subj);
 
-  // const moreElms = $$('.more');
-  // let more = false;
+  const moreElms = $$('.expand');
+  // const moreBtns = $$('.expand');
+
+  let more = false;
+
   // for(let moreElm of moreElms){
-  //   let plus = moreElm.querySelector('.readmore-elm');
-  //   let minus = moreElm.querySelector('.readless-elm');
-  //   let text = moreElm.querySelector('.more-content');
-  //   plus.style.display = 'flex';
-  //   text.style.height = '0px';
-  //   // text.style.display = 'none';
-  //   minus.style.display = 'none';
+  let plus = $('.readmore-elm');
+  let minus = $('.readless-elm');
+  let text = $('.more-content');
+  plus.classList.add('show');
 
-  //   moreElm.addEventListener('click', function(event){
-  //     console.log(event);
+  // plus.style.display = 'flex';
+  // text.style.height = '0px';
+  // text.style.display = 'none';
+  // minus.style.display = 'none';
 
-  //     if(!more){
-  //       plus.style.display = 'none';
-  //       // text.style.display = 'block';
-  //       text.style.height = 'auto';
-  //       minus.style.display = 'flex';
-  //     } else {
-  //       plus.style.display = 'flex';
-  //       text.style.height = '0px';
-  //       // text.style.display = 'none';
-  //       minus.style.display = 'none';
-  //     }
+    // moreElm.addEventListener('click', function(event){
+    //   // console.log(event);
 
-  //     more = !more;
+    //   if(!more){
+    //     plus.style.display = 'none';
+    //     // text.style.display = 'block';
+    //     text.style.height = 'auto';
+    //     minus.style.display = 'flex';
+    //   } else {
+    //     plus.style.display = 'flex';
+    //     text.style.height = '0px';
+    //     // text.style.display = 'none';
+    //     minus.style.display = 'none';
+    //   }
+
+    //   more = !more;
   
-  //   })
+    // })
+
+
+  plus.addEventListener('click', ()=>{
+    console.log('hellp')
+    text.classList.toggle('show', true);
+    plus.classList.toggle('show', false);
+
+    minus.classList.toggle('show', true);
+
+  })
+
+  minus.addEventListener('click', ()=>{
+    text.classList.toggle('show', false);
+    plus.classList.toggle('show', true);
+
+    minus.classList.toggle('show', false);
+
+  })
   // }
 
 }

@@ -24,11 +24,11 @@ input:focus, textarea:focus {
 
 
 .btn {
-  width: auto;
+  // width: auto;
   // background: $accent-color;
   background: white;
   color: $accent-color;
-  display: block;
+  // display: block;
   padding: 0.5em;
   font-weight: bold;
   border-radius: 2em; 
@@ -85,35 +85,35 @@ a.current-page, a.current-page:hover {
   color: $dark-accent-color;
 }
 
-div.readmore-elm, div.readless-elm {
-  width: 100%;
-  background: $contact-color; 
-  align-content: center;
-  padding: 1em;
-  font-weight: bold;
+// div.readmore-elm, div.readless-elm {
+//   width: 100%;
+//   background: $contact-color; 
+//   align-content: center;
+//   padding: 1em;
+//   font-weight: bold;
 
-  p {
-    margin: 0;
-  }
-}
+//   p {
+//     margin: 0;
+//   }
+// }
 
-.readmore-elm, .readless-elm{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+// .readmore-elm, .readless-elm{
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+// }
 
-.readless-elm {
-  display: none;
-}
+// .readless-elm {
+//   display: none;
+// }
 
-.readmore-elm:focus ~ .readless-elm {
-  display: flex;
-}
+// .readmore-elm:focus ~ .readless-elm {
+//   display: flex;
+// }
 
-.readmore-elm:focus, .readless-elm:focus{
-  display: none;
-}
+// .readmore-elm:focus, .readless-elm:focus{
+//   display: none;
+// }
 
 .more-content {
   overflow: none;
@@ -123,11 +123,29 @@ div.readmore-elm, div.readless-elm {
   transition: height 3s ease-in-out;
 }
 
-.readmore-elm:focus ~ .more-content     {
-  height: auto;
-}
+// .readmore-elm:focus ~ .more-content     {
+//   height: auto;
+// }
 
 // .sofwaremore
 
 
+// .more-content {
+//   height: 0px;
+// }
 
+.more-content.show {
+  height: auto;
+}
+
+.readmore-elm {
+
+}
+
+.readmore-elm.show, .readless-elm.show {
+  display: block;
+}
+
+.readmore-elm, .readless-elm {
+  display: none;
+}
