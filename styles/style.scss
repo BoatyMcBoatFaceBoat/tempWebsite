@@ -76,15 +76,32 @@ header {
     background: $content-color;
 
     // background: green;
-    padding: 1em;
+    // padding: 1em;
     min-height: calc(100vh - #{$header-height} - #{$breadcrumb-height} - #{$nav-height});
 
 
     a {
       color: $content-link-color;
+      font-weight: bold;
       padding: 0;
       font-size: 1rem;
     }
+
+    a:hover,  a:focus {
+      color: $accent-color;
+    }
+  }
+
+  .content > div:not(.contact){
+    padding: 1em;
+  }
+
+  .content > div {
+    padding: 0;
+  }
+
+  .contact > div {
+    padding: 1em;
   }
 
 }
@@ -98,9 +115,15 @@ header {
   // }
 // }
 
-.contact div{
-  padding: 1em;
-}
+// .contact div{
+//   padding: 1em;
+// }
+
+// .content:has(.contact) {
+//   background: pink;
+// }
+
+
 
 .nav-wrapper {
   position: relative;
@@ -119,15 +142,16 @@ header {
 }
 
 /* breadcrumb */
+
 .breadCrumb {
-  /* background: rgb(174, 245, 245); */
   width: 100%;
   height: $breadcrumb-height;
   font-size: 0.8rem;
-
-  // margin: 1em;
   background: $breadcrumb-color;
-  
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: $link-color;
 }
 
 .breadCrumb a {
@@ -135,7 +159,10 @@ header {
 }
 
 
-/* navigation */
+/* bottom navigation */
+.nav-wrapper{
+  color: $link-color;
+}
 
 .nav-wrapper ul {
   display: flex;
@@ -144,7 +171,6 @@ header {
 
 .nav-wrapper p, .nav-wrapper ul {
   margin: 1em;
-
   align-self: flex-end;
 }
 
@@ -162,6 +188,13 @@ header {
 .nav ul {
   align-self: center;
 }
+
+.nav { 
+  a {
+    font-weight: bold;
+  }
+}
+
 
 /* .nav a {
   font-size: 0.8rem;
