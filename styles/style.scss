@@ -89,14 +89,18 @@ header {
 
 }
 
-.content:has(.contact) {
-  background: pink;
-}
+// .content:has(.contact) {
+//   background: pink;
+// }
 // .content-wrapper {
   // .contact-wrapper  {
   //   padding: 0;
   // }
 // }
+
+.contact div{
+  padding: 1em;
+}
 
 .nav-wrapper {
   position: relative;

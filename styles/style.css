@@ -171,8 +171,8 @@ header {
   font-size: 1rem;
 }
 
-.content:has(.contact) {
-  background: pink;
+.contact div {
+  padding: 1em;
 }
 
 .nav-wrapper {
