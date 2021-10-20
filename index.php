@@ -28,18 +28,21 @@
   
   <div class="breadCrumb"></div>
 
-  <div class="content-wrapper"><?php
-  $lang = 'nl';
-  $page = 'home';
-  if(!empty($_GET['lang'])) {
-    $lang = $_GET['lang'];
-  }
-  if(!empty($_GET['page'])) {
-    $page = $_GET['page'];
-  }
-  $pages = json_decode(file_get_contents('pages.json'));
-  include('content/' . $lang . '/' . $pages->$lang->$page);
-  ?>
+  <div class="content-wrapper">
+    <div class="content">
+      <?php
+      $lang = 'nl';
+      $page = 'home';
+      if(!empty($_GET['lang'])) {
+        $lang = $_GET['lang'];
+      }
+      if(!empty($_GET['page'])) {
+        $page = $_GET['page'];
+      }
+      $pages = json_decode(file_get_contents('pages.json'));
+      include('content/' . $lang . '/' . $pages->$lang->$page);
+      ?>
+    </div>
   </div>
 
   <!-- <div class="nav-wrapper"> -->
