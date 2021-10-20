@@ -24,14 +24,6 @@
         "filename": "consultancy.html",
         "parent": "home"
     },
-    "software": {
-        "lang": {
-            "en": "Software",
-            "nl": "Software"
-        },
-        "filename": "software.html",
-        "parent": "consultancy"
-    },
     "model": {
         "lang": {
             "en": "Model",
@@ -47,6 +39,14 @@
         },
         "filename": "language.html",
         "parent": "model"
+    },
+    "software": {
+        "lang": {
+            "en": "Software",
+            "nl": "Software"
+        },
+        "filename": "software.html",
+        "parent": "consultancy"
     },
     "electron": {
         "lang": {

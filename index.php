@@ -10,8 +10,7 @@ if(!empty($_GET['page'])) {
 $pages = json_decode(file_get_contents('pages.json'));
 $languages = array(
   'nl',
-  'en',
-  'de'
+  'en'
 );
 $aboutPages = array(
   'values',
@@ -21,8 +20,12 @@ $aboutPages = array(
   'partners'
 );
 
-$menu = array(
-  
+$menuPages = array(
+  'excel',
+  'consultancy',
+  'model',
+  'language',
+  array('software' => array('electron', 'raku'))
 );
 ?><html>
 
@@ -55,26 +58,58 @@ $menu = array(
       echo 'tempWebsite/';
     }
     if(!empty($_GET['lang'])) {
-      echo $lang;
+      echo $lang . '/';
     }
-    ?>/"><img src="<?php
+    ?>"><img src="<?php
       if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
         echo '/tempWebsite';
       }
     ?>/media/logo.png" alt="logo" class="logo" /></a>
-    <div class="nav-menu nav-wrapper">
-    <nav class="nav">
+    <div class="header-menu-icon">
+      <span class="hamburger">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </span>
+    </div>
+    <div class="header-menu">
+    <nav class="header-menu-nav">
       <ul>
         <?php
-          foreach($pages as $pageName => $menuItem) {
-            if(!in_array($pageName, $aboutPages)) {
-              if(!empty($menuItem->lang->$lang)) {
-              echo '<li><a href="' . $pageName . '"';
-              if($page === $pageName) {
-                echo ' class="active"';
-              }
-              echo '>' . $menuItem->lang->$lang . '</a></li>';
+          foreach($menuPages as $menuPage) {
+            $menuPageArray = '';
+            $openTrigger = '';
+            if(is_array($menuPage)) {
+              $menuPageKey = array_keys($menuPage)[0];
+              $menuPageArray = $menuPage[$menuPageKey];
+              $menuPage = $menuPageKey;
+              $openTrigger = ' <span class="trigger-open"></span>';
             }
+            if(!empty($pages->$menuPage->lang->$lang)) {
+              echo '<li';
+              if($page === $menuPage || !empty($openTrigger)) {
+                  echo ' class="';
+                if($page === $menuPage) {
+                  echo 'active ';
+                }
+                if(!empty($openTrigger)) {
+                  echo ' trigger-openable ';
+                }
+                echo '"';
+              }
+              echo '><a href="' . $menuPage . '">' . $pages->$menuPage->lang->$lang . $openTrigger . '</a>';
+              if(!empty($menuPageArray)) {
+                echo '<ul>';
+                foreach($menuPageArray as $subMenuPage) {
+                  echo '<li';
+                  if($page === $subMenuPage) {
+                    echo ' class="active"';
+                  }
+                  echo '><a href="' . $subMenuPage . '">' . $pages->$subMenuPage->lang->$lang . '</a>';
+                }
+                echo '</ul>';
+              }
+              echo '</li>';
             }
           }
         ?>
@@ -82,7 +117,7 @@ $menu = array(
     </nav>
   </div>
   <div class="lang">
-    <a class="lang-item lang-active">
+    <a class="lang-item lang-active trigger-open">
       <img src="<?php
         if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
           echo '/tempWebsite';
