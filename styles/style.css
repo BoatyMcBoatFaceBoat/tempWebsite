@@ -161,7 +161,8 @@ header {
   text-align: justify;
   line-height: 1.5;
   background: #eae9e9;
-  padding: 1em;
+  /* padding: 1em; */
+
   min-height: calc(100vh - 90px - 20px - 60px);
 }
 
@@ -171,7 +172,16 @@ header {
   font-size: 1rem;
 }
 
-.contact div {
+.content > div {
+  padding: 0;
+}
+
+.content > div:not(.contact) {
+  padding: 1em;
+
+}
+
+.contact > div {
   padding: 1em;
 }
 
