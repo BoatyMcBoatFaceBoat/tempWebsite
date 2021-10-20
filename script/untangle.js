@@ -8,6 +8,11 @@ const j = function (object) {
   return console.log(JSON.stringify(object));
 }
 
+const $ = function(queryName) {
+  return document.querySelector(queryName);
+}
+
+
 const $$ = function(queryName) {
   return document.querySelectorAll(queryName);
 }
@@ -67,67 +72,78 @@ const hierarchy = {
 };
 
 
-function findRouteTo(locationName){
-  let res = [];
+function loadWebsite(){
+  let plus = $('.readmore-elm');
+  let minus = $('.readless-elm');
+  let text = $('.more-content');
+  plus.classList.add('show');
 
-  function findPath(pageName, obj = hierarchy, path = []) {
-    path.push(obj.name);
-    if (obj.name === pageName) {
-      return path;
-    } else {
-      obj.children.forEach(chObj => {
-        let subPath = path.slice();
-        res = findPath(pageName, chObj, subPath);
-      });
-    }
-    return res;
-  }
+  plus.addEventListener('click', ()=>{
+    console.log('hellp')
+    text.classList.toggle('show', true);
+    plus.classList.toggle('show', false);
+    minus.classList.toggle('show', true);
+  })
 
-  return findPath(locationName);
-}
-
-
-function redrawBreadCrumbs(curLoc ){
-  const crumbSpace = document.querySelector('.breadCrumb');
-  
-  crumbSpace.innerHTML = "";
-  let levels = findRouteTo(curLoc);
-  if(!levels.length){ return; }
-
-  levels.forEach(level => {
-    let link = document.createElement('a');
-    link.setAttribute('href', level);
-    link.innerHTML = level;
-    let span = document.createElement('span');
-    span.innerHTML = '/';
-    crumbSpace.append(link);
-    crumbSpace.append(span);
+  minus.addEventListener('click', ()=>{
+    text.classList.toggle('show', false);
+    plus.classList.toggle('show', true);
+    minus.classList.toggle('show', false);
   })
 }
 
 
-function loadWebsite(){
 
-  let loc = window.location.pathname;
-  let addressArr = loc.replace(/\s*\/tempWebsite\//, "");
-  let subj;
-  let addArr = addressArr.split('/');
-  console.log(addArr)  
-  if(addArr.length > 1 ){
-    // lang = addressArr[0];
-    subj = addArr[1];
-  } else {
-    subj = addArr[0];
-  }
+// let loc = window.location.pathname;
+// let addressArr = loc.replace(/\s*\/tempWebsite\//, "");
+// let subj;
+// let addArr = addressArr.split('/');
+// console.log(addArr)  
+// if(addArr.length > 1 ){
+//   // lang = addressArr[0];
+//   subj = addArr[1];
+// } else {
+//   subj = addArr[0];
+// }
 
-  c('addressArr', addressArr);
-  c('subj', subj);
-  redrawBreadCrumbs(subj);
+// function findRouteTo(locationName){
+//   let res = [];
+
+//   function findPath(pageName, obj = hierarchy, path = []) {
+//     path.push(obj.name);
+//     if (obj.name === pageName) {
+//       return path;
+//     } else {
+//       obj.children.forEach(chObj => {
+//         let subPath = path.slice();
+//         res = findPath(pageName, chObj, subPath);
+//       });
+//     }
+//     return res;
+//   }
+
+//   return findPath(locationName);
+// }
 
 
 
-}
+// function redrawBreadCrumbs(curLoc ){
+//   const crumbSpace = document.querySelector('.breadCrumb');
+  
+//   crumbSpace.innerHTML = "";
+//   let levels = findRouteTo(curLoc);
+//   if(!levels.length){ return; }
 
+//   levels.forEach(level => {
+//     let link = document.createElement('a');
+//     link.setAttribute('href', level);
+//     link.innerHTML = level;
+//     let span = document.createElement('span');
+//     span.innerHTML = '/';
+//     crumbSpace.append(link);
+//     crumbSpace.append(span);
+//   })
+// }
 
 
 

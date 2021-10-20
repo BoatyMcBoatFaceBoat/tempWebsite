@@ -61,7 +61,7 @@ $menu = array(
       if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
         echo '/tempWebsite';
       }
-    ?>/media/logo.png" alt="logo" class="logo" /></a>
+    ?>/media/untangle_logo_light.png" alt="logo" class="logo" /></a>
     <div class="nav-menu nav-wrapper">
     <nav class="nav">
       <ul>
