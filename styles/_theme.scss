@@ -70,7 +70,7 @@ a.current-page, a.current-page:hover {
   padding:  0;
   height: 0px;
   transition: height 3s ease-in-out;
-  p {
+  p, ul {
     display: none;
   }
 }
@@ -84,9 +84,17 @@ a.current-page, a.current-page:hover {
 .more-content.show {
   height: auto;
   padding: 1em 0;
-  p{
+  p {
     display: inline;
   }
+
+  ul {
+    display: block;
+    li {
+      display: list-item;
+    }
+  }
+
 }
 
 .readmore-elm.show, .readless-elm.show {

@@ -81,11 +81,12 @@ header {
   div.content {
     width: 85vw;
     max-width: 980px;
-    margin: 0 auto;
+    // margin: 0 auto;
+    margin: 20px auto;
     text-align: justify;
     line-height: 1.5;
     background: $content-color;
-    min-height: calc(100vh - #{$header-height} - #{$breadcrumb-height} - #{$nav-height});
+    // min-height: calc(100vh - #{$header-height} - #{$breadcrumb-height} - #{$nav-height});
 
     a {
       color: $content-link-color;
