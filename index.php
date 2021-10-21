@@ -1,4 +1,5 @@
 <?php
+$company = 'Untangle Data';
 $lang = 'nl';
 $page = 'home';
 if(!empty($_GET['lang'])) {
@@ -164,10 +165,26 @@ $menuPages = array(
       // echo "Deze pagina is wel beschikbaar in uw taalversie.";
       include('content/' . $lang . '/' . $pages->$page->filename);
     } else {
-      echo "Deze pagina is niet beschikbaar in uw taalversie.";
+      switch ($lang) {
+        case "nl":
+          echo "Deze pagina is niet beschikbaar in uw taalversie.";
+          break;
+        case "en":
+        default:
+          echo "This page is not available in your chosen language.";
+          break;
+      }
     }
   } else {
-    echo "Deze pagina bestaat niet.";
+    switch ($lang) {
+      case "nl":
+        echo "Deze pagina bestaat niet.";
+        break;
+      case "en":
+      default:
+        echo "This page is not available.";
+        break;
+    }
   }
   ?></div>
   </div>
@@ -188,7 +205,7 @@ $menuPages = array(
           }
         ?>
       </ul>
-      <p>this website was made by vandenHeuvelHLT Consultancy</p>
+      <p>this website was made by Van den Heuvel HLT Consultancy</p>
     </nav>
   </div>
 

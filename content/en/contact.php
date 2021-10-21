@@ -14,23 +14,23 @@ $captcha =  array(
   ),
   array(
     'q' => 'What year is next year (yyyy)?',
-    'a' => array('2022') // calculate this!
+    'a' => array(date('Y') + 1)
   ),
   array(
     'q' => 'What year is last year (yyyy)?',
-    'a' => array('2020') // calculate this!
+    'a' => array(date('Y') - 1)
   ),
   array(
     'q' => 'In the Peanuts cartoon, what is the name of the dog?',
-    'a' => array('Snoopy') // here and everywhere ignore case
+    'a' => array('snoopy') // here and everywhere ignore case
   ),
   array(
     'q' => 'The official language of France is ...?',
-    'a' => array('French')
+    'a' => array('french')
   ),
   array(
     'q' => 'King Arthur\'s castle is called ...?',
-    'a' => array('Camelot')
+    'a' => array('camelot')
   )
 );
 $captchaIndex = rand(0, count($captcha) - 1);
@@ -60,7 +60,7 @@ $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
 
 
   <div class="extra">
-    <p> Untangle is a trademark of Van den Heuvel HLT Consultancy.</p>
+    <p> <?php echo $company; ?> is a trademark of Van den Heuvel HLT Consultancy.</p>
     <p> Our office is in Malden near Nijmegen.</p>
     <p> Our KvK identification is 09205757. Theo van den Heuvel is the owner and manager.</p>
     <p class="icon-p">

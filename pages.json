@@ -10,8 +10,8 @@
     },
     "excel": {
         "lang": {
-            "en": "Excel",
-            "nl": "Excel"
+            "en": "Spreadsheets",
+            "nl": "Spreadsheets"
         },
         "filename": "excel.html",
         "parent": "home" 
@@ -26,8 +26,8 @@
     },
     "model": {
         "lang": {
-            "en": "Model",
-            "nl": "Model"
+            "en": "Modeling",
+            "nl": "Modellering"
         },
         "filename": "model.html",
         "parent": "consultancy"
@@ -42,8 +42,8 @@
     },
     "software": {
         "lang": {
-            "en": "Software",
-            "nl": "Software"
+            "en": "Software development",
+            "nl": "Softwareontwikkeling"
         },
         "filename": "software.html",
         "parent": "consultancy"
@@ -90,8 +90,8 @@
     },
     "impressum": {
         "lang": {
-            "en": "Impressum",
-            "nl": "Impressum"
+            "en": "Colophon",
+            "nl": "Colofon"
         },
         "filename": "impressum.html",
         "parent": "home"

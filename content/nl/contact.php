@@ -24,21 +24,21 @@ $captcha =  array(
     'q' => 'Welk dier verstopt met pasen eieren?',
     'a' => array('haas', 'paashaas')
   ),
-  array(
-    'q' => 'Ork ork ork, soep een je met een ...?',
-    'a' => array('lepel', 'spork')
-  ),
+  // array(
+  //   'q' => 'Ork ork ork, soep een je met een ...?',
+  //   'a' => array('lepel', 'spork')
+  // ),
   array(
     'q' => 'In de Peanuts-strip, hoe heet de hond?',
-    'a' => array('Snoopy')
+    'a' => array('snoopy')
   ),
   array(
     'q' => 'De officiële taal van Frankrijk is ...?',
-    'a' => array('Frans')
+    'a' => array('frans')
   ),
   array(
     'q' => 'Het kasteel van koning Arthur heet ...?',
-    'a' => array('Camelot')
+    'a' => array('camelot')
   )
 );
 $captchaIndex = rand(0, count($captcha) - 1);
@@ -66,7 +66,7 @@ $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
     </form>
   </div>
   <div class="extra">
-    <p>Van den Heuvel HLT Consultancy handelt onder de naam Untangle.</p>
+    <p>Van den Heuvel HLT Consultancy handelt onder de naam <?php echo $company; ?>.</p>
     <p>Ons kantoor bevindt zich in Malden vlakbij Nijmegen, in het oude Gemeentehuis.</p>
     <p> Ons KvK-nummer is 09205757. Theo van den Heuvel is de eigenaar.</p>
     <p class="icon-p">
