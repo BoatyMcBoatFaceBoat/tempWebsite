@@ -1,0 +1,73 @@
+html{
+  height:100%;
+}
+
+body{
+  height:100%;
+  margin: 0;
+  /*overflow: hidden;*/
+  font-family: Verdana, Geneva, sans-serif;
+}
+.node text {
+  font-size: 6pt;
+}
+.directory rect {
+  /* fill: #eeee44; */
+  fill: #99ff66;
+}
+.terminal rect {
+  fill: white;
+}
+rect {
+  /* fill: white; */
+  fill: #bbbbbb;
+  stroke: blue;
+  stroke-width: 1px;
+}
+.foreign rect {
+  fill: #ddaaaa;
+  stroke: red;
+  stroke-width: 2px;
+}
+text {
+  pointer-events: none;
+}
+line {
+  /* stroke: #cccc00; */
+  stroke: #33cc00;
+}
+line.extraneous {
+  /*stroke: #ccddff;*/
+  stroke: #cc0000;
+}
+path {
+  fill: none;
+  opacity: .25;
+}
+path.extlink {
+  /*stroke: blue;*/
+  stroke: blue;
+}
+path.foreign {
+  /*stroke: blue;*/
+  stroke: red;
+}
+path.extlink:hover {
+  fill: none;
+  stroke: red;
+  opacity: .75;
+  /*z-index: 1;*/
+}
+path.extraneous {
+  stroke: red;
+}
+
+#infobox {
+  position: fixed;
+  left: 150px;
+  top: 20px;
+  z-index: 1;
+  background: white;
+  border: 1px black solid;
+  box-shadow: 10px 10px 5px #888888;
+}
