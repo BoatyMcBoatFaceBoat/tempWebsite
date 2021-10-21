@@ -84,7 +84,7 @@ header {
     // margin: 0 auto;
     margin: 20px auto;
     text-align: justify;
-    line-height: 1.5;
+    line-height: 2.5;
     background: $content-color;
     // min-height: calc(100vh - #{$header-height} - #{$breadcrumb-height} - #{$nav-height});
 
@@ -213,7 +213,7 @@ footer{
     padding-top: 8rem;
     width: 50%;
     background: $contact-color;
-    line-height: 1.5;
+    // line-height: 1.5;
     // height: 100%; 
   }
 
