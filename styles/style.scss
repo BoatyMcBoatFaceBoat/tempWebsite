@@ -3,11 +3,10 @@
 @import "theme";
 
 
-html, body {
-  height: 100%;
+body {
+  // height: 100%;
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  
 
 }
 
@@ -28,10 +27,8 @@ h2, h1 {
 }
 
 
-body {
-  /* display: grid; */
-  /* grid-template-areas: 'header' 'content' 'foooter'; */
-}
+
+
 
 header {
   /* grid-area: 'header'; */
