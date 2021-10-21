@@ -53,6 +53,7 @@ $menuPages = array(
 
 <body onload="loadWebsite()">
   <header>
+    <div class="left-header-items"></div>
     <a href="/<?php
     if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
       echo 'tempWebsite/';
@@ -202,8 +203,8 @@ $menuPages = array(
           }
         ?>
       </ul>
-      <p>this website was made by vandenHeuvelHLT Consultancy</p>
     </nav>
+    <p>this&nbsp;website&nbsp;was&nbsp;made&nbsp;by&nbsp;van&nbsp;den&nbsp;Heuvel&nbsp;HLT&nbsp;Consultancy</p>
   </footer>
 
 </body>
