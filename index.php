@@ -73,78 +73,78 @@ $menuPages = array(
       </span>
     </div>
     <div class="header-menu">
-    <nav class="header-menu-nav">
-      <ul>
-        <?php
-          foreach($menuPages as $menuPage) {
-            $menuPageArray = '';
-            $openTrigger = '';
-            if(is_array($menuPage)) {
-              $menuPageKey = array_keys($menuPage)[0];
-              $menuPageArray = $menuPage[$menuPageKey];
-              $menuPage = $menuPageKey;
-              $openTrigger = ' <span class="trigger-open"></span>';
-            }
-            if(!empty($pages->$menuPage->lang->$lang)) {
-              echo '<li';
-              if($page === $menuPage || !empty($openTrigger)) {
-                  echo ' class="';
-                if($page === $menuPage) {
-                  echo 'active ';
-                }
-                if(!empty($openTrigger)) {
-                  echo ' trigger-openable ';
-                }
-                echo '"';
+      <nav class="header-menu-nav">
+        <ul>
+          <?php
+            foreach($menuPages as $menuPage) {
+              $menuPageArray = '';
+              $openTrigger = '';
+              if(is_array($menuPage)) {
+                $menuPageKey = array_keys($menuPage)[0];
+                $menuPageArray = $menuPage[$menuPageKey];
+                $menuPage = $menuPageKey;
+                $openTrigger = ' <span class="trigger-open"></span>';
               }
-              echo '><a href="' . $menuPage . '">' . $pages->$menuPage->lang->$lang . $openTrigger . '</a>';
-              if(!empty($menuPageArray)) {
-                echo '<ul>';
-                foreach($menuPageArray as $subMenuPage) {
-                  echo '<li';
-                  if($page === $subMenuPage) {
-                    echo ' class="active"';
+              if(!empty($pages->$menuPage->lang->$lang)) {
+                echo '<li';
+                if($page === $menuPage || !empty($openTrigger)) {
+                    echo ' class="';
+                  if($page === $menuPage) {
+                    echo 'active ';
                   }
-                  echo '><a href="' . $subMenuPage . '">' . $pages->$subMenuPage->lang->$lang . '</a>';
+                  if(!empty($openTrigger)) {
+                    echo ' trigger-openable ';
+                  }
+                  echo '"';
                 }
-                echo '</ul>';
+                echo '><a href="' . $menuPage . '">' . $pages->$menuPage->lang->$lang . $openTrigger . '</a>';
+                if(!empty($menuPageArray)) {
+                  echo '<ul>';
+                  foreach($menuPageArray as $subMenuPage) {
+                    echo '<li';
+                    if($page === $subMenuPage) {
+                      echo ' class="active"';
+                    }
+                    echo '><a href="' . $subMenuPage . '">' . $pages->$subMenuPage->lang->$lang . '</a>';
+                  }
+                  echo '</ul>';
+                }
+                echo '</li>';
               }
-              echo '</li>';
             }
-          }
-        ?>
-      </ul>
-    </nav>
-  </div>
-  <div class="lang">
-    <a class="lang-item lang-active trigger-open">
-      <img src="<?php
-        if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-          echo '/tempWebsite';
-        }
-      ?>/media/flag_<?php echo $lang; ?>.png" />
-    </a>
-    <?php
-    foreach ($languages as $language) {
-      if($language != $lang) {
-        ?>
-        <a class="lang-item" href="<?php
+          ?>
+        </ul>
+      </nav>
+    </div>
+    <div class="lang">
+      <a class="lang-item lang-active trigger-open">
+        <img src="<?php
           if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
             echo '/tempWebsite';
           }
-          echo '/' . $language . '/';
-        ?>">
-          <img src="<?php
+        ?>/media/flag_<?php echo $lang; ?>.png" />
+      </a>
+      <?php
+      foreach ($languages as $language) {
+        if($language != $lang) {
+          ?>
+          <a class="lang-item" href="<?php
             if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
               echo '/tempWebsite';
             }
-          ?>/media/flag_<?php echo $language; ?>.png" />
-          </a>
-        <?php
+            echo '/' . $language . '/';
+          ?>">
+            <img src="<?php
+              if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
+                echo '/tempWebsite';
+              }
+            ?>/media/flag_<?php echo $language; ?>.png" />
+            </a>
+          <?php
+        }
       }
-    }
-    ?>
-  </div>
+      ?>
+    </div>
   </header>
   
   <div class="breadCrumb"><?php
@@ -155,7 +155,8 @@ $menuPages = array(
         $breadcrumb = '<a href="' . $breadcrumbPage . '">' . $pages->$breadcrumbPage->lang->$lang . '</a> / ' . $breadcrumb;
       }
       echo $breadcrumb;
-      ?></div>
+      ?>
+  </div>
 
   <div class="content-wrapper">
     <div class="content"><?php
@@ -169,27 +170,26 @@ $menuPages = array(
     } else {
       echo "Deze pagina bestaat niet.";
     }
-  ?></div>
-
-  <div class="contact-element">
-    <div class='phone'> 
-      <img class="icon" src="<?php
-          if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-            echo '/tempWebsite';
-          }
-        ?>/media/telephone_icon.png" alt="address">
+    ?>
     </div>
 
-    <p>contact us</p>
-      
-  </div>
+    <div class="contact-element">
+      <div class='phone'> 
+        <img class="icon" src="<?php
+            if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
+              echo '/tempWebsite';
+            }
+          ?>/media/telephone_icon.png" alt="address">
+      </div>
+      <p>contact us</p>
+    </div>
  
-</div>
+  </div>
 
   <!-- <div class="nav-wrapper"> -->
   
 
-  <div class="nav-wrapper footer">
+  <footer class="nav-wrapper footer">
     <nav class="nav">
       <ul>
         <?php
@@ -204,7 +204,7 @@ $menuPages = array(
       </ul>
       <p>this website was made by vandenHeuvelHLT Consultancy</p>
     </nav>
-  </div>
+  </footer>
 
 </body>
 
