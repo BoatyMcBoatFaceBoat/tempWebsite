@@ -1,5 +1,4 @@
 <?php
-$company = 'Untangle Data';
 $lang = 'nl';
 $page = 'home';
 if(!empty($_GET['lang'])) {
@@ -34,7 +33,7 @@ $menuPages = array(
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo $company; ?></title>
+  <title> Untangle </title>
   <link rel="stylesheet" href="<?php
       if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
         echo '/tempWebsite';
@@ -170,48 +169,41 @@ $menuPages = array(
         echo "Deze pagina is niet beschikbaar in uw taalversie.";
       }
     } else {
-      switch ($lang) {
-        case "nl":
-          echo "Deze pagina is niet beschikbaar in uw taalversie.";
-          break;
-        case "en":
-        default:
-          echo "This page is not available in your chosen language.";
-          break;
-      }
-    } ?></div>
-    
+      echo "Deze pagina bestaat niet.";
+    }
+    ?>
 
-    <div class="contact-element">
-      <div class='phone'> 
-        <img class="icon" src="<?php
-            if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-              echo '/tempWebsite';
+      <div class="contact-element">
+        <div class='phone'> 
+          <img class="icon" src="<?php
+              if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
+                echo '/tempWebsite';
+              }
+            ?>/media/telephone_icon.png" alt="address">
+        </div>
+
+        <?php
+        $linktext = '';
+        if($page != 'contact') {
+          switch ($lang) {
+            case "nl":
+              $linktext = 'neem contact met ons op';
+              break;
+            case "en":
+              $linktext = 'contact us';
+              break;
+            default:
+              $linktext = 'neem contact met ons op';
+              break;
             }
-          ?>/media/telephone_icon.png" alt="address">
+            echo '<a href="contact">' . $linktext . '</a>';
+          }
+        ?>
+
       </div>
 
-      <!-- theo -->
-      <?php
-      $linktext = '';
-      if($page != 'contact') {
-        switch ($lang) {
-          case "nl":
-            $linktext = 'neem contact met ons op';
-            break;
-          case "en":
-            $linktext = 'contact us';
-            break;
-          default:
-            $linktext = 'neem contact met ons op';
-            break;
-          }
-          echo '<a href="contact">' . $linktext . '</a>';
-        }
-      ?>
-
+    
     </div>
- 
   </div>
 
   <!-- <div class="nav-wrapper"> -->
@@ -231,7 +223,7 @@ $menuPages = array(
         ?>
       </ul>
     </nav>
-    <p>this&nbsp;website&nbsp;was&nbsp;made&nbsp;by&nbsp;Van&nbsp;den&nbsp;Heuvel&nbsp;HLT&nbsp;Consultancy</p>
+    <p>this&nbsp;website&nbsp;was&nbsp;made&nbsp;by&nbsp;van&nbsp;den&nbsp;Heuvel&nbsp;HLT&nbsp;Consultancy</p>
   </footer>
 
 </body>
