@@ -172,7 +172,7 @@ $menuPages = array(
       echo "Deze pagina bestaat niet.";
     }
     ?>
-
+<!-- theo: contact-element should not be loaded in case $page == 'contact' -->
       <div class="contact-element">
         <div class='phone'> 
           <img class="icon" src="<?php
@@ -183,8 +183,9 @@ $menuPages = array(
         </div>
 
         <?php
-        $linktext = '';
-        if($page != 'contact') {
+          $linktext = '';
+          if($page != 'contact') {
+
           switch ($lang) {
             case "nl":
               $linktext = 'neem contact met ons op';
