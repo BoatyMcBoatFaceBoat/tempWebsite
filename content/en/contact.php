@@ -1,4 +1,7 @@
 <?php session_start();
+$success = 0;
+if (!empty($_POST['message'] && ($_POST['message'] == 'success'))) $success = 1;
+
 $rand_token = openssl_random_pseudo_bytes(16);
 $token = bin2hex($rand_token);
 //$_SESSION['token'] = $token;
@@ -36,7 +39,13 @@ $captcha =  array(
 $captchaIndex = rand(0, count($captcha) - 1);
 $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
 ?>
-<div class="contact">
+<div>
+ <p>message post: <?php echo $_POST['message'] ?> </p>
+</div>
+<div style="display:<?php echo ($success? 'flex': 'none') ?>;" class="contact">
+  <h2>your message was sent successfully</h2>
+</div>
+<div style="display:<?php echo ($success? 'none': 'flex') ?>;" class="contact">
   <div class="form">
     <h1>Contact</h1>
     <!-- <div class="contact flowText"> -->
