@@ -7,11 +7,11 @@ const j = function (object) {
   return console.log(JSON.stringify(object));
 }
 
-const $ = function(queryName) {
+const $ = function (queryName) {
   return document.querySelector(queryName);
 }
 
-const $$ = function(queryName) {
+const $$ = function (queryName) {
   return document.querySelectorAll(queryName);
 }
 
@@ -71,7 +71,7 @@ const hierarchy = {
 };
 
 
-function loadWebsite(){
+function loadWebsite() {
   let touch = false;
   if (!("ontouchstart" in document.documentElement)) {
     document.documentElement.className += " no-touch";
@@ -86,36 +86,44 @@ function loadWebsite(){
   let text = $('.more-content');
   let phone = $('.contact-element');
 
-  if(plus){
+  if (plus) {
     plus.classList.add('show');
 
-    plus.addEventListener('click', ()=>{
+    plus.addEventListener('click', () => {
       console.log('hellp')
       text.classList.toggle('show', true);
       plus.classList.toggle('show', false);
       minus.classList.toggle('show', true);
     })
-  
-    minus.addEventListener('click', ()=>{
+
+    minus.addEventListener('click', () => {
       text.classList.toggle('show', false);
       plus.classList.toggle('show', true);
       minus.classList.toggle('show', false);
     })
   }
 
-  if(touch){
-    phone.addEventListener('click', () => {
-      phone.classList.add('open');
-    })
+  if (touch) {
+    let open = false;
+
     document.addEventListener('click', ({target}) => {
-     console.log(target)
+
+      if (target.classList.contains('clickable-contact-element')) {
+        open = !open;
+        phone.classList.toggle('open', open);
+
+      } else {
+        open = false;
+        phone.classList.toggle('open', false);
+      }
     })
+  
   } else {
     phone.addEventListener('mouseover', () => {
       console.log('mouseover')
       phone.classList.add('open');
     })
-  
+
     phone.addEventListener('mouseout', () => {
       phone.classList.remove('open');
     })
@@ -165,7 +173,7 @@ function loadWebsite(){
 
 // function redrawBreadCrumbs(curLoc ){
 //   const crumbSpace = document.querySelector('.breadCrumb');
-  
+
 //   crumbSpace.innerHTML = "";
 //   let levels = findRouteTo(curLoc);
 //   if(!levels.length){ return; }

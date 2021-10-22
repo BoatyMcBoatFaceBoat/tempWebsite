@@ -174,8 +174,8 @@ $menuPages = array(
     ?>
 <!-- theo: contact-element should not be loaded in case $page == 'contact' -->
       <div class="contact-element">
-        <div class='phone'> 
-          <img class="icon" src="<?php
+        <div class='phone clickable-contact-element'> 
+          <img class="icon clickable-contact-element" src="<?php
               if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
                 echo '/tempWebsite';
               }
