@@ -106,10 +106,12 @@ a.current-page, a.current-page:hover {
   align-self: center;
 }
 
+
+$phone-padding: 0.4em;
+$phone-height: 2em;
 .contact-element {
 
-  $phone-padding: 0.4em;
-  $phone-height: 2em;
+
   position: relative;
   // top: 1em;
   // left: -1em;
@@ -127,13 +129,14 @@ a.current-page, a.current-page:hover {
   justify-content: flex-start;
   align-items: center;
   border-radius: 2em;
+  z-index: 2;
   // width: 1.5em;
   // padding: 1em;
   // border-radius: 16px; 
 
   // margin: 1em;
   // border: 2px solid #373770a3;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2) ;
+  box-shadow: 0px 24px 38px 3px rgba(0,0,0,0.14) , 0px 9px 46px 8px rgba(0,0,0,0.12) , 0px 11px 15px -7px rgba(0,0,0,0.2)  ;
   
 
   div.phone {
@@ -162,6 +165,14 @@ a.current-page, a.current-page:hover {
 }
 
 .contact-element.open {
+  $larger-phone-padding: 0.6em;
+  // left: calc(-1 * (#{$phone-height} + #{$larger-phone-padding}) / 2);
+  // top: calc(-1 * (#{$phone-height} + #{$larger-phone-padding}) / 2);
+  transform: translate(-$larger-phone-padding * 0.5, -$larger-phone-padding * 0.5);
+  .phone {
+    padding: $larger-phone-padding;
+
+  }
   // width: 160px;
   a {
     display: block;

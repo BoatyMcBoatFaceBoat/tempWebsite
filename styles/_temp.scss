@@ -295,14 +295,16 @@ footer {
             width: 0;
             transition: width ease 1s;
             overflow: hidden;
+            box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2) ;
+
 
             &.open {
                 width: 50vw;
+
             }
 
             .header-menu-nav {
                 width: 100%;
-               box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2) ;
 
                 ul {
                     flex-direction: column;
