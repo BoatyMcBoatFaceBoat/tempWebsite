@@ -190,7 +190,26 @@ $menuPages = array(
             }
           ?>/media/telephone_icon.png" alt="address">
       </div>
-      <p>contact us</p>
+
+      <!-- theo -->
+      <?php
+      $linktext = '';
+      if($page != 'contact') {
+        switch ($lang) {
+          case "nl":
+            $linktext = 'neem contact met ons op';
+            break;
+          case "en":
+            $linktext = 'contact us';
+            break;
+          default:
+            $linktext = 'neem contact met ons op';
+            break;
+          }
+          echo '<a href="contact">' . $linktext . '</a>';
+        }
+      ?>
+
     </div>
  
   </div>
