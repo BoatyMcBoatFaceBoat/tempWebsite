@@ -85,6 +85,7 @@ function loadWebsite() {
   let minus = $('.readless-elm');
   let text = $('.more-content');
   let phone = $('.contact-element');
+  let langMenu = $('.lang');
 
   if (plus) {
     plus.classList.add('show');
@@ -104,19 +105,35 @@ function loadWebsite() {
   }
 
   if (touch) {
-    let open = false;
+    let openContact = false;
+    let openLang = false;
 
     document.addEventListener('click', ({target}) => {
 
       if (target.classList.contains('clickable-contact-element')) {
-        open = !open;
-        phone.classList.toggle('open', open);
+        openContact = !openContact;
+        phone.classList.toggle('open', openContact);
 
       } else {
-        open = false;
+        openContact = false;
         phone.classList.toggle('open', false);
       }
-    })
+
+      console.log(target)
+
+      if (target.classList.contains('flag')) {
+        openLang = !openLang;
+        langMenu.classList.toggle('open', openLang);
+
+      } else {
+        openLang = false;
+        langMenu.classList.toggle('open', false);
+      }
+
+
+    });
+
+  
   
   } else {
     phone.addEventListener('mouseover', () => {

@@ -1,3 +1,5 @@
+@import "variables";
+
 header {
     $flag-height: 50px;
     z-index: 1;
@@ -12,14 +14,15 @@ header {
         height: $flag-height;
         width: $flag-height;
         background: $header-color;
-
         overflow: hidden;
+        
 
         &:hover,
-        &:focus {
+        &:focus,
+        &.open {
             height: auto;
             overflow: visible;
-
+  
         }
 
         .lang-item {

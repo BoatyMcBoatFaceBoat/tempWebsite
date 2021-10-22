@@ -119,7 +119,7 @@ $menuPages = array(
     </div>
     <div class="lang">
       <a class="lang-item lang-active trigger-open">
-        <img src="<?php
+        <img class="flag" src="<?php
           if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
             echo '/tempWebsite';
           }
