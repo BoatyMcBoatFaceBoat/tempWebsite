@@ -109,7 +109,7 @@ header {
   }
 
   .contact > div {
-    padding: 1em;
+    // padding: 1em;
   }
 
 }
@@ -189,17 +189,17 @@ footer{
     font-size: 0.6rem;
     // vertical-align: middle;
     align-self: flex-end;
-    // text-align: right;
+    font-style: italic;
   }
 }
 
 
 
 
-// contact form
+// contact form 
 .contact {
   display: flex;
-  
+  flex-direction: row;
 
   p {
     margin: 0;
@@ -208,9 +208,12 @@ footer{
 
   .form{
     width: 50%;
+    padding: 1em;
   }
   .extra{
-    padding-top: 8rem;
+    padding: 6rem 1em 1em 1em;
+    // padding: 8rem;
+    // margin-top: 5em;
     width: 50%;
     background: $contact-color;
     // line-height: 1.5;
@@ -234,7 +237,7 @@ footer{
 }
 
 p.icon-p {
-  margin: 1.5em 0;
+  margin: 1em 0;
   font-weight: bold;
 }
 
