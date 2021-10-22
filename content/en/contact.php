@@ -40,7 +40,11 @@ $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
   <div class="form">
     <h1>Contact</h1>
     <!-- <div class="contact flowText"> -->
-    <form action="xyzzy.php" method="post">
+    <form action="<?php
+        if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
+          echo '/tempWebsite';
+        }
+        ?>/content/en/xyzzy.php" method="post">
       <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
       <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
       <p>Your name </p> 

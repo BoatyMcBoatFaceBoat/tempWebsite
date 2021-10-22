@@ -48,7 +48,11 @@ $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
   <div class="form">
     <h1>Contact</h1>
     <!-- <div class="contact flowText"> -->
-    <form action="xyzzy.php" method="post">
+    <form action="<?php
+        if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
+          echo '/tempWebsite';
+        }
+        ?>/content/nl/xyzzy.php" method="post">
       <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
       <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
       <p>Uw naam </p> 
@@ -67,8 +71,8 @@ $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
   </div>
   <div class="extra">
     <p>Van den Heuvel HLT Consultancy handelt onder de naam <?php echo $company; ?>.</p>
-    <p>Ons kantoor bevindt zich in Malden vlakbij Nijmegen, in het oude Gemeentehuis.</p>
-    <p> Ons KvK-nummer is 09205757. Theo van den Heuvel is de eigenaar.</p>
+    <p>Ons kantoor bevindt zich in Malden vlakbij Nijmegen, in het Oude Gemeentehuis.</p>
+    <p> Ons KvK-nummer is 09205757. Theo van den Heuvel is de eigenaar en directeur.</p>
     <p class="icon-p">
       <img class="icon" src="<?php
         if(strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
