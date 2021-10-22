@@ -210,6 +210,23 @@ footer {
             }
         }
     }
+
+    .contact {
+        flex-direction: column;
+        // background: orange;
+        div.form, div.extra {
+            width: 100%;
+        }
+        div.form {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        div.extra {
+            padding: 1em;
+        }
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -326,7 +343,7 @@ footer {
         .lang {
             $flag-space-mobile: 20px;
             top: $flag-space-mobile;
-            right: calc(#{$header-height} + (#{$flag-space-mobile});
+            right: calc(#{$header-height} + #{$flag-space-mobile});
             z-index: 2;
             // height: calc(#{$header-height} - #{$flag-space-mobile});
             // width: calc(#{$header-height} - #{$flag-space-mobile});
