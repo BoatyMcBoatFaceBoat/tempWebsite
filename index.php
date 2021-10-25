@@ -2,11 +2,17 @@
 $company = 'Untangle Data';
 $lang = 'nl';
 $page = 'home';
+$message = ' ail';
+$contacted = 0;
 if(!empty($_GET['lang'])) {
   $lang = $_GET['lang'];
 }
 if(!empty($_GET['page'])) {
   $page = $_GET['page'];
+}
+if(!empty($_GET['message'])) {
+  $message = $_GET['message'];
+  if ($message == 'success') $contacted = 1;
 }
 $pages = json_decode(file_get_contents('pages.json'));
 $languages = array(
@@ -231,6 +237,7 @@ $menuPages = array(
         ?>
       </ul>
     </nav>
+    <p>(<?php echo "$lang,$page,$contacted"; ?>)</p>
     <p>this&nbsp;website&nbsp;was&nbsp;made&nbsp;by&nbsp;Van&nbsp;den&nbsp;Heuvel&nbsp;HLT&nbsp;Consultancy</p>
   </footer>
 

@@ -18,4 +18,4 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
   }
 }
 
-header('Location: index.xhtml?message=' . $return_message);
+header('Location: index.php?message=' . $return_message);

@@ -18,5 +18,6 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
 }
 
 // header('Location: index.php?message=' . $return_message);
-header('Location: contact.php?message=' . $return_message);
 // header('Location: index.php?lang=en&page=raku');
+// header('Location: index.php?message=' . $return_message);
+header('Location: snokkie' );
