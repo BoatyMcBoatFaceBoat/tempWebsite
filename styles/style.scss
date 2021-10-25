@@ -23,6 +23,8 @@ h2, h1 {
   font-size: 2rem;
   margin: 0.5em 0;
   color: $dark-accent-color;
+  // color: orange;
+  font-family: Arial, Geneva, Tahoma, sans-serif;
 }
 
 input, textarea {
@@ -84,7 +86,7 @@ header {
     // margin: 0 auto;
     margin: 20px auto;
     text-align: justify;
-    line-height: 2.5;
+    line-height: 2;
     background: $content-color;
     // min-height: calc(100vh - #{$header-height} - #{$breadcrumb-height} - #{$nav-height});
 
@@ -109,7 +111,7 @@ header {
   }
 
   .contact > div {
-    padding: 1em;
+    // padding: 1em;
   }
 
 }
@@ -189,17 +191,17 @@ footer{
     font-size: 0.6rem;
     // vertical-align: middle;
     align-self: flex-end;
-    // text-align: right;
+    font-style: italic;
   }
 }
 
 
 
 
-// contact form
+// contact form 
 .contact {
   display: flex;
-  
+  flex-direction: row;
 
   p {
     margin: 0;
@@ -208,12 +210,15 @@ footer{
 
   .form{
     width: 50%;
+    padding: 1em;
   }
   .extra{
-    padding-top: 8rem;
+    padding: 6rem 1em 1em 1em;
+    // padding: 8rem;
+    // margin-top: 5em;
     width: 50%;
     background: $contact-color;
-    // line-height: 1.5;
+    line-height: 2;
     // height: 100%; 
   }
 
@@ -228,13 +233,13 @@ footer{
 }
 
 .icon {
-  height: 1.5em;
+  height: 2em;
   display: inline;
   vertical-align: bottom;
 }
 
 p.icon-p {
-  margin: 1.5em 0;
+  margin: 1em 0;
   font-weight: bold;
 }
 

@@ -1,3 +1,5 @@
+@import "variables";
+
 header {
     $flag-height: 50px;
     z-index: 1;
@@ -12,14 +14,15 @@ header {
         height: $flag-height;
         width: $flag-height;
         background: $header-color;
-
         overflow: hidden;
+        
 
         &:hover,
-        &:focus {
+        &:focus,
+        &.open {
             height: auto;
             overflow: visible;
-
+  
         }
 
         .lang-item {
@@ -210,6 +213,23 @@ footer {
             }
         }
     }
+
+    .contact {
+        flex-direction: column;
+        // background: orange;
+        div.form, div.extra {
+            width: 100%;
+        }
+        div.form {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        div.extra {
+            padding: 1em;
+        }
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -269,6 +289,10 @@ footer {
 // mobile
 @media screen and (max-width: 540px) {
     header {
+        .logo{
+            width: 150px;
+        }
+        
         .header-menu {
             position: fixed;
             top: $header-height;
@@ -278,13 +302,17 @@ footer {
             width: 0;
             transition: width ease 1s;
             overflow: hidden;
+            box-shadow: $shadow ;
+
 
             &.open {
                 width: 50vw;
+
             }
 
             .header-menu-nav {
                 width: 100%;
+
 
                 ul {
                     flex-direction: column;
@@ -326,7 +354,7 @@ footer {
         .lang {
             $flag-space-mobile: 20px;
             top: $flag-space-mobile;
-            right: calc(#{$header-height} + (#{$flag-space-mobile});
+            right: calc(#{$header-height} + #{$flag-space-mobile});
             z-index: 2;
             // height: calc(#{$header-height} - #{$flag-space-mobile});
             // width: calc(#{$header-height} - #{$flag-space-mobile});
@@ -363,7 +391,10 @@ footer {
                     position: absolute;
                     width: 45px;
                     height: 0;
-                    border-bottom: 2px solid black
+                    // border-bottom: 2px solid black
+                    border-bottom: 2px solid white;
+
+
                 }
 
                 .top {

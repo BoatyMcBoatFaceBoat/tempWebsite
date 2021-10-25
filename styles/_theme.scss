@@ -7,7 +7,7 @@ input, textarea {
   border: none;
   background: $contact-color;
   width: 100%;
-  color: white;
+  // color: white;
   outline: none;
   border: none;
   transition: all 200ms ease-in-out;
@@ -106,43 +106,82 @@ a.current-page, a.current-page:hover {
   align-self: center;
 }
 
+
+$phone-padding: 0.4em;
+$phone-height: 2em;
 .contact-element {
-  display: flex;
+
+
   position: relative;
-  bottom: 20px;
-  left: 20px;
+  // top: 1em;
+  // left: -1em;
+  // margin: 0 !important;
+  // margin-left: calc(-1 * (#{$phone-height} + #{$phone-padding}) / 2);
+  // margin-top: calc((#{$phone-height} + #{$phone-padding}) / 2);
+
+  left: calc(-1 * (#{$phone-height} + #{$phone-padding}) / 2);
+  top: calc((#{$phone-height} + #{$phone-padding}) / 2);
+  padding: 0 !important;
   // width: 120px;
   background:   white;
+  // background: orange;
+  display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  width: 1.5em;
+  border-radius: 2em;
+  z-index: 2;
+  // width: 1.5em;
   // padding: 1em;
-  border-radius: 16px;
+  // border-radius: 16px; 
+
   // margin: 1em;
+  // border: 2px solid #373770a3;
+  box-shadow: 0px 24px 38px 3px rgba(0,0,0,0.14) , 0px 9px 46px 8px rgba(0,0,0,0.12) , 0px 11px 15px -7px rgba(0,0,0,0.2)  ;
   
 
   div.phone {
-    background: #373770a3;;
-    border-radius: 16px;
-    padding: 0.2em;
+    background: #373770a3;
+    // background: green;
+    border-radius: 2em;
+    padding: $phone-padding;
+
+    .icon {
+      height: $phone-height;
+    }
   }
 
-  p{
+  a{
     display: none;
     margin: 0;
     text-align: center;
-    padding: 0 1em;
+    padding: 0 1em !important;
     font-weight: bold;
+    color: $content-link-color;
+    opacity: 1;
+    font-size: 1rem;
+
   }
 
 }
 
 .contact-element.open {
-  width: 160px;
-  p {
+  $larger-phone-padding: 0.6em;
+  // left: calc(-1 * (#{$phone-height} + #{$larger-phone-padding}) / 2);
+  // top: calc(-1 * (#{$phone-height} + #{$larger-phone-padding}) / 2);
+  transform: translate(-$larger-phone-padding * 0.5, -$larger-phone-padding * 0.5);
+  .phone {
+    padding: $larger-phone-padding;
+
+  }
+  // width: 160px;
+  a {
     display: block;
     // background: pink;
     // height: 1.5em;
+  }
+
+  a:hover, a:focus {
+    color: $accent-color;
   }
 
 }

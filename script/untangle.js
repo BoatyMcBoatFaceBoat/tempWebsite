@@ -3,19 +3,18 @@ const c = function (descrip, something) {
   return console.log(`${descrip}:  ${something}`);
 }
 
-
 const j = function (object) {
   return console.log(JSON.stringify(object));
 }
 
-const $ = function(queryName) {
+const $ = function (queryName) {
   return document.querySelector(queryName);
 }
 
-
-const $$ = function(queryName) {
+const $$ = function (queryName) {
   return document.querySelectorAll(queryName);
 }
+
 
 // hierarchy for href names:
 const hierarchy = {
@@ -72,38 +71,82 @@ const hierarchy = {
 };
 
 
-function loadWebsite(){
+function loadWebsite() {
+  let touch = false;
+  if (!("ontouchstart" in document.documentElement)) {
+    document.documentElement.className += " no-touch";
+  } else {
+    touch = true;
+  }
+
+  console.log('touchscreen? ' + touch);
+
   let plus = $('.readmore-elm');
   let minus = $('.readless-elm');
   let text = $('.more-content');
   let phone = $('.contact-element');
+  let langMenu = $('.lang');
 
-  if(plus){
+  if (plus) {
     plus.classList.add('show');
 
-    plus.addEventListener('click', ()=>{
+    plus.addEventListener('click', () => {
       console.log('hellp')
       text.classList.toggle('show', true);
       plus.classList.toggle('show', false);
       minus.classList.toggle('show', true);
     })
-  
-    minus.addEventListener('click', ()=>{
+
+    minus.addEventListener('click', () => {
       text.classList.toggle('show', false);
       plus.classList.toggle('show', true);
       minus.classList.toggle('show', false);
     })
   }
 
+  if (touch) {
+    let openContact = false;
+    let openLang = false;
 
-  phone.addEventListener('mouseover', () => {
-    console.log('mouseover')
-    phone.classList.add('open');
-  })
+    document.addEventListener('click', ({target}) => {
 
-  phone.addEventListener('mouseout', () => {
-    phone.classList.remove('open');
-  })
+      if (target.classList.contains('clickable-contact-element')) {
+        openContact = !openContact;
+        phone.classList.toggle('open', openContact);
+
+      } else {
+        openContact = false;
+        phone.classList.toggle('open', false);
+      }
+
+      console.log(target)
+
+      if (target.classList.contains('flag')) {
+        openLang = !openLang;
+        langMenu.classList.toggle('open', openLang);
+
+      } else {
+        openLang = false;
+        langMenu.classList.toggle('open', false);
+      }
+
+
+    });
+
+  
+  
+  } else {
+    phone.addEventListener('mouseover', () => {
+      console.log('mouseover')
+      phone.classList.add('open');
+    })
+
+    phone.addEventListener('mouseout', () => {
+      phone.classList.remove('open');
+    })
+  }
+
+
 
 
 
@@ -147,7 +190,7 @@ function loadWebsite(){
 
 // function redrawBreadCrumbs(curLoc ){
 //   const crumbSpace = document.querySelector('.breadCrumb');
-  
+
 //   crumbSpace.innerHTML = "";
 //   let levels = findRouteTo(curLoc);
 //   if(!levels.length){ return; }
