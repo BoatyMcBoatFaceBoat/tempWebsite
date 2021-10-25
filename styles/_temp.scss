@@ -181,7 +181,7 @@ header {
         }
     }
   
-    &.open {
+    &:hover, &:focus, &.open {
         .trigger-open{
           transform:  translateY(0) rotate(135deg);
         }
