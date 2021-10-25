@@ -1,4 +1,5 @@
 <?php
+$company = "Untangle Data";
 $lang = 'nl';
 $page = 'home';
 if(!empty($_GET['lang'])) {
@@ -19,7 +20,6 @@ $aboutPages = array(
   'impressum',
   'partners'
 );
-
 $menuPages = array(
   'excel',
   'consultancy',
