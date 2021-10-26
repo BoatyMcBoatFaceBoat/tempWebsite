@@ -13,15 +13,17 @@ body{
 }
 .directory rect {
   /* fill: #eeee44; */
-  fill: #99ff66;
+  /* fill: #99ff66;*/
+  fill: #fd9330;
+
 }
 .terminal rect {
   fill: white;
 }
 rect {
   /* fill: white; */
-  fill: #bbbbbb;
-  stroke: blue;
+  fill: #c2bfbf;
+  /* stroke: blue; */
   stroke-width: 1px;
 }
 .foreign rect {
@@ -31,10 +33,12 @@ rect {
 }
 text {
   pointer-events: none;
+  display: none;
+  
 }
 line {
   /* stroke: #cccc00; */
-  stroke: #33cc00;
+  stroke: #ff7b00;
 }
 line.extraneous {
   /*stroke: #ccddff;*/
@@ -46,7 +50,7 @@ path {
 }
 path.extlink {
   /*stroke: blue;*/
-  stroke: blue;
+  stroke: rgb(115, 190, 207);
 }
 path.foreign {
   /*stroke: blue;*/
