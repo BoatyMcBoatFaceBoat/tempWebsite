@@ -175,13 +175,14 @@ header {
       margin: calc((#{$line-size}) / 2);
     }
  
-    &.close {
-      .trigger-open{
-        transform: translateY(calc(#{$line-size} / -2)) rotate(-45deg);
-        }
-    }
+    // &.close {
+    //   .trigger-open{
+    //     transform: translateY(calc(#{$line-size} / -2)) rotate(-45deg);
+    //     }
+    // }
   
-    &:hover, &:focus, &.open {
+    // &:hover, &:focus, 
+    &.open {
         .trigger-open{
           transform:  translateY(0) rotate(135deg);
         }
