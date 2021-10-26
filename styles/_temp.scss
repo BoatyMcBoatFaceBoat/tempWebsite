@@ -167,6 +167,10 @@ header {
   $line-size: 1em;
 
     .trigger-open {
+
+        // &::before {
+        //     content: '+'
+        // }
       border-left: 2px solid white;
       border-bottom: 2px solid white;
       height: $line-size;
@@ -182,6 +186,13 @@ header {
     // }
   
     // &:hover, &:focus, 
+
+
+    // &.open {
+    //     .trigger-open::before {
+    //         content: '-'
+    //     }
+    // }
     &.open {
         .trigger-open{
           transform:  translateY(0) rotate(135deg);
