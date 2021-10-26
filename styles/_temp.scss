@@ -164,19 +164,28 @@ header {
 }
 
 .trigger-openable {
-  $line-size: 1em;
+  $line-size: 8px;
 
     .trigger-open {
-
-        // &::before {
-        //     content: '+'
-        // }
-      border-left: 2px solid white;
-      border-bottom: 2px solid white;
-      height: $line-size;
-      width: $line-size;
-      transform:  translateY(calc(#{$line-size} / -2)) rotate(-45deg);
-      margin: calc((#{$line-size}) / 2);
+         &::before {
+             content: '';
+             display: inline-flex;
+             position: relative;
+             top: -($line-size / 2);
+             border-left: 2px solid white;
+             border-bottom: 2px solid white;
+             height: $line-size;
+             width: $line-size;
+             transform: rotate(-45deg);
+             margin: auto;
+             justify-content: center;
+             align-content: center;
+         }
+        display: flex!important;
+        margin-left: ($line-size / 2);
+        padding-left: ($line-size / 2);
+        height: 100%;
+        width: ($line-size * 2);
     }
  
     // &.close {
@@ -194,8 +203,14 @@ header {
     //     }
     // }
     &.open {
-        .trigger-open{
-          transform:  translateY(0) rotate(135deg);
+        .trigger-open {
+            &:before {
+                border-left: 0;
+                border-bottom: 0;
+                border-top: 2px solid white;
+                border-right: 2px solid white;
+                top: ($line-size / 2);
+            }
         }
     }
 }
@@ -222,7 +237,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 770px) {
     .header-menu {
         .header-menu-nav {
             ul {
@@ -253,7 +268,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 720px) {
     .header-menu {
         margin-left: 10px;
 
@@ -291,7 +306,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 680px) {
     .header-menu {
         margin-left: 5px;
 
@@ -308,10 +323,11 @@ footer {
 }
 
 // mobile
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 620px) {
     header {
         .logo{
             width: 150px;
+            max-width: calc(100vw - (#{$header-height} * 2) - 1em);
         }
         
         .header-menu {
@@ -319,7 +335,7 @@ footer {
             top: $header-height;
             right: 0;
             background: $header-secondairy-color;
-            height: calc(100vh - $header-height);
+            height: calc(100vh - #{$header-height});
             width: 0;
             transition: width ease 1s;
             overflow: hidden;
@@ -334,6 +350,9 @@ footer {
             .header-menu-nav {
                 width: 100%;
 
+                .trigger-open {
+                    margin-left: auto;
+                }
 
                 ul {
                     flex-direction: column;
@@ -351,6 +370,7 @@ footer {
                         }
 
                         border-top: 1px solid $header-color;
+                        height: auto;
                         width: 100%;
                         background: $header-secondairy-color;
 

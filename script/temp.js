@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
+
     document.querySelector('.header-menu-icon').addEventListener('click', (event) => {
       const menuElem = document.querySelector('.header-menu-icon');
       const menuContentElem = document.querySelector('.header-menu');
@@ -17,18 +17,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       // console.log(event.target.classList);
     });
-    document.querySelector('.trigger-open').addEventListener('click', (event) => {
-        event.preventDefault();
-        const clickedElem = event.target.closest('.trigger-open');
-        const parentElem = clickedElem.closest('.trigger-openable');
-        if(parentElem.classList.contains('open')) {
-            parentElem.classList.remove('open');
-            parentElem.classList.add('close');
-        } else {
-            parentElem.classList.add('open');
-            if(parentElem.classList.contains('close')) {
-              parentElem.classList.remove('close');
+    const triggerElems = document.querySelectorAll('.trigger-open');
+    triggerElems.forEach((triggerElem) => {
+        triggerElem.addEventListener('click', (event) => {
+            event.preventDefault();
+            const clickedElem = event.target.closest('.trigger-open');
+            const parentElem = clickedElem.closest('.trigger-openable');
+            if(parentElem.classList.contains('open')) {
+                parentElem.classList.remove('open');
+                parentElem.classList.add('close');
+            } else {
+                parentElem.classList.add('open');
+                if(parentElem.classList.contains('close')) {
+                    parentElem.classList.remove('close');
+                }
             }
-        }
+        })
     })
+
 });

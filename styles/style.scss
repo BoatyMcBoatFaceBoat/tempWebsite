@@ -192,6 +192,7 @@ footer{
     // vertical-align: middle;
     align-self: flex-end;
     font-style: italic;
+    height: $footer-copyright;
   }
 }
 
@@ -242,5 +243,8 @@ p.icon-p {
   margin: 1em 0;
   font-weight: bold;
 }
-
+.footer {
+  max-width: 100vw;
+  overflow: hidden;
+}
 @import "temp";
