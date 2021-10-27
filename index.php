@@ -225,7 +225,7 @@ $menuPages = array(
           ?>
         </ul>
     </nav>
-    <p>this&nbsp;website&nbsp;was&nbsp;made&nbsp;by&nbsp;van&nbsp;den&nbsp;Heuvel&nbsp;HLT&nbsp;Consultancy</p>
+    <p>this&nbsp;website&nbsp;was&nbsp;made&nbsp;by&nbsp;Van&nbsp;den&nbsp;Heuvel&nbsp;HLT&nbsp;Consultancy</p>
 </footer>
 
 </body>
