@@ -1,10 +1,10 @@
 const c = function (descrip, something) {
 
-  return console.log(`${descrip}:  ${something}`);
+  // return console.log(`${descrip}:  ${something}`);
 }
 
 const j = function (object) {
-  return console.log(JSON.stringify(object));
+  // return console.log(JSON.stringify(object));
 }
 
 const $ = function (queryName) {
@@ -79,7 +79,7 @@ function loadWebsite() {
     touch = true;
   }
 
-  console.log('touchscreen? ' + touch);
+  // console.log('touchscreen? ' + touch);
 
   let plus = $('.readmore-elm');
   let minus = $('.readless-elm');
@@ -91,7 +91,7 @@ function loadWebsite() {
     plus.classList.add('show');
 
     plus.addEventListener('click', () => {
-      console.log('hellp')
+      // console.log('hellp')
       text.classList.toggle('show', true);
       plus.classList.toggle('show', false);
       minus.classList.toggle('show', true);
@@ -119,7 +119,7 @@ function loadWebsite() {
         phone.classList.toggle('open', false);
       }
 
-      console.log(target)
+      // console.log(target)
 
       if (target.classList.contains('flag')) {
         openLang = !openLang;
@@ -137,7 +137,7 @@ function loadWebsite() {
   
   } else {
     phone.addEventListener('mouseover', () => {
-      console.log('mouseover')
+      // console.log('mouseover')
       phone.classList.add('open');
     })
 
