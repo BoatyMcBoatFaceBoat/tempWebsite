@@ -91,7 +91,7 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
               <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
                 <p>Uw naam </p>
                 <input type="text" name="name" required="required"/>
-                <p>E-mailaddres</p>
+                <p>E-mailadres</p>
                 <input type="email" name="email" required="required"/></p>
                 <p>Onderwerp</p>
                 <input type="text" name="subject" required="required"/></p>
