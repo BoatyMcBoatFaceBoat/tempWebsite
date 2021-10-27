@@ -202,7 +202,9 @@ header {
     //         content: '-'
     //     }
     // }
-    &.open {
+    &.open,
+    &:not(.close):hover,
+    &:not(.close):focus {
         .trigger-open {
             &:before {
                 border-left: 0;
