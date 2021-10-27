@@ -60,10 +60,22 @@ header {
   width: 100vw;
   height: $header-height;
   background: $header-color;
+  // background: red;
   align-items: center;
   display: flex;
   // justify-items: space-between;
+
+
+
+  border: 15px solid black;
+  border-image-source: url("../media/untangle_wave.svg");
+  border-image-slice: 100% ;
+  border-image-width: 0 100% 60% 30%; 
+  border-image-outset: 30px;
+
 }
+
+
 
 .logo {
   margin-left: 1em;
