@@ -104,16 +104,17 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
             </form>
         </div>
         <div class="extra">
-            <p>Van den Heuvel HLT Consultancy handelt onder de naam <?php echo $company; ?>.</p>
+            <!-- <p>Van den Heuvel HLT Consultancy handelt onder de naam <?php echo $company; ?>.</p>
             <p>Ons kantoor bevindt zich in Malden vlakbij Nijmegen, in het oude Gemeentehuis.</p>
-            <p> Ons KvK-nummer is 09205757. Theo van den Heuvel is de eigenaar.</p>
+            <p> Ons KvK-nummer is 09205757. Theo van den Heuvel is de eigenaar.</p> -->
             <p class="icon-p">
                 <img class="icon" src="<?php
                 if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
                   echo '/tempWebsite';
                 }
                 ?>/media/home_icon.png" alt="address">
-                Rijksweg 112
+                     Rijksweg 112, 
+              6581 ER Malden
             </p>
             <p class="icon-p">
                 <img class="icon" src="<?php
