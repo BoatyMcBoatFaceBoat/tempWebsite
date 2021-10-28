@@ -112,11 +112,11 @@ function loadWebsite() {
 
       if (target.classList.contains('clickable-contact-element')) {
         openContact = !openContact;
-        phone.classList.toggle('open', openContact);
+        if (phone) phone.classList.toggle('open', openContact);
 
       } else {
         openContact = false;
-        phone.classList.toggle('open', false);
+        if (phone) phone.classList.toggle('open', false);
       }
 
       // console.log(target)
@@ -135,7 +135,7 @@ function loadWebsite() {
 
   
   
-  } else {
+  } else if (phone)  {
     phone.addEventListener('mouseover', () => {
       // console.log('mouseover')
       phone.classList.add('open');
