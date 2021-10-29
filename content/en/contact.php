@@ -69,46 +69,57 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
   $captchaIndex = rand(0, count($captcha) - 1);
   $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
   ?>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact form</title>
+  </head>
+  <body>
+    
     <div class="contact">
-        <div class="form">
-            <h1>Contact</h1>
-            <!-- <div class="contact flowText"> -->
-            <form action="" method="post">
-                <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
-              <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
-                <p>Your name </p>
-                <input type="text" name="name" required="required"/>
-                <p>E-mail address</p>
-                <input type="email" name="email" required="required"/>
-                <p>Subject</p>
-                <input type="text" name="subject" required="required"/>
-                <p>Your message</p>
-                <textarea name="message" rows="8" cols="35" required="required"></textarea>
-                <p><?php echo $captcha[$captchaIndex]['q']; ?> </p>
-                <input type="text" name="captcha" required="required"/>
+      <div class="form">
+        <h1>Contact</h1>
+        <!-- <div class="contact flowText"> -->
+        <form action="" method="post">
+            <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
+          <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
+            <p>Your name </p>
+            <input type="text" name="name" required="required"/>
+            <p>E-mail address</p>
+            <input type="email" name="email" required="required"/>
+            <p>Subject</p>
+            <input type="text" name="subject" required="required"/>
+            <p>Your message</p>
+            <textarea name="message" rows="8" cols="35" required="required"></textarea>
+            <p><?php echo $captcha[$captchaIndex]['q']; ?> </p>
+            <input type="text" name="captcha" required="required"/>
 
-                <input class="btn" type="submit" value="Send"/>
-            </form>
-        </div>
+            <input class="btn" type="submit" value="Send"/>
+        </form>
+      </div>
+      <div class="extra">
+        <!-- <p> <?php echo $company; ?> is a trademark of Van den Heuvel HLT Consultancy.</p>
+        <p> Our office is in Malden near Nijmegen.</p>
+        <p> Our KvK identification is 09205757. Theo van den Heuvel is the owner and manager.</p> -->
+        <p class="icon-p">
+          <img class="icon" src="<?php echo $prefix ?>/media/home_icon.png" alt="home icon">
+          Rijksweg 112, 
+          6581 ER Malden,            
+          Netherlands
+        </p>
+        <p class="icon-p">
+          <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telephone icon">
 
-
-        <div class="extra">
-            <!-- <p> <?php echo $company; ?> is a trademark of Van den Heuvel HLT Consultancy.</p>
-            <p> Our office is in Malden near Nijmegen.</p>
-            <p> Our KvK identification is 09205757. Theo van den Heuvel is the owner and manager.</p> -->
-            <p class="icon-p">
-                <img class="icon" src="<?php echo $prefix ?>/media/home_icon.png" alt="home icon">
-              Rijksweg 112, 
-              6581 ER Malden,            
-              Netherlands
-            </p>
-            <p class="icon-p">
-                <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telephone icon">
-
-                +31625492788
-            </p>
-        </div>
+          +31625492788
+        </p>
+      </div>
     </div>
+  </body>
+  </html>
   <?php
 }
 ?>

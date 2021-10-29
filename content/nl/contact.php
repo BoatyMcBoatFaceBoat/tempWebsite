@@ -82,44 +82,60 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
 // no direct access
 // defined('_HLT') or die('Access denied');
   ?>
-    <div class="contact">
-        <div class="form">
-            <h1>Contact</h1>
-            <!-- <div class="contact flowText"> -->
-            <form action="" method="post">
-                <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
-              <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
-                <p>Uw naam </p>
-                <input type="text" name="name" required="required"/>
-                <p>E-mailadres</p>
-                <input type="email" name="email" required="required"/></p>
-                <p>Onderwerp</p>
-                <input type="text" name="subject" required="required"/></p>
-                <p>Uw bericht</p>
-                <textarea name="message" rows="8" cols="35" required="required"></textarea></p>
-                <p><?php echo $captcha[$captchaIndex]['q']; ?></p>
-                <input type="text" name="captcha" required="required"/>
 
-                <input class="btn" type="submit" value="Verzend"/>
-            </form>
-        </div>
-        <div class="extra">
-            <!-- <p>Van den Heuvel HLT Consultancy handelt onder de naam <?php echo $company; ?>.</p>
-            <p>Ons kantoor bevindt zich in Malden vlakbij Nijmegen, in het oude Gemeentehuis.</p>
-            <p> Ons KvK-nummer is 09205757. Theo van den Heuvel is de eigenaar.</p> -->
-            <p class="icon-p">
-                <img class="icon" src="<?php echo $prefix ?>/media/home_icon.png" alt="huis symbool">
-                     Rijksweg 112, 
-              6581 ER Malden
-            </p>
-            <p class="icon-p">
-                <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telefoon symbool">
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+</head>
+<body>
+  
 
-                +31625492788
-            </p>
+<div class="contact">
+  <div class="form">
+    <h1>Contact</h1>
+    <!-- <div class="contact flowText"> -->
+    <form action="" method="post">
+        <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
+      <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
+        <p>Uw naam </p>
+        <input type="text" name="name" required="required"/>
+        <p>E-mailadres</p>
+        <input type="email" name="email" required="required"/></p>
+        <p>Onderwerp</p>
+        <input type="text" name="subject" required="required"/></p>
+        <p>Uw bericht</p>
+        <textarea name="message" rows="8" cols="35" required="required"></textarea></p>
+        <p><?php echo $captcha[$captchaIndex]['q']; ?></p>
+        <input type="text" name="captcha" required="required"/>
 
-        </div>
-    </div>
+        <input class="btn" type="submit" value="Verzend"/>
+    </form>
+  </div>
+  <div class="extra">
+    <!-- <p>Van den Heuvel HLT Consultancy handelt onder de naam <?php echo $company; ?>.</p>
+    <p>Ons kantoor bevindt zich in Malden vlakbij Nijmegen, in het oude Gemeentehuis.</p>
+    <p> Ons KvK-nummer is 09205757. Theo van den Heuvel is de eigenaar.</p> -->
+    <p class="icon-p">
+      <img class="icon" src="<?php echo $prefix ?>/media/home_icon.png" alt="huis symbool">
+              Rijksweg 112, 
+      6581 ER Malden
+    </p>
+    <p class="icon-p">
+        <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telefoon symbool">
+
+        +31625492788
+    </p>
+
+  </div>
+  </div>
+</body>
+</html>
+
+
   <?php
 }
 ?>
