@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>untangle</title>
+  <title>Untangle Data</title>
+  <meta name="description" content="Our main field of operation is in 
+      solving bottlenecks.
+      Apart from that we offers consultancy 
+      on a range of subjects concerning
+      IT and modeling, 
+      i.e. building a conceptual model.">
 </head>
 <body>
   <div id="en-home" class="en home">
