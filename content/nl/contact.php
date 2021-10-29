@@ -108,20 +108,12 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
             <p>Ons kantoor bevindt zich in Malden vlakbij Nijmegen, in het oude Gemeentehuis.</p>
             <p> Ons KvK-nummer is 09205757. Theo van den Heuvel is de eigenaar.</p> -->
             <p class="icon-p">
-                <img class="icon" src="<?php
-                if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-                  echo '/tempWebsite';
-                }
-                ?>/media/home_icon.png" alt="address">
+                <img class="icon" src="<?php echo $prefix ?>/media/home_icon.png" alt="huis symbool">
                      Rijksweg 112, 
               6581 ER Malden
             </p>
             <p class="icon-p">
-                <img class="icon" src="<?php
-                if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-                  echo '/tempWebsite';
-                }
-                ?>/media/telephone_icon.png" alt="address">
+                <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telefoon symbool">
 
                 +31625492788
             </p>

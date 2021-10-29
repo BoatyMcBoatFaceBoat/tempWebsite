@@ -25,6 +25,10 @@ $menuPages = array(
   array('consultancy' => array('model', 'language')),
   array('software' => array('electron', 'raku'))
 );
+$prefix = '';
+if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite')) {
+  $prefix = '/tempWebsite';
+}
 ?>
 <html>
 
@@ -33,38 +37,19 @@ $menuPages = array(
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Untangle </title>
-    <link rel="stylesheet" href="<?php
-    if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-      echo '/tempWebsite';
-    }
-    ?>/styles/style.css">
-    <script src="<?php
-    if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-      echo '/tempWebsite';
-    }
-    ?>/script/untangle.js"></script>
-    <script src="<?php
-    if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-      echo '/tempWebsite';
-    }
-    ?>/script/temp.js"></script>
+    <link rel="stylesheet" href="<?php echo $prefix ?>/styles/style.css">
+    <script src="<?php echo $prefix ?>/script/untangle.js"></script>
+    <script src="<?php echo $prefix ?>/script/temp.js"></script>
 </head>
 
 <body onload="loadWebsite()">
 <header>
     <div class="left-header-items"></div>
-    <a href="/<?php
-    if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-      echo 'tempWebsite/';
-    }
+    <a href="/<?php echo $prefix;
     if (!empty($_GET['lang'])) {
       echo $lang . '/';
     }
-    ?>"><img src="<?php
-      if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-        echo '/tempWebsite';
-      }
-      ?>/media/untangle_logo_light.png" alt="logo" class="logo"/></a>
+    ?>"><img src="<?php echo $prefix ?>/media/untangle_logo_light.png" alt="logo" class="logo"/></a>
     <div class="header-menu-icon">
       <span class="hamburger">
         <span class="top"></span>
@@ -118,27 +103,17 @@ $menuPages = array(
     </div>
     <div class="lang">
         <a class="lang-item lang-active trigger-open">
-            <img class="flag" src="<?php
-            if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-              echo '/tempWebsite';
-            }
-            ?>/media/flag_<?php echo $lang; ?>.png"/>
+            <img class="flag" src="<?php echo $prefix ?>/media/flag_<?php echo $lang; ?>.png"/>
         </a>
       <?php
       foreach ($languages as $language) {
         if ($language != $lang) {
           ?>
             <a class="lang-item" href="<?php
-            if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-              echo '/tempWebsite';
-            }
+            echo $prefix;
             echo '/' . $language . '/';
             ?>">
-                <img src="<?php
-                if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-                  echo '/tempWebsite';
-                }
-                ?>/media/flag_<?php echo $language; ?>.png"/>
+                <img src="<?php echo $prefix ?>/media/flag_<?php echo $language; ?>.png"/>
             </a>
           <?php
         }
@@ -175,11 +150,7 @@ $menuPages = array(
           <!-- theo: contact-element should not be loaded in case $page == 'contact' -->
           <div class="contact-element">
               <div class='phone clickable-contact-element'>
-                  <img class="icon clickable-contact-element" src="<?php
-                  if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite') !== false) {
-                    echo '/tempWebsite';
-                  }
-                  ?>/media/telephone_icon.png" alt="address">
+                  <img class="icon clickable-contact-element" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="address">
               </div>
 
             <?php
