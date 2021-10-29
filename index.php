@@ -36,6 +36,8 @@ if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite')) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34="/> -->
+    
     <title> Untangle </title>
     <link rel="stylesheet" href="<?php echo $prefix ?>/styles/style.css">
     <script src="<?php echo $prefix ?>/script/untangle.js"></script>
@@ -49,7 +51,7 @@ if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite')) {
     if (!empty($_GET['lang'])) {
       echo $lang . '/';
     }
-    ?>"><img src="<?php echo $prefix ?>/media/untangle_logo_light.png" alt="logo" class="logo"/></a>
+    ?>"><img src="<?php echo $prefix ?>/media/untangle_logo_light.png" alt="untangle data logo" class="logo"/></a>
     <div class="header-menu-icon">
       <span class="hamburger">
         <span class="top"></span>
@@ -140,10 +142,31 @@ if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite')) {
           // echo "Deze pagina is wel beschikbaar in uw taalversie.";
           include('content/' . $lang . '/' . $pages->$page->filename);
         } else {
-          echo "Deze pagina is niet beschikbaar in uw taalversie.";
+          $misspage = '';
+          switch ($lang) {
+            case "nl":
+              $misspage = 'Deze pagina bestaat niet in uw taal.';
+              break;
+            case "en":
+              default:
+              $misspage = 'this page does not exist in your language';
+              break;
+          }
+          echo $misspage;
         }
       } else {
-        echo "Deze pagina bestaat niet.";
+        $misspage = '';
+        switch ($lang) {
+          case "nl":
+            $misspage = 'Deze pagina bestaat niet.';
+            break;
+          case "en":
+            default:
+            $misspage = 'this page does not exist';
+            break;
+        }
+        echo $misspage;
+
       }
       if ($page != 'contact') {
         ?>
@@ -161,10 +184,8 @@ if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite')) {
                 $linktext = 'neem contact met ons op';
                 break;
               case "en":
+                default:
                 $linktext = 'contact us';
-                break;
-              default:
-                $linktext = 'neem contact met ons op';
                 break;
             }
             echo '<a href="contact">' . $linktext . '</a>';
