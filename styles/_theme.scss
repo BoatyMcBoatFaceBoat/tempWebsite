@@ -157,6 +157,7 @@ a.current-page, a.current-page:hover {
 }
 
 .contact-element.open {
+  div.envelope-wrapper {
   .icon-env-closed {
     display: none;
    }  
@@ -164,6 +165,7 @@ a.current-page, a.current-page:hover {
   .icon-env-opened {
     display: block;
   }  
+}
 
   a {
     display: block;
@@ -173,3 +175,21 @@ a.current-page, a.current-page:hover {
     color: $accent-color;
   }
 }
+
+
+// #letter {
+//   animation: wiggle 3s infinite;
+// }
+
+// @keyframes wiggle {
+//   50% {
+//     transform: translate(0, -20px);
+//     fill: red;
+
+//   }
+
+//   100% {
+//     transform: translate(0, 0px);
+//     fill: yellow;
+//   }
+// }
