@@ -84,7 +84,7 @@ function loadWebsite() {
   let plus = $('.readmore-elm');
   let minus = $('.readless-elm');
   let text = $('.more-content');
-  let phone = $('.contact-element');
+  let contactEl = $('.contact-element');
   let langMenu = $('.lang');
 
   if (plus) {
@@ -109,14 +109,15 @@ function loadWebsite() {
     let openLang = false;
 
     document.addEventListener('click', ({target}) => {
+      console.log(target)
 
-      if (target.classList.contains('clickable-contact-element')) {
+      if (target.classList.contains('click-target')) {
         openContact = !openContact;
-        if (phone) phone.classList.toggle('open', openContact);
+        if (contactEl) contactEl.classList.toggle('open', openContact);
 
       } else {
         openContact = false;
-        if (phone) phone.classList.toggle('open', false);
+        if (contactEl) contactEl.classList.toggle('open', false);
       }
 
       // console.log(target)
@@ -135,14 +136,14 @@ function loadWebsite() {
 
   
   
-  } else if (phone)  {
-    phone.addEventListener('mouseover', () => {
+  } else if (contactEl)  {
+    contactEl.addEventListener('mouseover', () => {
       // console.log('mouseover')
-      phone.classList.add('open');
+      contactEl.classList.add('open');
     })
 
-    phone.addEventListener('mouseout', () => {
-      phone.classList.remove('open');
+    contactEl.addEventListener('mouseout', () => {
+      contactEl.classList.remove('open');
     })
   }
 
