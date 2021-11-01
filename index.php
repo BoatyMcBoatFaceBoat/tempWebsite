@@ -172,8 +172,8 @@ if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite')) {
         ?>
           <div class="contact-element click-target">
             <div class="envelope-wrapper click-target">
-              <img src="<?php echo $prefix ?>/media/envelope_closed.svg" class="icon icon-env-closed click-target" alt="envelope">
-              <img src="<?php echo $prefix ?>/media/envelope_open_letter.svg" class="icon icon-env-opened click-target" alt="envelope_open">
+              <?php include('media/envelope_closed.svg')?>
+              <?php include('media/envelope_open_letter.svg')?>
             </div>
 
             <?php
