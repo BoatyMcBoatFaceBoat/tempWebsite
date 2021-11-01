@@ -47,8 +47,7 @@ if (!empty($pages->$page)) {
         $misspage = 'Deze pagina bestaat niet in uw taal.';
         break;
       case "en":
-        default:
-        $misspage = 'this page does not exist in your language';
+        $misspage = 'This page does not exist in your language.';
         break;
     }
   }
@@ -58,8 +57,7 @@ if (!empty($pages->$page)) {
       $misspage = 'Deze pagina bestaat niet.';
       break;
     case "en":
-      default:
-      $misspage = 'this page does not exist';
+      $misspage = 'This page does not exist.';
       break;
   }
 }
@@ -82,15 +80,17 @@ if (!empty($pages->$page)) {
       $url.= $_SERVER['HTTP_HOST'];   
       foreach ($languages as $language) {
         if ($language != $lang) {
+          if(!empty($currentPageFile)) {
             echo '<link rel="alternate" hreflang="' . $language . '" href="';
             echo $url . $prefix . '/';
             if($language !== $langDefault) {
               echo $language . '/' ;
             }
-            if(!empty($currentPageFile)) {
+            if(!empty($_GET['page'])) {
               echo $page;
             }
             echo '">';
+          }
         }
       }
       ?>
@@ -182,13 +182,27 @@ if (!empty($pages->$page)) {
 </header>
 
 <div class="breadCrumb"><?php
-  $breadcrumb = '<a href="' . $prefixLang . '/' . $page . '">' . $pages->$page->lang->$lang . '</a>';
-  $breadcrumbPage = $page;
-  while ($pages->$breadcrumbPage->parent != false) {
-    $breadcrumbPage = $pages->$breadcrumbPage->parent;
-    $breadcrumb = '<a href="' . $prefixLang . '/' . $breadcrumbPage . '">' . $pages->$breadcrumbPage->lang->$lang . '</a> / ' . $breadcrumb;
+  if(!empty($currentPageFile)) {
+    $breadcrumb = '<a href="' . $prefixLang . '/' . $page . '">' . $pages->$page->lang->$lang . '</a>';
+    $breadcrumbPage = $page;
+    while ($pages->$breadcrumbPage->parent != false) {
+      $breadcrumbPage = $pages->$breadcrumbPage->parent;
+      $breadcrumb = '<a href="' . $prefixLang . '/' . $breadcrumbPage . '">' . $pages->$breadcrumbPage->lang->$lang . '</a> / ' . $breadcrumb;
+    }
+    echo $breadcrumb;
+  } else {
+    switch ($lang) {
+      case "nl":
+        $notFound = 'Pagina niet gevonden';
+        break;
+      case "en":
+        default:
+        $notFound = 'Page not found';
+        break;
+    }
+    echo '<a href="' . $prefixLang . '/">Home</a> / ' . $notFound;
+
   }
-  echo $breadcrumb;
   ?>
 </div>
 
