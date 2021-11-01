@@ -7,7 +7,6 @@ input, textarea {
   border: none;
   background: $contact-color;
   width: 100%;
-  // color: white;
   outline: none;
   border: none;
   transition: all 200ms ease-in-out;
@@ -107,50 +106,44 @@ a.current-page, a.current-page:hover {
 }
 
 
-$phone-padding: 0.4em;
-$phone-height: 2em;
-.contact-element {
 
+
+.contact-element {
+  $env-width: 3em;
 
   position: relative;
-  // top: 1em;
-  // left: -1em;
-  // margin: 0 !important;
-  // margin-left: calc(-1 * (#{$phone-height} + #{$phone-padding}) / 2);
-  // margin-top: calc((#{$phone-height} + #{$phone-padding}) / 2);
-
-  left: calc(-1 * (#{$phone-height} + #{$phone-padding}) / 2);
-  top: calc((#{$phone-height} + #{$phone-padding}) / 2);
   padding: 0 !important;
-  // width: 120px;
-  background:   white;
-  // background: orange;
+  background: white;
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
   border-radius: 2em;
   z-index: 2;
-  // width: 1.5em;
-  // padding: 1em;
-  // border-radius: 16px; 
-
-  // margin: 1em;
-  // border: 2px solid #373770a3;
   box-shadow: 0px 24px 38px 3px rgba(0,0,0,0.14) , 0px 9px 46px 8px rgba(0,0,0,0.12) , 0px 11px 15px -7px rgba(0,0,0,0.2)  ;
-  
 
-  div.phone {
-    background: #373770a3;
-    // background: green;
+  div.envelope-wrapper {
+    background: $navigation-color;
     border-radius: 2em;
-    padding: $phone-padding;
+    padding: 1em;
+    padding-top: 0;
+    position: relative;
 
     .icon {
-      height: $phone-height;
+      height: auto;
+      width: $env-width; 
     }
+
+    .icon-env-closed {
+      display: block;
+    }
+  
+    .icon-env-opened {
+      display: none;
+    }
+  
   }
 
-  a{
+  a {
     display: none;
     margin: 0;
     text-align: center;
@@ -159,29 +152,23 @@ $phone-height: 2em;
     color: $content-link-color;
     opacity: 1;
     font-size: 1rem;
-
   }
-
 }
 
 .contact-element.open {
-  $larger-phone-padding: 0.6em;
-  // left: calc(-1 * (#{$phone-height} + #{$larger-phone-padding}) / 2);
-  // top: calc(-1 * (#{$phone-height} + #{$larger-phone-padding}) / 2);
-  transform: translate(-$larger-phone-padding * 0.5, -$larger-phone-padding * 0.5);
-  .phone {
-    padding: $larger-phone-padding;
+  .icon-env-closed {
+    display: none;
+   }  
 
-  }
-  // width: 160px;
+  .icon-env-opened {
+    display: block;
+  }  
+
   a {
     display: block;
-    // background: pink;
-    // height: 1.5em;
   }
 
   a:hover, a:focus {
     color: $accent-color;
   }
-
 }

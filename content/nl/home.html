@@ -6,7 +6,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> home </title>
+  <title> Untangle Data </title>
+  <meta name="description" content="Ons belangrijkste werkterrein is 
+    het oplossen van Excel hindernissen.
+    Daarnaast bieden we consultancy
+    op een scala van gebieden binnen IT en 
+    modellering, 
+    (i.e. het bouwen van een conceptueel model).">
 </head>
 <body>
 <div id="nl-home" class="nl home">

@@ -77,7 +77,8 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact form</title>
+    <title>Contact form</title>
+    <meta name="description" content="Contact us when you want to know more about our services ">
   </head>
   <body>
     
@@ -113,11 +114,10 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
           6581 ER Malden,            
           Netherlands
         </p>
-        <p class="icon-p">
-          <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telephone icon">
-
-          +31625492788
-        </p>
+        <a href="tel:+31625492788">
+            <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telephone icon">
+            +31625492788
+        </a>
       </div>
     </div>
   </body>

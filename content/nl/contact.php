@@ -90,7 +90,8 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>contact</title>
+  <title>Contact formulier</title>
+  <meta name="description" content="Neem contact met ons op indien u meer wilt weten over onze services">
 </head>
 <body>
   
@@ -126,12 +127,10 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
               Rijksweg 112, 
       6581 ER Malden
     </p>
-    <p class="icon-p">
+    <a href="tel:+31625492788">
         <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telefoon symbool">
-
         +31625492788
-    </p>
-
+    </a>
   </div>
   </div>
 </body>
