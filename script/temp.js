@@ -16,6 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
         menuContentElem.classList.add('open');
       }
       // console.log(event.target.classList);
+
+      document.querySelector('.content-wrapper').addEventListener('click', (event) => {
+        menuElem.classList.remove('open');
+        menuElem.classList.add('close');
+        if(menuContentElem.classList.contains('open')) {
+          menuContentElem.classList.remove('open');
+        }
+      });
     });
     const triggerElems = document.querySelectorAll('.trigger-open');
     triggerElems.forEach((triggerElem) => {
@@ -33,6 +41,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         })
-    })
-
+    });
 });
