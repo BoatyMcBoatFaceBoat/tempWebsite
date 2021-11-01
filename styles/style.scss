@@ -81,6 +81,7 @@ header {
 
 .content-wrapper {
   div.content {
+    position: relative;
     width: 85vw;
     max-width: 980px;
     // margin: 0 auto;
@@ -133,6 +134,7 @@ footer {
 /* breadcrumb */
 
 .breadCrumb {
+  z-index: 1;
   width: 100%;
   height: $breadcrumb-height;
   font-size: 0.8rem;
