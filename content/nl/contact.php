@@ -18,11 +18,12 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
   }
   session_destroy();
 
-  if($success) {
-      ?>
-    <div class="contact">
-        U hebt succesvol contact met ons opgenomen, dankuwel.
-    </div>
+  if ($success) {
+    ?>
+      <div class="contact">
+          Dank u. We hebben uw bericht ontvangen 
+          en zullen zo spoedig mogelijk reageren.
+      </div>
     <?php
   } else {
     ?>
@@ -47,11 +48,11 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
     ),
     array(
       'q' => 'Welk jaar is het volgend jaar (yyyy)?',
-      'a' => array('2022')
+      'a' => array(date('Y') + 1)
     ),
     array(
       'q' => 'Welk jaar was het afgelopen jaar (yyyy)?',
-      'a' => array('2020')
+      'a' => array(date('Y') - 1)
     ),
     array(
       'q' => 'Welk dier verstopt met pasen eieren?',
@@ -110,7 +111,8 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
         <p>Uw bericht</p>
         <textarea name="message" rows="8" cols="35" required="required"></textarea></p>
         <p><?php echo $captcha[$captchaIndex]['q']; ?></p>
-        <input type="text" name="captcha" required="required"/>
+        <input type="text" name="captcha" required="required" 
+          placeholder="om te zien of u geen robot bent"/>
 
         <input class="btn" type="submit" value="Verzend"/>
     </form>

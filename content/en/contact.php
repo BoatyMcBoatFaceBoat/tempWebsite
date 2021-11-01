@@ -21,13 +21,14 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
   if ($success) {
     ?>
       <div class="contact">
-          U hebt succesvol contact met ons opgenomen, dankuwel.
+          Thank you. We have received your message and
+          will respond quickly.
       </div>
     <?php
   } else {
     ?>
       <div class="contact">
-          Er ging helaas iets mis, probeer het nog een keer.
+          Something went awry. Please try again.
       </div>
     <?php
   }
@@ -96,7 +97,8 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
             <p>Your message</p>
             <textarea name="message" rows="8" cols="35" required="required"></textarea>
             <p><?php echo $captcha[$captchaIndex]['q']; ?> </p>
-            <input type="text" name="captcha" required="required"/>
+            <input type="text" name="captcha" required="required" 
+              placeholder="just to check if you are a robot"/>
 
             <input class="btn" type="submit" value="Send"/>
         </form>

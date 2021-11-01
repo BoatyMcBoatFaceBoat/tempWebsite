@@ -20,7 +20,7 @@ const $$ = function (queryName) {
 const hierarchy = {
   name: 'home',
   children: [{
-      name: 'excel',
+      name: 'spreadsheet',
       children: []
     },
     {

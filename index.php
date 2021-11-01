@@ -21,7 +21,7 @@ $aboutPages = array(
   'partners'
 );
 $menuPages = array(
-  'excel',
+  'spreadsheet',
   array('consultancy' => array('model', 'language')),
   array('software' => array('electron', 'raku'))
 );

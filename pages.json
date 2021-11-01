@@ -5,15 +5,15 @@
             "nl": "Home",
             "de": "Home"
         },
-        "filename": "home.php",
+        "filename": "home.html",
         "parent": false
     },
-    "excel": {
+    "spreadsheet": {
         "lang": {
             "en": "Spreadsheets",
             "nl": "Spreadsheets"
         },
-        "filename": "excel.html",
+        "filename": "spreadsheet.html",
         "parent": "home" 
     },
     "consultancy": {
