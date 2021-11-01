@@ -169,9 +169,10 @@ $phone-height: 2em;
 
 .contact-element.open {
   $larger-phone-padding: 0.6em;
-  // left: calc(-1 * (#{$phone-height} + #{$larger-phone-padding}) / 2);
+  left: calc(-1em - (#{$larger-phone-padding} - #{$phone-padding}));
   // top: calc(-1 * (#{$phone-height} + #{$larger-phone-padding}) / 2);
-  transform: translate($larger-phone-padding * 0.5, $larger-phone-padding * 0.5);
+  // transform: translate((-($larger-phone-padding - $phone-padding) * 0.5), (-($larger-phone-padding - $phone-padding) * 0.5));
+  bottom: calc(-1em - (#{$larger-phone-padding} - #{$phone-padding}));
   .phone {
     padding: $larger-phone-padding;
 
