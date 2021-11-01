@@ -1,20 +1,9 @@
 <?php
 $company = "Untangle Data";
-$langDefault = 'nl';
-$prefix = '';
-if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite')) {
-  $prefix = '/tempWebsite';
-}
-$prefixLang = $prefix;
+$lang = 'nl';
 $page = 'home';
 if (!empty($_GET['lang'])) {
-  if($_GET['lang'] === $langDefault) {
-    header('Location: ' . $prefix . '/' . (!empty($_GET['page']) ? $_GET['page'] : ''));
-  }
   $lang = $_GET['lang'];
-  $prefixLang .= '/' . $lang;
-} else {
-  $lang = $langDefault;
 }
 if (!empty($_GET['page'])) {
   $page = $_GET['page'];
@@ -103,7 +92,11 @@ if (!empty($pages->$page)) {
 <body onload="loadWebsite()">
 <header>
     <div class="left-header-items"></div>
-    <a href="<?php echo $prefixLang; ?>/"><img src="<?php echo $prefix ?>/media/untangle_logo_light.png" alt="untangle data logo" class="logo"/></a>
+    <a href="/<?php echo $prefix;
+    if (!empty($_GET['lang'])) {
+      echo $lang . '/';
+    }
+    ?>"><img src="<?php echo $prefix ?>/media/untangle_logo_light.png" alt="untangle data logo" class="logo"/></a>
     <div class="header-menu-icon">
       <span class="hamburger">
         <span class="top"></span>
@@ -136,7 +129,7 @@ if (!empty($pages->$page)) {
                     }
                     echo '"';
                   }
-                  echo '><a href="' . $prefixLang . '/' . $menuPage . '">' . $pages->$menuPage->lang->$lang . $openTrigger . '</a>';
+                  echo '><a href="' . $menuPage . '">' . $pages->$menuPage->lang->$lang . $openTrigger . '</a>';
                   if (!empty($menuPageArray)) {
                     echo '<ul>';
                     foreach ($menuPageArray as $subMenuPage) {
@@ -144,7 +137,7 @@ if (!empty($pages->$page)) {
                       if ($page === $subMenuPage) {
                         echo ' class="active"';
                       }
-                      echo '><a href="' . $prefixLang . '/' . $subMenuPage . '">' . $pages->$subMenuPage->lang->$lang . '</a>';
+                      echo '><a href="' . $subMenuPage . '">' . $pages->$subMenuPage->lang->$lang . '</a>';
                     }
                     echo '</ul>';
                   }
@@ -157,22 +150,17 @@ if (!empty($pages->$page)) {
     </div>
     <div class="lang">
         <a class="lang-item lang-active trigger-open">
-            <img class="flag" src="<?php echo $prefix ?>/media/flag_<?php echo $lang; ?>.png"/>
+            <img class="flag" src="<?php echo $prefix ?>/media/flag_<?php echo $lang; ?>.png" alt="<?php echo $lang;?>_flag_icon"/>
         </a>
       <?php
       foreach ($languages as $language) {
         if ($language != $lang) {
           ?>
             <a class="lang-item" href="<?php
-            echo $prefix . '/';
-            if($language !== $langDefault) {
-              echo $language . '/' ;
-            }
-            if(!empty($currentPageFile)) {
-              echo $page;
-            }
+            echo $prefix;
+            echo '/' . $language . '/';
             ?>">
-                <img src="<?php echo $prefix ?>/media/flag_<?php echo $language; ?>.png"/>
+                <img src="<?php echo $prefix ?>/media/flag_<?php echo $language; ?>.png"  alt="<?php echo $lang;?>_flag_icon"/>
             </a>
           <?php
         }
@@ -208,18 +196,44 @@ if (!empty($pages->$page)) {
 
 <div class="content-wrapper">
     <div class="content"><?php
-    if(!empty($currentPageFile)) {
-      include($currentPageFile);
-    } else {
-      echo $misspage;
-    }
-    if (!empty($currentPageFile) && $page != 'contact') {
+      if (!empty($pages->$page)) {
+        if (!empty($pages->$page->lang->$lang)) {
+          // echo "Deze pagina is wel beschikbaar in uw taalversie.";
+          include('content/' . $lang . '/' . $pages->$page->filename);
+        } else {
+          $misspage = '';
+          switch ($lang) {
+            case "nl":
+              $misspage = 'Deze pagina bestaat niet in uw taal.';
+              break;
+            case "en":
+              default:
+              $misspage = 'this page does not exist in your language';
+              break;
+          }
+          echo $misspage;
+        }
+      } else {
+        $misspage = '';
+        switch ($lang) {
+          case "nl":
+            $misspage = 'Deze pagina bestaat niet.';
+            break;
+          case "en":
+            default:
+            $misspage = 'this page does not exist';
+            break;
+        }
+        echo $misspage;
+
+      }
+      if ($page != 'contact') {
         ?>
-          <!-- theo: contact-element should not be loaded in case $page == 'contact' -->
-          <div class="contact-element">
-              <div class='phone clickable-contact-element'>
-                  <img class="icon clickable-contact-element" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="address">
-              </div>
+          <div class="contact-element click-target">
+            <div class="envelope-wrapper click-target">
+              <img src="<?php echo $prefix ?>/media/envelope_closed.svg" class="icon icon-env-closed click-target" alt="envelope">
+              <img src="<?php echo $prefix ?>/media/envelope_open_letter.svg" class="icon icon-env-opened click-target" alt="envelope_open">
+            </div>
 
             <?php
             $linktext = '';
@@ -253,7 +267,7 @@ if (!empty($pages->$page)) {
         <ul>
           <?php
           foreach ($aboutPages as $aboutPage) {
-            echo '<li><a href="' . $prefixLang . '/' .$aboutPage . '"';
+            echo '<li><a href="' . $aboutPage . '"';
             if ($page === $aboutPage) {
               echo ' class="active"';
             }
