@@ -125,12 +125,10 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
               Rijksweg 112, 
       6581 ER Malden
     </p>
-    <p class="icon-p">
+    <a href="tel:+31625492788">
         <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telefoon symbool">
-
         +31625492788
-    </p>
-
+    </a>
   </div>
   </div>
 </body>

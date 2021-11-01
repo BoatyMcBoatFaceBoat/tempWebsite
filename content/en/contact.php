@@ -112,11 +112,10 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
           6581 ER Malden,            
           Netherlands
         </p>
-        <p class="icon-p">
-          <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telephone icon">
-
-          +31625492788
-        </p>
+        <a href="tel:+31625492788">
+            <img class="icon" src="<?php echo $prefix ?>/media/telephone_icon.png" alt="telephone icon">
+            +31625492788
+        </a>
       </div>
     </div>
   </body>
