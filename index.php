@@ -73,7 +73,18 @@ if (!empty($pages->$page)) {
     <title><?php
     echo $company;
     if (!empty($_GET['page'])) {
-      echo ' | ' . $page;
+      if (!empty($currentPageFile)) {
+        echo ' | ' . $pages->$page->lang->$lang;
+      } else {
+        switch ($lang) {
+          case "nl":
+            echo '| Pagina niet gevonden';
+            break;
+          case "en":
+            echo '| Page not found';
+            break;
+        }
+      }
     }
     ?></title>
       <?php
