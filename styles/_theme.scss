@@ -112,15 +112,18 @@ $phone-height: 2em;
 .contact-element {
 
 
-  position: relative;
+  // position: relative;
+  position: absolute;
+  bottom: -1em;
+  left: -1em;
   // top: 1em;
   // left: -1em;
   // margin: 0 !important;
   // margin-left: calc(-1 * (#{$phone-height} + #{$phone-padding}) / 2);
   // margin-top: calc((#{$phone-height} + #{$phone-padding}) / 2);
 
-  left: calc(-1 * (#{$phone-height} + #{$phone-padding}) / 2);
-  top: calc((#{$phone-height} + #{$phone-padding}) / 2);
+  // left: calc(-1 * (#{$phone-height} + #{$phone-padding}) / 2);
+  // top: calc((#{$phone-height} + #{$phone-padding}) / 2);
   padding: 0 !important;
   // width: 120px;
   background:   white;
@@ -168,7 +171,7 @@ $phone-height: 2em;
   $larger-phone-padding: 0.6em;
   // left: calc(-1 * (#{$phone-height} + #{$larger-phone-padding}) / 2);
   // top: calc(-1 * (#{$phone-height} + #{$larger-phone-padding}) / 2);
-  transform: translate(-$larger-phone-padding * 0.5, -$larger-phone-padding * 0.5);
+  transform: translate($larger-phone-padding * 0.5, $larger-phone-padding * 0.5);
   .phone {
     padding: $larger-phone-padding;
 
