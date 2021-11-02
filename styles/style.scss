@@ -65,9 +65,33 @@ header {
   // justify-items: space-between;
 }
 
-.logo {
-  margin-left: 1em;
+.logo-wrapper {
+  // height: calc(#{$header-height} )
+  padding: 1em;
+  .logo {
+    margin-left: 1em;
+    height: calc(#{$header-height} - 2em);
+    // padding: 2em; 
+    // height: 100%;
+    
+
+
+    #UL {
+      stroke: white;
+    }
+
+    #untangle_logic {
+      fill: white;
+    }
+    
+    #U, #L {
+      fill: yellow;
+    }
+
+  }
+  
 }
+
 
 .content-wrapper {
   // width: 100%;

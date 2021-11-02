@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="115.81467mm"
+   height="101.92915mm"
+   viewBox="0 0 115.81467 101.92915"
+   version="1.1"
+   id="svg303989"
+   class="logo"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
+   sodipodi:docname="UntangleLogic1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview303991"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.3884119"
+     inkscape:cx="-127.44203"
+     inkscape:cy="756.92841"
+     inkscape:window-width="1327"
+     inkscape:window-height="1055"
+     inkscape:window-x="2091"
+     inkscape:window-y="50"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs303986" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-10.924508,-2.9232389)">
+    <path
+       style="fill:none;stroke-width:7.02293;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 29.344042,27.519405 c 0,0 2.112163,-28.40480888 16.905439,-19.4270606 10.95576,6.6488506 -11.961294,34.6731086 -4.870467,58.4872576 2.477595,8.320848 14.927699,8.14895 21.503587,3.957151 C 73.156642,63.987582 81.21804,46.759392 85.276282,36.368099 90.712762,22.44775 92.680064,1.4816054 84.483823,8.6120086 79.457932,12.984341 72.154019,47.894049 75.795678,65.248997 c 4.328864,12.89668 13.689047,8.736626 17.849123,-1.663614"
+       id="UL"
+       sodipodi:nodetypes="cssssscc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0469px;line-height:1.25;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;stroke:none;stroke-width:0.451172;stroke-opacity:1"
+       x="9.8919592"
+       y="96.555183"
+       id="untangle_logic"
+       transform="scale(0.963725,1.0376404)"><tspan
+         sodipodi:role="line"
+         id="tspan199182"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0469px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;stroke:none;stroke-width:0.451172;stroke-opacity:1"
+         x="9.8919592"
+         y="96.555183"><tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0469px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;stroke-width:0.451172"
+   id="U">U</tspan>ntangle <tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0469px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;stroke-width:0.451172"
+   id="L">L</tspan>ogic</tspan></text>
+  </g>
+</svg>
