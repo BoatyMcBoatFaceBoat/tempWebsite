@@ -231,3 +231,10 @@ function loadWebsite() {
 // let result = findPath('raku', hierarchy, "");
 
 // c('result', result);
+
+
+// <?php echo $prefix ?>
+// /media/envelope_closed.svg" class="icon icon-env-closed click-target" alt="envelope">
+// <img src="
+// <?php echo $prefix ?>
+// /media/envelope_open_letter.svg" class="icon icon-env-opened click-target" alt="envelope_open"> 

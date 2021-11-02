@@ -176,19 +176,36 @@ a.current-page, a.current-page:hover {
 }
 
 
-// #letter {
-//   animation: wiggle 3s infinite;
-// }
+#letter {
+  animation: pop-out 1s infinite;
 
-// @keyframes wiggle {
-//   50% {
-//     transform: translate(0, -20px);
-//     fill: red;
+}
 
-//   }
+@keyframes pop-out {
+  30% {
+    transform: translate(0, -10px);
+    // fill: scarlet;
 
-//   100% {
-//     transform: translate(0, 0px);
-//     fill: yellow;
-//   }
-// }
+  }
+  40% {
+    transform: translate(0, -10px) rotate(-4deg);
+    // transform: rotate(-4deg);
+  }
+  // 50% {
+  //   transform: translate(0, -10px);
+  // }
+  60% {
+    transform: translate(0, -10px) rotate(4deg);
+    // transform: rotate(-4deg);
+  }
+  70% {
+    transform: translate(0, -10px);
+    // fill: scarlet;
+
+  }
+
+  100% {
+    transform: translate(0, 0px);
+    // fill: yellow;
+  }
+}
