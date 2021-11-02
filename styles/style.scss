@@ -67,28 +67,39 @@ header {
 
 .logo-wrapper {
   // height: calc(#{$header-height} )
-  padding: 1em;
+  padding: 0.5em;
   .logo {
     margin-left: 1em;
-    height: calc(#{$header-height} - 2em);
+    height: calc(#{$header-height} - 1em);
     // padding: 2em; 
     // height: 100%;
     
-
-
     #UL {
-      stroke: white;
+      stroke: rgb(188, 212, 248);
     }
 
     #untangle_logic {
-      fill: white;
+      fill: rgb(180, 180, 180);
     }
-    
+
     #U, #L {
-      fill: yellow;
+      stroke: rgb(188, 212, 248);
     }
 
   }
+  
+}
+
+.logo-wrapper:hover {
+
+  #UL {
+    stroke: white;
+  }
+
+  #U, #L, #untangle_logic {
+    fill: white;
+  }
+
   
 }
 
