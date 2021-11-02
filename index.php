@@ -1,5 +1,5 @@
 <?php
-$company = "Untangle Data";
+$company = "Untangle Logic";
 $langDefault = 'nl';
 $prefix = '';
 if (strpos($_SERVER['REQUEST_URI'], 'tempWebsite')) {
@@ -69,7 +69,10 @@ if (!empty($pages->$page)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34="/> -->
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $prefix ?> /favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $prefix ?> /favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $prefix ?> /favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title><?php
     echo $company;
     if (!empty($_GET['page'])) {
