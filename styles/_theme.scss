@@ -10,6 +10,9 @@ input, textarea {
   outline: none;
   border: none;
   transition: all 200ms ease-in-out;
+  &.error {
+    border: 1px solid red;
+  }
 }
 
 input:focus, textarea:focus {

@@ -110,11 +110,10 @@ header {
   .content > div {
     padding: 0;
   }
-
-  .contact > div {
-    // padding: 1em;
+  
+  .content .contact .form form {
+    width: 100%;
   }
-
 }
 
 footer {
@@ -210,11 +209,17 @@ footer{
   p {
     margin: 0;
     text-align: left;
+    &.error {
+      margin-top: -25px;
+      font-size: 12px;
+      margin-bottom: 30px;
+      color: red;
+    }
   }
 
   .form{
     width: 50%;
-    padding: 1em;
+    padding: 1em 2em;
   }
   .extra{
     padding: 6rem 1em 1em 1em;

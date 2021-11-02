@@ -1,12 +1,11 @@
-<?php session_start();
-if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
+
+<div class="contact">
+  <?php session_start();
   $success = false;
-  if (!empty($_POST['captcha']) && !empty($_SESSION[$_POST['token']]['captcha_answer'])) {
+if (!empty($_POST['token'])) {
+  if (!empty($_SESSION[$_POST['token']]) && !empty($_POST['captcha']) && !empty($_SESSION[$_POST['token']]['captcha_answer'])) {
     $captcha = $_POST['captcha'];
     $captcha = strtolower($captcha);
-    $captcha = str_replace('de ', '', $captcha);
-    $captcha = str_replace('het ', '', $captcha);
-//  $captcha = str_replace('een ', '', $captcha);
     if (in_array($captcha, $_SESSION[$_POST['token']]['captcha_answer'])) {
       $sent = mail($_SERVER['SERVER_ADMIN'],
         ':>hlt: ' . htmlspecialchars($_POST['subject']),
@@ -15,24 +14,18 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
         'X-Mailer: PHP/' . phpversion());
       $success = true;
     }
-  }
-  session_destroy();
-
-  if ($success) {
-    ?>
-      <div class="contact">
-          Thank you. We have received your message and
+    if ($success) {
+      ?>
+            Thank you. We have received your message and
           will respond quickly.
-      </div>
-    <?php
-  } else {
-    ?>
-      <div class="contact">
-          Something went awry. Please try again.
-      </div>
-    <?php
+      <?php
+      session_destroy();
+    } else {
+      $error = 'The security question was answered incorrectly.';
+    }
   }
-} else {
+}
+if(!$success) {
   $rand_token = openssl_random_pseudo_bytes(16);
   $token = bin2hex($rand_token);
 //$_SESSION['token'] = $token;
@@ -70,8 +63,6 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
   $captchaIndex = rand(0, count($captcha) - 1);
   $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
   ?>
-
-    <div class="contact">
       <div class="form">
         <h1>Contact</h1>
         <!-- <div class="contact flowText"> -->
@@ -79,17 +70,39 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
             <!-- <input type="hidden" name="token" value="<?php echo $token; ?>" required="required" /> -->
           <?php echo '<input type="hidden" name="token" value="' . $token . '" required="required" />'; ?>
             <p>Your name </p>
-            <input type="text" name="name" required="required"/>
+            <input type="text" name="name" required="required" value="<?php
+            if(!empty($_POST['name'])) {
+              echo $_POST['name'];
+            }
+            ?>"/>
             <p>E-mail address</p>
-            <input type="email" name="email" required="required"/>
+            <input type="email" name="email" required="required" value="<?php
+            if(!empty($_POST['email'])) {
+              echo $_POST['email'];
+            }
+            ?>"/>
             <p>Subject</p>
-            <input type="text" name="subject" required="required"/>
+            <input type="text" name="subject" required="required" value="<?php
+            if(!empty($_POST['subject'])) {
+              echo $_POST['subject'];
+            }
+            ?>"/>
             <p>Your message</p>
-            <textarea name="message" rows="8" cols="35" required="required"></textarea>
+            <textarea name="message" rows="8" cols="35" required="required"><?php
+            if(!empty($_POST['message'])) {
+              echo $_POST['message'];
+            }
+            ?></textarea>
             <p><?php echo $captcha[$captchaIndex]['q']; ?> </p>
             <input type="text" name="captcha" required="required" 
-              placeholder="just to check if you are a robot"/>
-
+                placeholder="just to check if you are a robot" <?php if(!empty($error)) {
+                echo 'class= "error" ';
+              } 
+              ?>/>
+              <?php if(!empty($error)) {
+                echo '<p class="error">' . $error . '</p>';
+              } 
+              ?>
             <input class="btn" type="submit" value="Send"/>
         </form>
       </div>
@@ -108,7 +121,7 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
             +31625492788
         </a>
       </div>
-    </div>
   <?php
 }
 ?>
+</div>
