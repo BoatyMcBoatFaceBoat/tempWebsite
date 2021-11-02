@@ -40,7 +40,9 @@ $menuPages = array(
 $misspage = '';
 if (!empty($pages->$page)) {
   if (!empty($pages->$page->lang->$lang)) {
-    $currentPageFile = 'content/' . $lang . '/' . $pages->$page->filename;
+    $currentPageData = $pages->$page;
+    $currentPage = $currentPageData->lang->$lang;
+    $currentPageFile = 'content/' . $lang . '/' . $currentPageData->filename;
   } else {
     switch ($lang) {
       case "nl":
@@ -69,23 +71,22 @@ if (!empty($pages->$page)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta name="google-site-verification" content="+nxGUDJ4QpAZ5l9Bsjdi102tLVC21AIh5d1Nl23908vVuFHs34="/> -->
-    
     <title><?php
-    echo $company;
     if (!empty($_GET['page'])) {
       if (!empty($currentPageFile)) {
-        echo ' | ' . $pages->$page->lang->$lang;
+        echo $currentPage->title . ' | ';
       } else {
         switch ($lang) {
           case "nl":
-            echo '| Pagina niet gevonden';
+            echo 'Pagina niet gevonden |';
             break;
           case "en":
-            echo '| Page not found';
+            echo 'Page not found |';
             break;
         }
       }
     }
+    echo $company;
     ?></title>
       <?php
       if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   {
@@ -109,6 +110,7 @@ if (!empty($pages->$page)) {
           }
         }
       }
+      echo '<meta name="description" content="' . $currentPage->description . '">';
       ?>
     <!-- <link rel="alternate" hreflang="en" href="https://heuvelhlt.nl/en/consultancy" /> -->
     <link rel="stylesheet" href="<?php echo $prefix ?>/styles/style.css">
@@ -140,7 +142,7 @@ if (!empty($pages->$page)) {
                   $menuPage = $menuPageKey;
                   $openTrigger = ' <span class="trigger-open"></span>';
                 }
-                if (!empty($pages->$menuPage->lang->$lang)) {
+                if (!empty($pages->$menuPage->lang->$lang->title)) {
                   echo '<li';
                   if ($page === $menuPage || !empty($openTrigger)) {
                     echo ' class="';
@@ -152,7 +154,7 @@ if (!empty($pages->$page)) {
                     }
                     echo '"';
                   }
-                  echo '><a href="' . $prefixLang . '/' . $menuPage . '">' . $pages->$menuPage->lang->$lang . $openTrigger . '</a>';
+                  echo '><a href="' . $prefixLang . '/' . $menuPage . '">' . $pages->$menuPage->lang->$lang->title . $openTrigger . '</a>';
                   if (!empty($menuPageArray)) {
                     echo '<ul>';
                     foreach ($menuPageArray as $subMenuPage) {
@@ -160,7 +162,7 @@ if (!empty($pages->$page)) {
                       if ($page === $subMenuPage) {
                         echo ' class="active"';
                       }
-                      echo '><a href="' . $prefixLang . '/' . $subMenuPage . '">' . $pages->$subMenuPage->lang->$lang . '</a>';
+                      echo '><a href="' . $prefixLang . '/' . $subMenuPage . '">' . $pages->$subMenuPage->lang->$lang->title . '</a>';
                     }
                     echo '</ul>';
                   }
@@ -199,11 +201,11 @@ if (!empty($pages->$page)) {
 
 <div class="breadCrumb"><?php
   if(!empty($currentPageFile)) {
-    $breadcrumb = '<a href="' . $prefixLang . '/' . $page . '">' . $pages->$page->lang->$lang . '</a>';
+    $breadcrumb = '<a href="' . $prefixLang . '/' . $page . '">' . $currentPage->title . '</a>';
     $breadcrumbPage = $page;
     while ($pages->$breadcrumbPage->parent != false) {
       $breadcrumbPage = $pages->$breadcrumbPage->parent;
-      $breadcrumb = '<a href="' . $prefixLang . '/' . $breadcrumbPage . '">' . $pages->$breadcrumbPage->lang->$lang . '</a> / ' . $breadcrumb;
+      $breadcrumb = '<a href="' . $prefixLang . '/' . $breadcrumbPage . '">' . $pages->$breadcrumbPage->lang->$lang->title . '</a> / ' . $breadcrumb;
     }
     echo $breadcrumb;
   } else {
@@ -217,7 +219,6 @@ if (!empty($pages->$page)) {
         break;
     }
     echo '<a href="' . $prefixLang . '/">Home</a> / ' . $notFound;
-
   }
   ?>
 </div>
@@ -273,7 +274,7 @@ if (!empty($pages->$page)) {
             if ($page === $aboutPage) {
               echo ' class="active"';
             }
-            echo '>' . $pages->$aboutPage->lang->$lang . '</a></li>';
+            echo '>' . $pages->$aboutPage->lang->$lang->title . '</a></li>';
           }
           ?>
         </ul>

@@ -71,17 +71,6 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
   $_SESSION[$token]['captcha_answer'] = $captcha[$captchaIndex]['a'];
   ?>
 
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact form</title>
-    <meta name="description" content="Contact us when you want to know more about our services ">
-  </head>
-  <body>
-    
     <div class="contact">
       <div class="form">
         <h1>Contact</h1>
@@ -120,8 +109,6 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
         </a>
       </div>
     </div>
-  </body>
-  </html>
   <?php
 }
 ?>

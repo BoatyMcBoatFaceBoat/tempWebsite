@@ -83,19 +83,6 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
 // no direct access
 // defined('_HLT') or die('Access denied');
   ?>
-
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact formulier</title>
-  <meta name="description" content="Neem contact met ons op indien u meer wilt weten over onze services">
-</head>
-<body>
-  
-
 <div class="contact">
   <div class="form">
     <h1>Contact</h1>
@@ -133,10 +120,6 @@ if (!empty($_POST['token']) && !empty($_SESSION[$_POST['token']])) {
     </a>
   </div>
   </div>
-</body>
-</html>
-
-
   <?php
 }
 ?>

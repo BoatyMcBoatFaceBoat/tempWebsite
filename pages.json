@@ -1,105 +1,182 @@
 {
     "home": {
         "lang": {
-            "en": "Home",
-            "nl": "Home",
-            "de": "Home"
+            "en": {
+                "title": "Home",
+                "description": "Our main field of operation is in solving bottlenecks. Apart from that we offers consultancy on a range of subjects concerning IT and modeling, i.e. building a conceptual model."
+            },
+            "nl": {
+                "title": "Home",
+                "description": "Ons belangrijkste werkterrein is het oplossen van Excel hindernissen. Daarnaast bieden we consultancy op een scala van gebieden binnen IT en modellering (i.e. het bouwen van een conceptueel model)."
+            }
         },
         "filename": "home.html",
         "parent": false
     },
     "spreadsheet": {
         "lang": {
-            "en": "Spreadsheets",
-            "nl": "Spreadsheets"
+            "en": {
+                "title": "Spreadsheets",
+                "description": "If your organization encounters the limits of Excel, we may be able to use our tool set to help you out. We offer a software service by which your Excel materials are automatically semantically analyzed."
+            },
+            "nl": {
+                "title": "Spreadsheets",
+                "description": "Als uw bedrijf afhankelijk is van spreadsheets, dan heb je een probleem als ze zich niet fatsoenlijk gedragen. We bieden een software-service aan om uw Excel materialen automatisch semantisch te analyseren."
+            }
         },
         "filename": "spreadsheet.html",
         "parent": "home" 
     },
     "consultancy": {
         "lang": {
-            "en": "Consultancy",
-            "nl": "Consultancy"
+            "en": {
+                "title": "Consultancy",
+                "description": "We offer consultancy to answer hard questions on software use and development, on information streams, and other terrains where information technology affects the operation of your organisation."
+            },
+            "nl": {
+                "title": "Consultancy",
+                "description": "We bieden consultancy aan om moeilijke vragen te beantwoorden over softwaregebruik en -ontwikkeling, over informatiestromen en op andere terreinen waar informatietechnologie de werking van uw organisatie beïnvloedt."
+            }
         },
         "filename": "consultancy.html",
         "parent": "home"
     },
     "model": {
         "lang": {
-            "en": "Modeling",
-            "nl": "Modellering"
+            "en": {
+                "title": "Modeling",
+                "description": "The creation of a reliable model is essential in approaching complex problems. We aim for models that we can trust to be complete"
+            },
+            "nl": {
+                "title": "Modellering",
+                "description": "Het bouwen van een betrouwbaar model is essentieel voor het benaderen van complexe problemen. We streven naar modellen waarvan we zeker kunnen zijn dat ze compleet zijn."
+            }
         },
         "filename": "model.html",
         "parent": "consultancy"
     },
     "language": {
         "lang": {
-            "en": "Language",
-            "nl": "Taal"
+            "en": {
+                "title": "Language",
+                "description": "Our team has experience in various branches of HLT, such as spelling and grammar checking, search, and speech synthesis."
+            },
+            "nl": {
+                "title": "Taal",
+                "description": "Ons team heeft ervaring in verschillende takken van HLT zoals spelling- en grammaticacontrole, zoeken en spraaksynthese."
+            }
         },
         "filename": "language.html",
         "parent": "model"
     },
     "software": {
         "lang": {
-            "en": "Software development",
-            "nl": "Softwareontwikkeling"
+            "en": {
+                "title": "Software development",
+                "description": "Our company hosts decades of experience in software engineering. We offer consultancy for Raku and Electron and also are able to help you with picking the right framework suited for your company's needs."
+            },
+            "nl": {
+                "title": "Softwareontwikkeling",
+                "description": "Binnen ons bedrijf bevinden zich decennia van ervaring in software engineering. We bieden consultancy op het gebied van Raku en Electron en kunnen uw bedrijf hulp bieden in het kiezen van het juiste framework."
+            }
         },
         "filename": "software.html",
         "parent": "consultancy"
     },
     "electron": {
         "lang": {
-            "en": "Electron",
-            "nl": "Electron"
+            "en": {
+                "title": "Electron",
+                "description": "Electron is a platform to build complete stand-alone applications with use of HTML, CSS and Javascript."
+            },
+            "nl": {
+                "title": "Electron",
+                "description": "Electron is een platform om complete stand-alone applicaties te bouwen met HTML, CSS en Javascript."
+            }
         },
         "filename": "electron.html",
         "parent": "software"
     },
     "raku": {
         "lang": {
-            "en": "Raku",
-            "nl": "Raku"
+            "en": {
+                "title": "Raku",
+                "description": "Raku is a programming language ideally suited for complex analysis tasks."
+            },
+            "nl": {
+                "title": "Raku",
+                "description": "Raku is een programmeertaal ideaal voor complexe analysetaken."
+            }
         },
         "filename": "raku.html",
         "parent": "software"
     },
     "values": {
         "lang": {
-            "en": "Values",
-            "nl": "Waarden"
+            "en": {
+                "title": "Values",
+                "description": "Our core value is integrity. We see climate change as the main threat of our times. We measure the choices we make on the effects they could have on the environment."
+            },
+            "nl": {
+                "title": "Waarden",
+                "description": "Onze kernwaarde is integriteit. We beschouwen klimaatverandering als de belangrijkste hedendaagse dreiging. We meten onze keuzes af aan de effecten die ze kunnen hebben op onze leefomgeving."
+            }
         },
         "filename": "values.html",
         "parent": "home"
     },
     "team": {
         "lang": {
-            "en": "Team",
-            "nl": "Team"
+            "en": {
+                "title": "Team",
+                "description": "Our team consists mostly of academics with a science background."
+            },
+            "nl": {
+                "title": "Team",
+                "description": "Ons team bestaat grotendeels uit mensen met een exacte academische achtergrond."
+            }
         },
         "filename": "team.html",
         "parent": "home"
     },
     "contact": {
         "lang": {
-            "en": "Contact",
-            "nl": "Contact"
+            "en": {
+                "title": "Contact",
+                "description": "Contact us when you want to know more about our services."
+            },
+            "nl": {
+                "title": "Contact",
+                "description": "Neem contact met ons op indien u meer wilt weten over onze services."
+            }
         },
         "filename": "contact.php",
         "parent": "home"
     },
     "impressum": {
         "lang": {
-            "en": "Colophon",
-            "nl": "Colofon"
+            "en": {
+                "title": "Colophon",
+                "description": "Untangle Data is a trademark of Van den Heuvel HLT Consultancy."
+            },
+            "nl": {
+                "title": "Colofon",
+                "description": "Van den Heuvel HLT Consultancy handelt onder de naam Untangle Data."
+            }
         },
         "filename": "impressum.html",
         "parent": "home"
     },
     "partners": {
         "lang": {
-            "en": "Partners",
-            "nl": "Partners"
+            "en": {
+                "title": "Partners",
+                "description": "We would like to team with Excel experts, so that we can refer questions to them that require additional knowledge on formulas, pivoting, array formulas, VBA and other spreadsheet issues, many users struggle with. We can help with the issues concerning maintainability, hart to find anomalies and reliability."
+            },
+            "nl": {
+                "title": "Partners",
+                "description": "We zouden graag samenwerken met Excel-experts, zodat we vragen om Excelkennis over formules, draaitabellen, VBA en andere zaken waar veel gebruikers mee worstelen, kunnen kunnen doorgeven. We kunnen ons dan richten op problemen met onderhoudbaarheid, moeilijk te traceren anomaliën en betrouwbaarheid."
+            }
         },
         "filename": "partners.html",
         "parent": "home"
