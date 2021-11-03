@@ -82,14 +82,28 @@ header {
       stroke: #d4d9f2ff;
     }
 
+    #UL_overlay {
+      stroke: white;
+      stroke-dasharray: 0, 4000;
+      stroke-dashoffset: 5;
+      transition: all 1s;
+    }
+
     #Untangle {
       fill: white;
+      transition: all 0.5s;
+      // transition-delay: 1s;
       // fill: rgb(202, 239, 248);
+      stroke-width:0.550067;
     }
 
     #Logic {
       fill: #aaeeffff;
       // fill: #7f7fa3;
+      transition: all 0.5s;
+      transition-delay: 0.5s;
+      // stroke-width:0.550067;
+      stroke-width:1.29631;
     }
 
     #divider {
@@ -102,13 +116,25 @@ header {
 
 .logo-wrapper:hover {
   #logo_svg {
-    height: calc(#{$header-height} + 0.4em);
-    #UL, #divider  {
+    // height: calc(#{$header-height} + 0.4em);
+    #divider  {
       stroke: white;
     }
 
     #Untangle, #Logic {
-      fill: white;
+      fill: rgb(255, 255, 255);
+    }
+
+    #Logic {
+      // fill: #aaeeffff;
+      // fill: #7f7fa3;
+      transition: all 0.5s;
+      transition-delay: 0.5s;
+      // stroke-width:0.550067;
+    }
+   
+    #UL_overlay {
+      stroke-dasharray: 347.5;
     }
   }
 
