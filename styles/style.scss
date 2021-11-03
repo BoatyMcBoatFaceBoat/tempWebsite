@@ -66,24 +66,31 @@ header {
 }
 
 .logo-wrapper {
-  // height: calc(#{$header-height} )
+  //  height: calc(#{$header-height} );
   padding: 0.5em;
-  .logo {
-    margin-left: 1em;
-    height: calc(#{$header-height} - 1em);
+  
+  #logo_svg {
+    // margin-left: 1em;
+    height: calc(#{$header-height});
     // padding: 2em; 
     // height: 100%;
     
     #UL {
-      stroke: rgb(188, 212, 248);
+      stroke: #d4d9f2ff;
     }
 
-    #untangle_logic {
-      fill: rgb(180, 180, 180);
+    #Untangle {
+      fill: white;
+      // fill: rgb(202, 239, 248);
     }
 
-    #U, #L {
-      stroke: rgb(188, 212, 248);
+    #Logic {
+      fill: #aaeeffff;
+      // fill: #7f7fa3;
+    }
+
+    #divider {
+      stroke: #aaeeffff;
     }
 
   }
@@ -91,13 +98,15 @@ header {
 }
 
 .logo-wrapper:hover {
+  #logo_svg {
+    height: calc(#{$header-height} + 0.4em);
+    #UL, #divider  {
+      stroke: white;
+    }
 
-  #UL {
-    stroke: white;
-  }
-
-  #U, #L, #untangle_logic {
-    fill: white;
+    #Untangle, #Logic {
+      fill: white;
+    }
   }
 
   
