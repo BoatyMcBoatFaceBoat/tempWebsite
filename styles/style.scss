@@ -65,9 +65,53 @@ header {
   // justify-items: space-between;
 }
 
-.logo {
-  margin-left: 1em;
+.logo-wrapper {
+  //  height: calc(#{$header-height} );
+  padding: 0.5em;
+  
+  #logo_svg {
+    // margin-left: 1em;
+    height: calc(#{$header-height});
+    // padding: 2em; 
+    // height: 100%;
+    
+    #UL {
+      stroke: #d4d9f2ff;
+    }
+
+    #Untangle {
+      fill: white;
+      // fill: rgb(202, 239, 248);
+    }
+
+    #Logic {
+      fill: #aaeeffff;
+      // fill: #7f7fa3;
+    }
+
+    #divider {
+      stroke: #aaeeffff;
+    }
+
+  }
+  
 }
+
+.logo-wrapper:hover {
+  #logo_svg {
+    height: calc(#{$header-height} + 0.4em);
+    #UL, #divider  {
+      stroke: white;
+    }
+
+    #Untangle, #Logic {
+      fill: white;
+    }
+  }
+
+  
+}
+
 
 .content-wrapper {
   // width: 100%;
