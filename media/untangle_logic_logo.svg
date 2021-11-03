@@ -2,20 +2,19 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="115.81467mm"
-   height="101.92915mm"
-   viewBox="0 0 115.81467 101.92915"
+   width="99.409378mm"
+   height="59.378361mm"
+   viewBox="0 0 99.40938 59.378361"
    version="1.1"
-   id="svg303989"
-   class="logo"
+   id="svg790712"
    inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
-   sodipodi:docname="UntangleLogic1.svg"
+   sodipodi:docname="untangle-logic-icon1.2.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview303991"
+     id="namedview790714"
      pagecolor="#ffffff"
      bordercolor="#111111"
      borderopacity="1"
@@ -24,46 +23,65 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:zoom="0.3884119"
-     inkscape:cx="-127.44203"
-     inkscape:cy="756.92841"
-     inkscape:window-width="1327"
-     inkscape:window-height="1055"
-     inkscape:window-x="2091"
-     inkscape:window-y="50"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer1" />
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     inkscape:zoom="1.0985947"
+     inkscape:cx="104.67918"
+     inkscape:cy="48.698576"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g790694" />
   <defs
-     id="defs303986" />
+     id="defs790709" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-10.924508,-2.9232389)">
-    <path
-       style="fill:none;stroke-width:7.02293;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 29.344042,27.519405 c 0,0 2.112163,-28.40480888 16.905439,-19.4270606 10.95576,6.6488506 -11.961294,34.6731086 -4.870467,58.4872576 2.477595,8.320848 14.927699,8.14895 21.503587,3.957151 C 73.156642,63.987582 81.21804,46.759392 85.276282,36.368099 90.712762,22.44775 92.680064,1.4816054 84.483823,8.6120086 79.457932,12.984341 72.154019,47.894049 75.795678,65.248997 c 4.328864,12.89668 13.689047,8.736626 17.849123,-1.663614"
-       id="UL"
-       sodipodi:nodetypes="cssssscc" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0469px;line-height:1.25;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;stroke:none;stroke-width:0.451172;stroke-opacity:1"
-       x="9.8919592"
-       y="96.555183"
-       id="untangle_logic"
-       transform="scale(0.963725,1.0376404)"><tspan
-         sodipodi:role="line"
-         id="tspan199182"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0469px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;stroke:none;stroke-width:0.451172;stroke-opacity:1"
-         x="9.8919592"
-         y="96.555183"><tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0469px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;stroke-width:0.451172"
-   id="U">U</tspan>ntangle <tspan
-   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.0469px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;stroke-width:0.451172"
-   id="L">L</tspan>ogic</tspan></text>
+     transform="translate(-5.0362828,-2.863058)">
+    <g
+       id="g790694"
+       transform="matrix(0.40448394,0,0,0.40448394,-106.37553,-4805.2725)">
+      <path
+         style="fill:none;stroke:#d4d9f2;stroke-width:17.0064;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 308.66793,11944.77 c 0,0 6.54148,-30.127 20.61105,-23.685 14.20611,6.505 -14.5831,42.273 -5.93803,71.307 1.82586,6.133 8.09402,8.481 14.53765,8.252 4.21655,-0.151 8.50821,-1.406 11.67938,-3.427 12.52601,-7.985 28.61786,-28.989 33.56562,-41.658 6.62812,-16.972 3.664,-41.375 -7.22952,-33.841 -11.74598,8.124 -18.06913,47.8 -10.59254,69.052 5.27772,15.724 16.68962,10.651 21.76158,-2.028"
+         id="path790670"
+         sodipodi:nodetypes="csssssscc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.0027px;line-height:1.25;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a5e7f9;fill-opacity:1;stroke:none;stroke-width:0.550067;stroke-opacity:1"
+         x="423.3396"
+         y="11538.759"
+         id="text790678"
+         transform="scale(0.963725,1.0376404)"><tspan
+           sodipodi:role="line"
+           id="tspan790676"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.0027px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a5e7f9;fill-opacity:1;stroke:none;stroke-width:0.550067;stroke-opacity:1"
+           x="423.3396"
+           y="11538.759"><tspan
+   style="fill:#a5e7f9;fill-opacity:1;stroke:none;stroke-width:0.550067;stroke-opacity:1"
+   id="tspan790672">Untangle</tspan> <tspan
+   style="fill:#a5e7f9;fill-opacity:1;stroke-width:0.550067"
+   id="tspan790674" /></tspan></text>
+      <path
+         style="fill:#d7eef4;stroke:#ffffff;stroke-width:0.886005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 409.94322,11982.989 h 86.5442"
+         id="path790680" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.8525px;line-height:1.25;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:0;fill:#aaeeff;fill-opacity:1;stroke:none;stroke-width:1.29631;stroke-opacity:1"
+         x="540.49353"
+         y="10326.331"
+         id="text790684"
+         transform="matrix(0.40894033,0,0,0.44030507,186.95334,7456.7428)"><tspan
+           id="tspan790682"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.8525px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.29631;stroke-opacity:1"
+           x="540.49353"
+           y="10326.331">Logic</tspan></text>
+    </g>
   </g>
 </svg>
