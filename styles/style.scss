@@ -67,11 +67,14 @@ header {
 
 .logo-wrapper {
   //  height: calc(#{$header-height} );
+
   padding: 0.5em;
   
   #logo_svg {
-    // margin-left: 1em;
     height: calc(#{$header-height});
+    width: fit-content;
+    // margin-left: 1em;
+    
     // padding: 2em; 
     // height: 100%;
     
