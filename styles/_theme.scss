@@ -144,6 +144,12 @@ a.current-page, a.current-page:hover {
       display: none;
     }
   
+    #letter {
+      transition: all 1s ease-in-out;
+      transition-delay: 3s;
+      transform: translate(0, 0);
+      // fill: yellow;
+    }
   }
 
   a {
@@ -167,6 +173,12 @@ a.current-page, a.current-page:hover {
   .icon-env-opened {
     display: block;
   }  
+
+  #letter {
+    transform: translate(0, -10px);
+    // fill: red;
+  }
+  
 }
 
   a {
@@ -176,13 +188,16 @@ a.current-page, a.current-page:hover {
   a:hover, a:focus {
     color: $accent-color;
   }
+
+
 }
 
 
-#letter {
-  animation: pop-out 1s infinite;
+// #letter {
 
-}
+  // animation: pop-out 1s infinite;
+
+// }
 
 @keyframes pop-out {
   30% {
