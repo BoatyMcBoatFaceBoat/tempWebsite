@@ -1,5 +1,4 @@
 const c = function (descrip, something) {
-
   // return console.log(`${descrip}:  ${something}`);
 }
 
@@ -15,62 +14,6 @@ const $$ = function (queryName) {
   return document.querySelectorAll(queryName);
 }
 
-
-// hierarchy for href names:
-const hierarchy = {
-  name: 'home',
-  children: [{
-      name: 'spreadsheet',
-      children: []
-    },
-    {
-      name: 'consultancy',
-      children: [{
-          name: 'model',
-          children: [{
-            name: 'lang',
-            children: []
-          }]
-        },
-        {
-          name: 'software',
-          children: [{
-              name: 'electron',
-              children: []
-            },
-            {
-              name: 'raku',
-              children: []
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      name: 'values',
-      children: []
-    },
-    {
-      name: 'team',
-      children: []
-    },
-    {
-      name: 'contact',
-      children: []
-    },
-    {
-      name: 'impressum',
-      children: []
-    },
-    {
-      name: 'partners',
-      children: []
-    }
-  ]
-};
-
-
 function loadWebsite() {
   let touch = false;
   if (!("ontouchstart" in document.documentElement)) {
@@ -84,8 +27,10 @@ function loadWebsite() {
   let plus = $('.readmore-elm');
   let minus = $('.readless-elm');
   let text = $('.more-content');
-  let contactEl = $('.contact-element');
-  let langMenu = $('.lang');
+  // let contactEl = $('.contact-element');
+  // let langMenu = $('.lang');
+
+  const toggleElmClasses = ['contact-element', 'lang'];
 
   if (plus) {
     plus.classList.add('show');
@@ -105,34 +50,54 @@ function loadWebsite() {
   }
 
   if (touch) {
-    let openContact = false;
-    let openLang = false;
+    toggleElmClasses.forEach(elmClass => {
+      addToggleTo(elmClass);
+    })
 
-    document.addEventListener('click', ({target}) => {
-      console.log(target)
+    // let openContact = false;
+    // let openLang = false;
 
-      if (target.classList.contains('click-target')) {
-        openContact = !openContact;
-        if (contactEl) contactEl.classList.toggle('open', openContact);
+    // if(contactEl){
+    //   contactEl.addEventListener('click', () => {
+    //     openContact = !openContact;
+    //     contactEl.classList.toggle('open', openContact);
+    //   })
+    //   document.addEventListener('click', ({target}) => {
+    //     if(!(target.closest('.contact-element'))){
+    //       openContact = false;
+    //       contactEl.classList.toggle('open', false);
+    //     }
+    //   })
 
-      } else {
-        openContact = false;
-        if (contactEl) contactEl.classList.toggle('open', false);
-      }
+    // }
 
-      // console.log(target)
+    // document.addEventListener('click', ({currentTarget}) => {
+      // console.log(currentTarget)
 
-      if (target.classList.contains('flag')) {
-        openLang = !openLang;
-        langMenu.classList.toggle('open', openLang);
+      // if (target.classList.contains('click-target')) {
+      //   openContact = !openContact;
+      //   if (contactEl) contactEl.classList.toggle('open', openContact);
 
-      } else {
-        openLang = false;
-        langMenu.classList.toggle('open', false);
-      }
+      // } else {
+      //   openContact = false;
+      //   if (contactEl) contactEl.classList.toggle('open', false);
+      // }
+
+      // // console.log(target)
+
+      // if (target.classList.contains('flag')) {
+      //   openLang = !openLang;
+      //   langMenu.classList.toggle('open', openLang);
+
+      // } else {
+      //   openLang = false;
+      //   langMenu.classList.toggle('open', false);
+      // }
 
 
-    });
+    // });
+
+    
 
   
   
@@ -146,14 +111,26 @@ function loadWebsite() {
       contactEl.classList.remove('open');
     })
   }
-
-
-
-
-
-
 }
 
+function addToggleTo(className){
+  const domEl = $(`.${className}`);
+  console.log(domEl);
+  if (!domEl) { return; }
+  let isOpen = false;
+
+  domEl.addEventListener('click', () => {
+    isOpen = !isOpen;
+    domEl.classList.toggle('open', isOpen);
+  })
+  
+  document.addEventListener('click', ({target}) => {
+    if(!(target.closest(`.${className}`))) {
+      isOpen = false;
+      domEl.classList.toggle('open', false);
+    }
+  })
+}
 
 
 // let loc = window.location.pathname;
@@ -238,3 +215,58 @@ function loadWebsite() {
 // <img src="
 // <?php echo $prefix ?>
 // /media/envelope_open_letter.svg" class="icon icon-env-opened click-target" alt="envelope_open"> 
+
+
+// hierarchy for href names:
+// const hierarchy = {
+//   name: 'home',
+//   children: [{
+//       name: 'spreadsheet',
+//       children: []
+//     },
+//     {
+//       name: 'consultancy',
+//       children: [{
+//           name: 'model',
+//           children: [{
+//             name: 'lang',
+//             children: []
+//           }]
+//         },
+//         {
+//           name: 'software',
+//           children: [{
+//               name: 'electron',
+//               children: []
+//             },
+//             {
+//               name: 'raku',
+//               children: []
+//             }
+//           ]
+//         }
+//       ]
+//     },
+
+//     {
+//       name: 'values',
+//       children: []
+//     },
+//     {
+//       name: 'team',
+//       children: []
+//     },
+//     {
+//       name: 'contact',
+//       children: []
+//     },
+//     {
+//       name: 'impressum',
+//       children: []
+//     },
+//     {
+//       name: 'partners',
+//       children: []
+//     }
+//   ]
+// };
