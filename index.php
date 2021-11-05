@@ -243,7 +243,7 @@ if (!empty($pages->$page)) {
               <?php include('media/envelope_closed.svg')?>
               <?php include('media/envelope_open_letter.svg')?>
             </div>
-
+            
             <?php
             $linktext = '';
 
