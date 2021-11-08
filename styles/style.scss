@@ -84,11 +84,22 @@ header {
       transition: all 1s;
     }
 
+    #Untangle, #Logic {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      // font-size: 50px;
+      font-size: 20px;
+      line-height:  1.25;
+      stroke-width:0.654126
+      // stroke-width:1.29631;
+    }
+
+    #untangle-text {
+    }
+
     #Untangle {
       fill: $logo_color_sec;
       transition: all 0.5s;
-      stroke-width:0.550067;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      // stroke-width:0.550067;
     }
 
     #Untangle2, #Logic2 {
@@ -99,8 +110,7 @@ header {
       fill: $logo_color_ter;
       transition: all 0.5s;
       transition-delay: 0.5s;
-      stroke-width:1.29631;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      // stroke-width:1.29631;
     }
 
     #Logic_overlay, #Untangle_overlay, #divider_overlay {
