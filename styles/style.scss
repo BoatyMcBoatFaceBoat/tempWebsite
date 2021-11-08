@@ -88,7 +88,11 @@ header {
       fill: $logo_color_sec;
       transition: all 0.5s;
       stroke-width:0.550067;
-      // font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #Untangle2, #Logic2 {
+      display: none;
     }
 
     #Logic {
@@ -96,7 +100,14 @@ header {
       transition: all 0.5s;
       transition-delay: 0.5s;
       stroke-width:1.29631;
-      // font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #Logic_overlay, #Untangle_overlay, #divider_overlay {
+      display: none;
+      visibility: hidden; 
+      stroke: none;
+      fill: none;
     }
 
     #divider {
@@ -111,11 +122,15 @@ header {
   #logo_svg {
     // height: calc(#{$header-height} + 0.4em);
     #divider  {
-      stroke: white;
+      stroke: rgb(149, 177, 253);
     }
 
     #Untangle, #Logic {
-      fill: rgb(255, 255, 255);
+      // fill: rgb(129, 198, 255);
+      // fill: rgb(157, 255, 218);
+      fill: rgb(149, 177, 253);
+
+      // fill: red;
     }
 
     #Logic {
