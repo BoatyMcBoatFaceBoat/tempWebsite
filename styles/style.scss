@@ -66,20 +66,15 @@ header {
 }
 
 .logo-wrapper {
-  //  height: calc(#{$header-height} );
 
   padding: 0.5em;
   
   #logo_svg {
     height: calc(#{$header-height});
     width: fit-content;
-    // margin-left: 1em;
-    
-    // padding: 2em; 
-    // height: 100%;
     
     #UL {
-      stroke: #d4d9f2ff;
+      stroke: $logo_color;
     }
 
     #UL_overlay {
@@ -90,24 +85,33 @@ header {
     }
 
     #Untangle {
-      fill: white;
+      fill: $logo_color_sec;
       transition: all 0.5s;
-      // transition-delay: 1s;
-      // fill: rgb(202, 239, 248);
       stroke-width:0.550067;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #Untangle2, #Logic2 {
+      display: none;
     }
 
     #Logic {
-      fill: #aaeeffff;
-      // fill: #7f7fa3;
+      fill: $logo_color_ter;
       transition: all 0.5s;
       transition-delay: 0.5s;
-      // stroke-width:0.550067;
       stroke-width:1.29631;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #Logic_overlay, #Untangle_overlay, #divider_overlay {
+      display: none;
+      visibility: hidden; 
+      stroke: none;
+      fill: none;
     }
 
     #divider {
-      stroke: #aaeeffff;
+      stroke: $logo_color_ter;
     }
 
   }
@@ -118,19 +122,16 @@ header {
   #logo_svg {
     // height: calc(#{$header-height} + 0.4em);
     #divider  {
-      stroke: white;
+      stroke: rgb(149, 177, 253);
     }
 
     #Untangle, #Logic {
-      fill: rgb(255, 255, 255);
+      fill: rgb(149, 177, 253);
     }
 
     #Logic {
-      // fill: #aaeeffff;
-      // fill: #7f7fa3;
       transition: all 0.5s;
       transition-delay: 0.5s;
-      // stroke-width:0.550067;
     }
    
     #UL_overlay {
