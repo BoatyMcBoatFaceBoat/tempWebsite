@@ -1,20 +1,20 @@
-<!-- <?xml version="1.0" encoding="UTF-8" standalone="no"?> -->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="99.409378mm"
-   height="59.378361mm"
-   viewBox="0 0 99.40938 59.378361"
+   width="91.488258mm"
+   height="49.378361mm"
+   viewBox="0 0 91.48826 49.378361"
    version="1.1"
    id="logo_svg"
-   sodipodi:docname="untangle_logo_double1.2.svg"
+   sodipodi:docname="untangle_logo_double1.3.svg"
    inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview790714"
+     id="namedview7"
      pagecolor="#ffffff"
      bordercolor="#111111"
      borderopacity="1"
@@ -23,69 +23,45 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="mm"
      showgrid="false"
-     fit-margin-top="10"
-     fit-margin-left="10"
-     fit-margin-right="10"
-     fit-margin-bottom="10"
-     inkscape:zoom="2.1971895"
-     inkscape:cx="180.68537"
-     inkscape:cy="96.714462"
+     inkscape:zoom="1.0985947"
+     inkscape:cx="74.640812"
+     inkscape:cy="142.45472"
      inkscape:window-width="1920"
      inkscape:window-height="1056"
      inkscape:window-x="1920"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g790694" />
+     inkscape:current-layer="g790694"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
   <defs
-     id="defs790709" />
+     id="defs2">
+    <rect
+       x="489.64545"
+       y="801.97882"
+       width="185.29308"
+       height="81.486336"
+       id="rect17226" />
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-5.0362828,-2.863058)">
+     transform="translate(-58.649577,-122.11766)">
     <g
        id="g790694"
-       transform="matrix(0.40448394,0,0,0.40448394,-106.37553,-4805.2725)">
+       transform="matrix(0.40448394,0,0,0.40448394,-57.762236,-4691.0179)">
       <path
          style="fill:none;stroke-width:17.0064;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 308.66793,11944.77 c 0,0 6.54148,-30.127 20.61105,-23.685 14.20611,6.505 -14.5831,42.273 -5.93803,71.307 1.82586,6.133 8.09402,8.481 14.53765,8.252 4.21655,-0.151 8.50821,-1.406 11.67938,-3.427 12.52601,-7.985 28.61786,-28.989 33.56562,-41.658 6.62812,-16.972 3.664,-41.375 -7.22952,-33.841 -11.74598,8.124 -18.06913,47.8 -10.59254,69.052 5.27772,15.724 16.68962,10.651 21.76158,-2.028"
          id="UL"
          sodipodi:nodetypes="csssssscc" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.0027px;line-height:1.25;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a5e7f9;fill-opacity:1;stroke:none;stroke-width:0.550067;stroke-opacity:1"
-         x="423.3396"
-         y="11538.759"
-         id="text790678"
-         transform="scale(0.963725,1.0376404)"><tspan
-           sodipodi:role="line"
-           id="tspan790676"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.0027px;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a5e7f9;fill-opacity:1;stroke:none;stroke-width:0.550067;stroke-opacity:1"
-           x="423.3396"
-           y="11538.759"><tspan
-              style="fill-opacity:1;stroke:none;stroke-width:0.550067;stroke-opacity:1"
-              id="Untangle">Untangle</tspan> <tspan
-              style="fill:#a5e7f9;fill-opacity:1;stroke-width:0.550067"
-              id="tspan790674" /></tspan></text>
       <path
-         style="fill:#d7eef4;stroke-width:0.886005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 409.94322,11982.989 h 86.5442"
+         style="fill:none;fill-opacity:1;stroke-width:0.886005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 409.94322,11982.926 h 86.5442"
          id="divider" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.8525px;line-height:1.25;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:0;fill:#aaeeff;fill-opacity:1;stroke:none;stroke-width:1.29631;stroke-opacity:1"
-         x="540.49353"
-         y="10326.331"
-         id="text790684"
-         transform="matrix(0.40894033,0,0,0.44030507,186.95334,7456.7428)"><tspan
-           id="Logic"
-      
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.8525px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;stroke:none;stroke-width:1.29631;stroke-opacity:1"
-           x="540.49353"
-           y="10326.331">Logic</tspan></text>
-      
-      
-      
       <path
          style="fill:none;stroke-width:17.0064;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
          d="m 308.66793,11944.77 c 0,0 6.54148,-30.127 20.61105,-23.685 14.20611,6.505 -14.5831,42.273 -5.93803,71.307 1.82586,6.133 8.09402,8.481 14.53765,8.252 4.21655,-0.151 8.50821,-1.406 11.67938,-3.427 12.52601,-7.985 28.61786,-28.989 33.56562,-41.658 6.62812,-16.972 3.664,-41.375 -7.22952,-33.841 -11.74598,8.124 -18.06913,47.8 -10.59254,69.052 5.27772,15.724 16.68962,10.651 21.76158,-2.028"
@@ -93,35 +69,26 @@
          sodipodi:nodetypes="csssssscc" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.0027px;line-height:1.25;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a5e7f9;fill-opacity:1;stroke:none;stroke-width:0.550067;stroke-opacity:1"
-         x="423.3396"
-         y="11538.759"
-         id="text812762"
-         transform="scale(0.963725,1.0376404)"><tspan
+         x="406.62558"
+         y="11973.968"
+         id="text12886"><tspan
            sodipodi:role="line"
-           id="tspan812760"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.0027px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a5e7f9;fill-opacity:1;stroke:none;stroke-width:0.550067;stroke-opacity:1"
-           x="423.3396"
-           y="11538.759"><tspan
-              style="fill-opacity:1;stroke:none;stroke-opacity:1"
-              id="Untangle_overlay">Untangle</tspan> <tspan
-              style="fill:#a5e7f9;fill-opacity:1;stroke-width:0.550067"
-              id="tspan812758" /></tspan></text>
-      <path
-         style="fill:#d7eef4;stroke:#ffffff;stroke-width:0.886005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 409.94322,11982.989 h 86.5442"
-         id="divider_overlay" />
+           id="Untangle"
+           style="stroke-width:0.654126"
+           x="406.62558"
+           y="11973.968">Untangle</tspan></text>
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.8525px;line-height:1.25;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:0;fill:#aaeeff;fill-opacity:1;stroke:none;stroke-width:1.29631;stroke-opacity:1"
-         x="540.49353"
-         y="10326.331"
-         id="text812768"
-         transform="matrix(0.40894033,0,0,0.44030507,186.95334,7456.7428)"><tspan
-           id="Logic_overlay"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.8525px;font-family:NanumSquare;-inkscape-font-specification:'NanumSquare, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill-opacity:1;stroke:none;stroke-opacity:1"
-           x="540.49353"
-           y="10326.331">Logic</tspan></text>
+         x="406.60416"
+         y="12003.792"
+         id="text13724"><tspan
+           sodipodi:role="line"
+           id="Logic"
+           style="stroke-width:0.654126"
+           x="406.60416"
+           y="12003.792">Logic</tspan>
+      </text>
+      
     </g>
   </g>
 </svg>
