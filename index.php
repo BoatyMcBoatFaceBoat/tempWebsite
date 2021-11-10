@@ -74,7 +74,6 @@ if (!empty($pages->$page)) {
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $prefix ?>/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $prefix ?>/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $prefix ?>/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
     <title><?php
     if (!empty($_GET['page'])) {
       if (!empty($currentPageFile)) {
@@ -116,7 +115,6 @@ if (!empty($pages->$page)) {
       }
       echo '<meta name="description" content="' . $currentPage->description . '">';
       ?>
-    <!-- <link rel="alternate" hreflang="en" href="https://heuvelhlt.nl/en/consultancy" /> -->
     <link rel="stylesheet" href="<?php echo $prefix ?>/styles/style.css">
     <script src="<?php echo $prefix ?>/script/untangle.js"></script>
     <script src="<?php echo $prefix ?>/script/temp.js"></script>
