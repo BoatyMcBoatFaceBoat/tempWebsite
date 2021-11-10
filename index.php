@@ -122,7 +122,7 @@ if (!empty($pages->$page)) {
 
 <body onload="loadWebsite()">
 <header>
-    <a href="<?php echo $prefixLang;?>/">
+    <a class="logo-link-wrapper" href="<?php echo $prefixLang;?>/">
       <div class="logo-wrapper"><?php include("media/untangle_logic_logo_double.svg"); ?></div>
     </a>
 

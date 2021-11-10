@@ -65,9 +65,13 @@ header {
   // justify-items: space-between;
 }
 
+.logo-link-wrapper {
+  padding: 0;
+  margin: 0 1em; 
+}
+
 .logo-wrapper {
 
-  padding: 0.5em;
   
   #logo_svg {
     height: calc(#{$header-height});
