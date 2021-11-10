@@ -11,12 +11,13 @@ const $$ = function (queryName) {
 }
 
 function loadWebsite() {
-  let touch = false;
-  if (!("ontouchstart" in document.documentElement)) {
-    document.documentElement.className += " no-touch";
-  } else {
-    touch = true;
-  }
+  // let touch = false;
+  // if (!("ontouchstart" in document.documentElement)) {
+  //   document.documentElement.className += " no-touch";
+  // } else {
+  //   touch = true;
+  // }
+  //deprecated
 
   const plus = $('.readmore-elm');
   const minus = $('.readless-elm');
@@ -39,17 +40,62 @@ function loadWebsite() {
   }
 
   toggleElmClasses.forEach(elmClass => {
-    if (touch) {
-      addToggleTo(elmClass);
-    } else {
-      addMouseoverTo(elmClass);
-    }
+    // if (touch) {
+    //   addToggleTo(elmClass);
+    //  } else {
+    //   addMouseoverTo(elmClass);
+
+       addToggleAndHoverTo(elmClass);
+    // }
   })
 }
 
+
+
+
+
+
+
+function addToggleAndHoverTo(className) {
+  const domEl = $(`.${className}`);
+  if (!domEl) { return; }
+  let isOpen = false;
+  let clicked = false;
+
+ 
+
+  domEl.addEventListener('mouseover', () => {
+    if(clicked) return;
+    isOpen = true;
+    domEl.classList.add('open');
+  })
+
+  domEl.addEventListener('mouseout', () => {
+    if(clicked) return;
+    isOpen = false;
+    domEl.classList.remove('open');
+  })
+
+  domEl.addEventListener('click', () => {
+    clicked = true;
+    domEl.removeEventLister
+    isOpen = !isOpen;
+    domEl.classList.toggle('open', isOpen);
+  })
+  
+  document.addEventListener('click', ({target}) => {
+    if(!(target.closest(`.${className}`))) {
+      isOpen = false;
+      domEl.classList.toggle('open', false);
+    }
+  })
+
+}
+
+
+
 function addToggleTo(className){
   const domEl = $(`.${className}`);
-  console.log(domEl);
   if (!domEl) { return; }
   let isOpen = false;
 
@@ -65,6 +111,8 @@ function addToggleTo(className){
     }
   })
 }
+
+
 
 function addMouseoverTo(className){
   const domEl = $(`.${className}`);
