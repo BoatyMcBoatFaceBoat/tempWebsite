@@ -9,7 +9,7 @@ $prefixLang = $prefix;
 $page = 'home';
 if (!empty($_GET['lang'])) {
   if($_GET['lang'] === $langDefault) {
-    header('Location: ' . $prefix . '/' . (!empty($_GET['page']) ? $_GET['page'] : ''));
+    header('Location: ' . $prefix . '/' . (!empty($_GET['page'] && $_GET['page'] !== $page) ? $_GET['page'] : ''));
   }
   $lang = $_GET['lang'];
   $prefixLang .= '/' . $lang;
@@ -17,6 +17,9 @@ if (!empty($_GET['lang'])) {
   $lang = $langDefault;
 }
 if (!empty($_GET['page'])) {
+  if($_GET['page'] === $page) {
+    header('Location: ' . $prefix . '/' . (!empty($_GET['lang']) ? $_GET['lang'] : ''));
+  }
   $page = $_GET['page'];
 }
 $pages = json_decode(file_get_contents('pages.json'));
