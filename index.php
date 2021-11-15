@@ -285,9 +285,12 @@ if (!empty($pages->$page)) {
           ?>
         </ul>
     </nav>
+    <a href="<?php echo $prefixLang;?>/">
+      <div class="logo-wrapper"><?php include("media/untangle_logic_logo_double_dark_bckgrnd_greyscale.svg"); ?></div>
+    </a>
     <p>this&nbsp;website&nbsp;was&nbsp;made&nbsp;by&nbsp;Van&nbsp;den&nbsp;Heuvel&nbsp;HLT&nbsp;Consultancy</p>
 </footer>
 
 </body>
 
-</html>
+</html> 
